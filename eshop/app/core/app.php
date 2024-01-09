@@ -1,27 +1,27 @@
 <?php 
 
+/**
+ * Todo o website vai arrancar desta classe
+ * 
+ */
 
-//Comentario A função geral desta parte do código é capturar a URL fornecida e imprimir seu valor. 
-
-
-class app
+class App
 {
     protected $controller = "home"; 
     protected $method ="index";
 
+    //Constructor
     public function __construct()
     {
         $url= $this->parseURL();
         show($url);
-
     }
 
-
+    //Serve para 
     private function parseURL()
     {
         $url = isset($_GET['url']) ? $_GET['url'] : "home";
-        return explode("/", filter_var(trim($url, "/"),FILTER_SANITIZE_URL));
-        
+        return explode("/", filter_var(trim($url, "/"),FILTER_SANITIZE_URL));      
     }
 
 }

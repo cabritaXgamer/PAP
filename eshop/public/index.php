@@ -4,5 +4,5 @@ session_start();
 
 include "../app/init.php";
 
-$app = new app();
+$app = new App();
 
