@@ -12,7 +12,7 @@ class app
     public function __construct()
     {
         $url= $this->parseURL();
-        print_r($url);
+        show($url);
 
     }
 
@@ -20,7 +20,8 @@ class app
     private function parseURL()
     {
         $url = isset($_GET['url']) ? $_GET['url'] : "home";
-        return $url;
+        return explode("/", filter_var(trim($url, "/"),FILTER_SANITIZE_URL));
+        
     }
 
 }
