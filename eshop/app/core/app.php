@@ -15,15 +15,15 @@ Class App
         show($url);
     if(file_exists("../app/controlles/" . strtolower($url[0]). ".php"))
     {
+        $this->controller = strtolower($url[0]);
+        unset($url[0]);
+        
+    }
         require "../app/controllers/" . $this->controller . ".php";
         $this->controller = new $this->controller;
         show ($url);
 
     }
-}
-
-   
-
 
     private function parseURL()
     {
