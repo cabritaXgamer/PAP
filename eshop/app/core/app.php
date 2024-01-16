@@ -8,6 +8,7 @@ Class App
 {
     protected $controller = "home"; 
     protected $method ="index";
+    protected $params;
 
     public function __construct()
     {
@@ -28,7 +29,9 @@ Class App
             if(method_exists($this->controller,$url[1]));
 
         }
-        show ($url);
+       $this->params = (count($url) > 0) ? $url : ["home"];
+       call_user_func_array([],$this->params);
+
 
     }
 
