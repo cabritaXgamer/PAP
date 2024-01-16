@@ -13,7 +13,7 @@ Class App
     public function __construct()
     {
         $url= $this->parseURL();
-        show($url);
+        //show($url);
     if(file_exists("../app/controlles/" . strtolower($url[0]). ".php"))
     {
         $this->controller = strtolower($url[0]);
@@ -27,10 +27,14 @@ Class App
         {
             $url[1] = strtolower($url[1]);
             if(method_exists($this->controller,$url[1]));
+            {
+                $this->method =$url[1];
+                unset($url[1]);
+            }
 
         }
        $this->params = (count($url) > 0) ? $url : ["home"];
-       call_user_func_array([],$this->params);
+       call_user_func_array([$this->controller, $this->method], $this->params);
 
 
     }
