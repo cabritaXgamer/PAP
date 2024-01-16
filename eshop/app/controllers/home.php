@@ -3,7 +3,7 @@ class home
 {
     public function index()
         {
-            echo "BATATAS    this is the home class inside index method";
+            echo "BATATAS  de teste  this is the home class inside index method";
 
         }
 }
