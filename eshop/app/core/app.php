@@ -19,14 +19,14 @@ class App
 
         //Se o ficheiro existir, ele vai substituir o controlador para aceder às funçoes do controlador especifico
         //Concatena a URL com as funçoes 
-        if(file_exists("../app/controllers/" . strtolower($url[0]) . ".php"))
+        if(file_exists("../app/controlers/" . strtolower($url[0]) . ".php"))
         {
             $this->controller = strtolower($url[0]);
             unset($url[0]);
         }
 
         //Senao encontrar o controlador ele vai para a home
-        require "../app/controllers/" . $this->controller . ".php";
+        require "../app/controlers/" . $this->controller . ".php";
         $this->controller = new $this->controller;
         
         //Aqui vamos procurar um metodo dentro do controldaor no array pos [1] da URL
