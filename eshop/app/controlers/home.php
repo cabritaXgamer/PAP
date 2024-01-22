@@ -4,9 +4,9 @@ class home extends controlers
 {   
    public function index()
 {
-    
    
-    $this->view("");
+   
+    $this->view("home");
 }
 }
 
