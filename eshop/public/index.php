@@ -2,11 +2,14 @@
 
 session_start();
 
+$path = $_SERVER['REQUEST_SCHEME'] . "://". $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF'];
+$path = str_replace("index.php", "", $path);
 
+define('ROOT', $path);
+define ('ASSETS', $path . "assets/");
 
-$a = $_SERVER['REQUEST_SCREME'] . "://". $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF'] .$_SERVER['PHP_SELF'];
-$a = str_replace("index.php", "", $a);
 include "../app/init.php";
-show($a);
+//show($_SERVER);
+
 $app = new App();
 
