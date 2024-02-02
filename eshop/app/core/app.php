@@ -14,14 +14,14 @@ Class App
     {
         $url= $this->parseURL();
    //     show($url);
-    if(file_exists("../app/controlers/" . strtolower($url[0]). ".php"))
+    if(file_exists("../app/controllers/" . strtolower($url[0]). ".php"))
     {
         $this->controller = strtolower($url[0]);
         unset($url[0]);
         
 
     }
-        require "../app/controlers/" . $this->controller . ".php";
+        require "../app/controllers/" . $this->controller . ".php";
         $this->controller = new $this->controller;
         if(isset($url[1]))
         {

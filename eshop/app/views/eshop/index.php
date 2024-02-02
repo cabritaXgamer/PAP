@@ -1,4 +1,4 @@
-<?php $this->view("eshop/haeder"); ?>
+<?php $this->view("eshop/haeder",$data); ?>
 
 	<section id="slider"><!--slider-->
 		<div class="container">
