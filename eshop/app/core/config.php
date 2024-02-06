@@ -8,7 +8,9 @@ define("WEBSITE_TITLE", 'MY SHOP');
 define('DM_NAME', "eshop_db");
 define('DM_USER', "root");
 define('DM_PASS', "");
-define('THEME','eshop');
+
+
+define('THEME', 'eshop/');
 
 define('DEBUG', true);
 

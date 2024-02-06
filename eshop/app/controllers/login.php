@@ -1,12 +1,12 @@
 <?php
 //extenção da class controller para a home
-class Home extends Controller
+class Login extends Controller
 {   
 
    public function index()
 {
-   $data['page_title'] = "Home";
+   $data['page_title'] = "Login";
    //mostra a pagina home
-    $this->view("index",$data);
+    $this->view("login",$data);
 }
 }
