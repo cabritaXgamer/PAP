@@ -7,6 +7,6 @@ class Home extends Controller
 {
    $data['page_title'] = "Home";
    //mostra a pagina home
-    $this->view("index",$data);
+    $this->view( "index",$data);
 }
 }

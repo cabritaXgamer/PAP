@@ -164,5 +164,9 @@
 	<script src="<?= ASSETS . THEME?>js/price-range.js"></script>
     <script src="<?= ASSETS . THEME?>js/jquery.prettyPhoto.js"></script>
     <script src="<?= ASSETS . THEME?>js/main.js"></script>
+
+	<?php var_dump(ASSETS . THEME . "js/main.js"); ?>
+
+
 </body>
 </html>

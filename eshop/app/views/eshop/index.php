@@ -1,4 +1,8 @@
-<?php $this->view("haeder",$data); ?>
+<?php $this->view("views/eshop/header",$data); 
+
+var_dump($this->view("header"));
+
+?>
 
 	<section id="slider"><!--slider-->
 		<div class="container">
@@ -718,7 +722,7 @@
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
-													<img <?= ASSETS . THEME ?>/="<?= ASSETS . THEME ?>/images/home/recommend2.jpg" alt="" />
+													<img src="?= ASSETS . THEME ?>/images/home/recommend2.jpg" alt="" />
 													<h2>$56</h2>
 													<p>Easy Polo Black Edition</p>
 													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
