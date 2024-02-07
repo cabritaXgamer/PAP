@@ -12,12 +12,9 @@
 							<span>
 								<input type="checkbox" class="checkbox"> 
 								Keep me signed in
-								
 							</span>
 							<button type="submit" class="btn btn-default">Login</button>
 						</form>
-						<br>
-						<a href="signup.php"> have account? Signup here</a>
 					</div><!--/login form-->
 				</div>
 				
