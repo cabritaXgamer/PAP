@@ -2,7 +2,7 @@
 
 /**
  * Todo o website vai arrancar desta classe
- * 
+ * File app.php
  */
 
 class App
@@ -43,9 +43,6 @@ class App
         }
 
         //show( ADMIN_THEME);
-     
-        
-
         //Validação se nao existir nada na url ele manda para a home, caso contrario
         //O params pode receber o array fornecido pelo utilizador, caso contrario recebe a home 
         $this->params = (count($url) > 0) ? $url : ["home"];
@@ -60,5 +57,4 @@ class App
         $url = isset($_GET['url']) ? $_GET['url'] : "home";
         return explode("/", filter_var(trim($url, "/"),FILTER_SANITIZE_URL));      
     }
-
 }
