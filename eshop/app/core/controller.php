@@ -8,17 +8,17 @@ class Controller
 
     
 
-        if (file_exists("../app/views/" . ADMIN_THEME .  $path . ".php"))
+        if (file_exists("../app/views/" . THEME .  $path . ".php"))
         {
-            include "../app/views/"  . ADMIN_THEME .  $path . ".php" ;
-            //show("../app/views/" . ADMIN_THEME .  $path . ".php");
+            include "../app/views/"  . THEME .  $path . ".php" ;
+            //show("../app/views/" . THEME .  $path . ".php");
             //show("../app/views/" .   $path . ".php");
            
         }
         else
         {
             //if not exists the view, give to the user a 404 error
-            include "../app/views/" . ADMIN_THEME . "404.php" ;
+            include "../app/views/" . THEME . "404.php" ;
         }
     }
 }

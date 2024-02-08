@@ -10,7 +10,7 @@ define('DB_TYPE', "mysql");
 define('DB_HOST', "localhost");
 
 
-define('ADMIN_THEME', 'admin/');
+define('THEME', 'user/');
 //define('INCLUDES_THEME', "_includes/")
 
 define('DEBUG', true);
