@@ -31,12 +31,44 @@ Class Database
             return self::$con;
         }
 
-        self::$con = new self();
+        //self::$con = new self();
+        return $instance = new self();
     }
 
+    //read data from database
+    public function read($query, $data = array())
+    {
+        $stm = self::$con->prepare($query);
+        $result = $stm->execute($data);
 
+        if($result)
+        {
+            $data = $stm->fetchAll(PDO::FETCH_OBJ);
+            if(is_array($data))
+            {
+                return $data;
+            }
+        }
+
+        return false;
+    }
+
+    //write to database
+    public function write($query, $data = array())
+    {
+        $stm = self::$con->prepare($query);
+        $result = $stm->execute($data);
+
+        if($result)
+        {
+            return true;
+        }
+
+        return false;
+    }
 }
-
+/*
 $db = Database::getInstance();
-
-show($db);
+$data = $db->read("describe users");
+show($data);
+*/
