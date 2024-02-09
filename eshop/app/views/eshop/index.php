@@ -1,4 +1,4 @@
-<?php $this->view("views/eshop/header",$data); 
+<?php $this->view("header",$data); 
 
 var_dump($this->view("header"));
 

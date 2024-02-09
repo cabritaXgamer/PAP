@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title> <?= $data['page_title']?> </title>
+    <title> <?= $data['page_title']?> | E-Shoopper </title>
     <link href="<?= ASSETS . THEME ?>css/font-awesome.mincss" rel="stylesheet">
 
-	<?php var_dump(ASSETS . THEME . "css/font-awesome.mincss"); ?>
+	
 
     <link href="<?= ASSETS . THEME ?>css/prettyPhotocss" rel="stylesheet">
     <link href="<?= ASSETS . THEME ?>css/price-rangecss" rel="stylesheet">
@@ -60,7 +60,7 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="index"><img src="<?= ASSETS . THEME ?>/images/home/logo.png" alt="" /></a>
+							<a href="index"><img src="<?= ASSETS . THEME ?>images/home/logo.png" alt="" /></a>
 						</div>
 						<div class="btn-group pull-right">
 							<div class="btn-group">

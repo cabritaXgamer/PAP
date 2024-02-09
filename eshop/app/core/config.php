@@ -5,9 +5,11 @@ define("WEBSITE_TITLE", 'MY SHOP');
 //nome da database
 
 // TODO: tenho que alterar para a minha base de dados
-define('DM_NAME', "eshop_db");
-define('DM_USER', "root");
-define('DM_PASS', "");
+define('DB_NAME', "pap_db");
+define('DB_USER', "root");
+define('DB_PASS', "");
+define('DB_TYPE',"mysql");
+define('DB_HOST',"localhost");
 
 
 define('THEME', 'eshop/');
