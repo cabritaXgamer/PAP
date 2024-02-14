@@ -71,6 +71,10 @@
                       <div class="invalid-feedback">Please, enter your name!</div>
                     </div>
 
+                    <!-- Email span validation -->
+                    <span sytle="color:red"><?php check_error() ?></span>
+
+
                     <div class="col-12">
                       <label for="yourEmail" class="form-label">Your Email</label>
                       <input type="email" name="email" class="form-control" id="yourEmail" required>

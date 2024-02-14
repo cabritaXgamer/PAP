@@ -9,6 +9,7 @@ Class User
     {
 
         $data = array();
+        $db = Database::getInstance();
 
         $data['name']       = trim($POST['name']);
         //$data['username']   = trim($POST['username']);
@@ -40,15 +41,41 @@ Class User
             $this->error .= "Password must be at last 4 characters long! <br>";
         }
 
+        /*
+        * Check if the email exists
+        */
+        $sql = "select * from users where email = :email limit 1";
+        $arr['email'] = $data['email'];
+        $check= $db->read($sql,$arr);
+        if(is_array($check)){
+
+            $this->error .= "That email already exits! <br>";
+        
+        }
+
+        $data['url_address'] = $this->get_random_string_max(60);
+        
+        /*
+        * Check if the url_address exists
+        */
+        $arr =false;
+        $sql = "select * from users where url_address = :url_address limit 1";
+        $arr['url_address'] = $data['url_address'];
+        $check= $db->read($sql,$arr);
+        if(is_array($check)){
+
+            $data['url_address'] = $this->get_random_string_max(60);
+        
+        }
+
         if($this->error == "")
         {
             //save at database
             $data['role'] = "costumer";
-            $data['url_address'] = $this->get_random_string_max(60);
             $data['date'] = date("Y-m-d H:i:s");
-
-            $query = "insert into users (url_address,name,email,password,date,role) values(:url_address,:name,:email,:password,:date,:role)";
-            $db = Database::getInstance();
+            $data['password'] = hash('sha1', $data['password']);
+            
+            $query = "insert into users (url_address,name,email,password,date,role) values(:url_address,:name,:email,:password,:date,:role)";            
             $result = $db->write($query,$data);
 
             if($result)
@@ -57,11 +84,51 @@ Class User
                 die;
             }
         }
+
+        $_SESSION['error'] = $this->error;
     }
 
     function Login($POST)
     {
+        $data = array();
+        $db = Database::getInstance();
+
+        $data['email']      = trim($POST['email']);
+        $data['password']   = trim($POST['password']);
+
+        //validation for you write an email corretly
+        if(empty($data['email']) || !preg_match("/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/", $data['email']))
+        {
+            $this->error .= "Please enter a valid email <br>";
+        }
+
+        //validation for minimal password lenght
+        if(strlen($data['password']) < 4 )
+        {
+            $this->error .= "Password must be at last 4 characters long! <br>";
+        }
+
+
+        if($this->error == "")
+        {
+            //confirm
+            $data['password'] = hash('sha1', $data['password']);
+            
+            $sql = "select * from users where email = :email && password = :password limit 1";
+            $arr['email'] = $data['email'];
+            $result= $db->read($sql,$data);
+            
+            if(is_array($result))
+            {
+                $_SESSION['user_url'] = $result[0]->url_address;
+                header("Location: " . ROOT . "home");
+                die;
         
+            }
+            $this->error .= "Wrong email or password! <br>";
+        }
+
+        $_SESSION['error'] = $this->error;
     }
 
     function get_user($url)

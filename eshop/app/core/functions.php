@@ -1,4 +1,6 @@
 <?php 
+
+//this fucntion will show data to the frontend
 function show($data)
 {
         echo "<pre>";
@@ -7,4 +9,11 @@ function show($data)
 }
 
 
-?>
+function check_error()
+{
+        if(isset($_SESSION['error']) && $_SESSION['error'] != "" )
+        {
+                echo $_SESSION['error'];
+                unset($_SESSION['error']);
+        }
+}

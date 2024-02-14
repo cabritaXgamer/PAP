@@ -45,8 +45,14 @@ class App
         //show( ADMIN_THEME);
         //Validação se nao existir nada na url ele manda para a home, caso contrario
         //O params pode receber o array fornecido pelo utilizador, caso contrario recebe a home 
-        $this->params = (count($url) > 0) ? $url : ["home"];
+        //$this->params = (count($url) > 0) ? $url : ["home"];
         //show(array_values($url));
+
+        if (count($url) > 0) {
+            $this->params = $url;
+        } else {
+            $this->params = ["home"];
+        }
 
         call_user_func_array([$this->controller,$this->method],$this->params);
     }

@@ -8,13 +8,13 @@ class Register extends Controller
      {
         $this->title = 'User - Register';
 
-if($_SERVER['REQUEST_METHOD'] == "POST")
-{
-   	//show($_POST);
+         if($_SERVER['REQUEST_METHOD'] == "POST")
+         {
+               //show($_POST);
 
-      $User = $this->load_model("User");
-      $User->signup($_POST);
-}
+               $User = $this->load_model("User");
+               $User->signup($_POST);
+         }
 
 
         //Direção de onde esta a view que vai carregar
