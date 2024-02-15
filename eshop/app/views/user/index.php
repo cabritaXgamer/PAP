@@ -1,4 +1,8 @@
-<?php $this->view(  "_includes/admin_header", $data); ?>
+<?php $this->view(  "_includes/admin_header", $data); 
+  //var_dump($data);
+  //var_dump($data['user_data']->name);
+  //echo ($data['user_data']->name);
+?>
 
   <!-- ======= Sidebar ======= -->
   <aside id="sidebar" class="sidebar">
