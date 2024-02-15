@@ -3,6 +3,7 @@
 class Controller 
 {
    //In this method is where we call the route and we can also pass some data to the view
+   //At this moment this function are not working
     public function view($path, $data = [])
     {
 

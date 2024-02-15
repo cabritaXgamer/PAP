@@ -5,9 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <!-- <title> <?php //echo $this-> title ?></title> -->
-  <title>  <?= $data['page_title'] ?></title>
- 
+  <title> <?= $data['page_title']?> </title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -41,15 +39,8 @@
 </head>
 
 <body>
-
-<div>
-
-  <h1>  <?= var_dump($data['user_data']->email); ?>         </h1>   
-
-</div> 
-
-
-
+  
+<h1><?php echo $data['user_data']->name;  ?></h1>
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">
     <div class="d-flex align-items-center justify-content-between">
@@ -220,7 +211,7 @@
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2"><?= $data['user_data']->name ?></span>
+            <span class="d-none d-md-block dropdown-toggle ps-2"><?php echo $data['user_data']->name;  ?></span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">

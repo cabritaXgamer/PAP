@@ -13,6 +13,11 @@ define('DB_HOST', "localhost");
 define('THEME', 'user/');
 //define('INCLUDES_THEME', "_includes/")
 
+
+// Caminho para a raiz
+define( 'ABSPATH', dirname( __FILE__ ) );
+
+
 define('DEBUG', true);
 
 if(DEBUG){
