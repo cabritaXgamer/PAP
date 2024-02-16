@@ -13,20 +13,21 @@ class App
 
     //Constructor
     public function __construct()
-    {
+    { 
+        
         $url= $this->parseURL();
         //show($url);
 
         //Se o ficheiro existir, ele vai substituir o controlador para aceder às funçoes do controlador especifico
         //Concatena a URL com as funçoes 
-        if(file_exists("../app/controlers/user/" . strtolower($url[0]) . ".php"))
+        if(file_exists("../app/controllers/user/" . strtolower($url[0]) . ".php"))
         {
             $this->controller = strtolower($url[0]);
             unset($url[0]);
         }
 
         //Senao encontrar o controlador ele vai para a home
-        require "../app/controlers/user/" . $this->controller . ".php";
+        require "../app/controllers/user/" . $this->controller . ".php";
         $this->controller = new $this->controller;
         
         //Aqui vamos procurar um metodo dentro do controldaor no array pos [1] da URL
@@ -41,7 +42,7 @@ class App
                 unset($url[1]);
             }
         }
-
+    
         //show( ADMIN_THEME);
         //Validação se nao existir nada na url ele manda para a home, caso contrario
         //O params pode receber o array fornecido pelo utilizador, caso contrario recebe a home 

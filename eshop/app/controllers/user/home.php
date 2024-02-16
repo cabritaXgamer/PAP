@@ -1,7 +1,7 @@
 <?php
 
 
-class Test extends Controller
+class Home extends Controller
 {
     //Public default metodo index, mesmo que o utilizador coloque ou não qualquer URL, o Index vai sempre correr
     public function index()
@@ -18,16 +18,16 @@ class Test extends Controller
         }
 
         //$this->title = 'Admin - Dashboard';
-        $data['page_title'] = "Test";
+        $data['page_title'] = "Home - Dashboard";
         //Rota onde esta a view que vai carregar
-        //$this->view("test", $data);
+        $this->view("index", $data);
 
-        /** Balance load page to force user view */
+        /*
         require ABSPATH . '/views/user/_includes/admin_header.php';
 
-        require ABSPATH . '/views/user/test.php';
+        require ABSPATH . '/views/user/index.php';
 
         require ABSPATH . '/views/user/_includes/admin_footer.php';
-
+        */
      }
 }

@@ -4,7 +4,7 @@ class Controller
 {
    //In this method is where we call the route and we can also pass some data to the view
    //At this moment this function are not working
-    public function view($path, $data = [])
+   /* public function view($path, $data = [])
     {
 
         if (file_exists("../app/views/" . THEME .  $path . ".php"))
@@ -20,6 +20,19 @@ class Controller
             include "../app/views/" . THEME . "404.php" ;
         }
     }
+*/
+    public function view($path, $data = [])
+    {
+        $fullPath = "../app/views/" . THEME .  $path . ".php";
+
+        if (file_exists($fullPath)) {
+            include $fullPath;
+        } else {
+            // Se a view não existir, exibir página de erro 404
+            include "../app/views/" . THEME . "404.php";
+        }
+    }
+
 
     //In this method is where we call the route and we can also pass some data to the view
     public function load_model($model)
