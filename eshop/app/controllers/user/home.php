@@ -8,10 +8,10 @@ class Home extends Controller
      {
         
         $User = $this->load_model('User');
-        $data['user_data'] = $User->check_login();
+        $user_data = $User->check_login();
 
         //validate if the user is really log in
-        if(is_array($data['user_data']))
+        if(is_object($user_data))
         {
             $data['user_data'] = $user_data;
             //show($data['user_data']);

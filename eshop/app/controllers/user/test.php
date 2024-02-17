@@ -18,7 +18,7 @@ class Test extends Controller
         }
 
         //$this->title = 'Admin - Dashboard';
-        $data['page_title'] = "Test";
+        $data['page_title'] = "Test Admin Section";
         //Rota onde esta a view que vai carregar
         $this->view("test", $data);
 

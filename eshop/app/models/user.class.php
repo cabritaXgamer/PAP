@@ -148,7 +148,8 @@ Class User
         return $random_string;
     }
 
-    function check_login()
+    //Function to check login
+    function check_login($redirect=false)
     {
         if(isset($_SESSION['user_url']))
         {
@@ -161,10 +162,27 @@ Class User
             {
                 return $result[0];
             }
+        }
 
+        if($redirect)
+        {
+            header("Location: " . ROOT . "login");
+            die;
         }
 
         return false;
+    }
+
+    //Function to logout
+    public function logout()
+    {
+        if(isset($_SESSION['user_url']))
+        {
+            unset($_SESSION['user_url']);
+        }
+
+        header("Location: " . ROOT . "login");
+                die;
     }
 
 }

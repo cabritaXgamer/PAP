@@ -242,7 +242,15 @@
             <li>
               <hr class="dropdown-divider">
             </li>
-
+            <!-- Admin choice -->
+            <?php if(isset($data['user_data']) && $data['user_data']->role == 'admin') : ?> 
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="<?=ROOT?>test">
+                <i class="bi bi-person"></i>
+                <span>ADMIN - Section</span>
+              </a>
+            </li>
+            <?php endif; ?>
             <li>
               <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
                 <i class="bi bi-question-circle"></i>
@@ -252,14 +260,15 @@
             <li>
               <hr class="dropdown-divider">
             </li>
-
+            <!-- Made the logout -->
+            <?php if(isset($data['user_data'])) : ?> 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+              <a class="dropdown-item d-flex align-items-center" href="logout">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Sign Out</span>
               </a>
             </li>
-
+            <?php endif; ?>
           </ul><!-- End Profile Dropdown Items -->
         </li><!-- End Profile Nav -->
 

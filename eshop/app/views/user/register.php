@@ -67,7 +67,7 @@
                   <form class="row g-3 needs-validation" novalidate method= "post" >
                     <div class="col-12">
                       <label for="yourName" class="form-label">Your Name</label>
-                      <input type="text" name="name" class="form-control" id="yourName" required>
+                      <input type="text" name="name" value="<?= isset($_POST['name']) ? $_POST['name'] : ''; ?>" class="form-control" id="yourName" required>
                       <div class="invalid-feedback">Please, enter your name!</div>
                     </div>
 
@@ -77,7 +77,7 @@
 
                     <div class="col-12">
                       <label for="yourEmail" class="form-label">Your Email</label>
-                      <input type="email" name="email" class="form-control" id="yourEmail" required>
+                      <input type="email" name="email" value="<?= isset($_POST['email']) ? $_POST['email'] : ''; ?>" class="form-control" id="yourEmail" required>
                       <div class="invalid-feedback">Please enter a valid Email adddress!</div>
                     </div>
 

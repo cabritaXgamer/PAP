@@ -251,11 +251,16 @@
 </div><!-- End Page Title -->
 
 <section class="section">
-<h3>Test web page</h3>
+<h3>Test Admin - web page</h3>
         
 
      
-        <h1><?php echo $data['user_data']->name;  ?></h1>
+        <h1>Admin Nome: <?php echo $data['user_data']->name;  ?></h1>
+<br>
+        <h1>Registo na data: <?=date("d M Y", strtotime($data['user_data']->date))?></h1>
+
+
+        
 </section>
 
 </main><!-- End #main -->
