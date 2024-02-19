@@ -44,7 +44,7 @@
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="<?=ROOT?>home" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
         <span class="d-none d-lg-block">NiceAdmin</span>
       </a>
@@ -216,7 +216,7 @@
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Kevin Anderson</h6>
+              <h6><?php echo $data['user_data']->name;  ?></h6>
               <span>Web Designer</span>
             </li>
             <li>
@@ -224,7 +224,7 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+              <a class="dropdown-item d-flex align-items-center" href="profile">
                 <i class="bi bi-person"></i>
                 <span>My Profile</span>
               </a>
@@ -233,7 +233,7 @@
               <hr class="dropdown-divider">
             </li>
 
-            <li>
+            <!-- <li>
               <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
                 <i class="bi bi-gear"></i>
                 <span>Account Settings</span>
@@ -241,12 +241,12 @@
             </li>
             <li>
               <hr class="dropdown-divider">
-            </li>
+            </li> -->
             <!-- Admin choice -->
             <?php if(isset($data['user_data']) && $data['user_data']->role == 'admin') : ?> 
             <li>
               <a class="dropdown-item d-flex align-items-center" href="<?=ROOT?>test">
-                <i class="bi bi-person"></i>
+                <i class="bi bi-gear"></i>
                 <span>ADMIN - Section</span>
               </a>
             </li>
