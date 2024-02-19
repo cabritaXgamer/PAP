@@ -26,7 +26,8 @@ return $instance = new self();
 public function read($query,$data = array())
 {
  $stm = self::$con->prepare($query);
- $result = $stm->execute();
+ $result = $stm->execute($data);
+
  if($result){
  $data = $stm->fetchAll(PDO::FETCH_OBJ);
  if(is_array($data))
@@ -39,9 +40,15 @@ return false;
 //write
 public function write($query,$data = array())
 {
-    
+    $stm = self::$con->prepare($query);
+    $result = $stm->execute($data);
+
+ if($result){
+
+ {
+    return $data;
+    }
+}
+return false;
 }  
 }
-$db = Database::getInstance();
-$data = $db->read("describe users");
-show($data);
