@@ -1,7 +1,7 @@
 <?php
 class User
 {
-    function Signup($POST)
+    function signup($POST)
 {
 
 }

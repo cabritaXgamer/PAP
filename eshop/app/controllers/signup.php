@@ -11,6 +11,7 @@ class Signup extends Controller
    {
       show($_POST);
       $user = $this->Load_model("User");
+     // $user->signup($_POST);
    }
     $this->view("signup",$data);
 }
