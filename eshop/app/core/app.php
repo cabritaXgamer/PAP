@@ -27,8 +27,15 @@ class App
                 unset($url[1]);
             }
         }
-        $this->params = (count($url) > 0) ? $url : ["home"];
-        call_user_func_array([$this->controller, $this->method], $this->params);
+
+         //Validação se nao existir nada na url ele manda para a home, caso contrario
+        if (count($url) > 0) {
+            $this->params = $url;
+        } else {
+            $this->params = ["home"];
+        }
+
+        call_user_func_array([$this->controller,$this->method],$this->params);
     }
 
     private function parseURL()

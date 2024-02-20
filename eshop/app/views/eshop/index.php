@@ -1,8 +1,4 @@
-<?php $this->view("header", $data);
-
-var_dump($this->view("header"));
-
-?>
+<?php $this->view("_includes/header", $data);?>
 
 <section id="slider"><!--slider-->
 	<div class="container">
@@ -760,4 +756,4 @@ var_dump($this->view("header"));
 	</div>
 </section>
 
-<?php $this->view("footer"); ?>
+<?php $this->view("_includes/footer", $data); ?>

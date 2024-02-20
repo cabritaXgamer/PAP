@@ -1,14 +1,13 @@
-<?php $this->view("haeder", $data); ?>
+<?php $this->view("_includes/header", $data);?>
 
-<section id="form"> style="margin-top: 5px<!--form-->
+<section id="form" style="margin-top: 5px;"> <!--form-->
 	<div class="container">
-		<div class="row" style="text-aling: center;">
+		<div class="row" style="text-align: center;">
 
 			<div class="col-sm-4" style="float: none;display: inline-block;">
 				<div class="signup-form"><!--sign up form-->
 					<h2>New User Signup!</h2>
-					<form method="post">
-						<?php show($_POST) ?>
+					<form method= "post">
 						<input name="name" type="text" placeholder="Nome" />
 						<input name="email" type="email" placeholder="Email" />
 						<input name="password" type="password" placeholder="Password" />
@@ -22,4 +21,4 @@
 </section><!--/form-->
 
 
-<?php $this->view("footer", $data); ?>
+<?php $this->view("_includes/footer", $data);?>

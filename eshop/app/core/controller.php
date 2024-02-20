@@ -10,12 +10,13 @@ class Controller
 
         }
     }
+
     //metodo que atribui responsabilidade a base de dados 
-    public function Load_model($model)
+    public function load_model($model)
     {
-        if(file_exists("../app/models/" . strtolower($model) . "class.php"))
+        if(file_exists("../app/models/" . strtolower($model) . ".class.php"))
         {
-            include "../app/models/" . strtolower($model) . "class.php";
+            include "../app/models/" . strtolower($model) . ".class.php";
             return $a = new $model();
         }
         return false;

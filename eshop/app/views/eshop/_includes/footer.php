@@ -1,4 +1,5 @@
-<footer id="footer"><!--Footer-->
+<!--Footer-->
+<footer id="footer">
 		<div class="footer-top">
 			<div class="container">
 				<div class="row">
@@ -155,9 +156,6 @@
 		</div>
 		
 	</footer><!--/Footer-->
-	
-
-  
     <script src="<?= ASSETS . THEME?>js/jquery.js"></script>
 	<script src="<?= ASSETS . THEME?>js/bootstrap.min.js"></script>
 	<script src="<?= ASSETS . THEME?>js/jquery.scrollUp.min.js"></script>
@@ -165,8 +163,6 @@
     <script src="<?= ASSETS . THEME?>js/jquery.prettyPhoto.js"></script>
     <script src="<?= ASSETS . THEME?>js/main.js"></script>
 
-	<?php var_dump(ASSETS . THEME . "js/main.js"); ?>
-
-
+	<?php var_dump(ASSETS . THEME) ?>
 </body>
 </html>
