@@ -149,29 +149,97 @@ Class User
     }
 
     //Function to check login
-    function check_login($redirect=false)
-    {
-        if(isset($_SESSION['user_url']))
-        {
-            $arr['url'] = $_SESSION['user_url'];
-            $query = "select * from users where url_address = :url limit 1";
-            $db = Database::getInstance();
 
+    /*
+    function check_login($redirect = false, $allowed = array())
+    {
+
+        $db = Database::getInstance();
+        
+        //check the role, to give access to the page request
+        if(count($allowed) > 0 ) 
+        {
+        
+            $arr['url'] =  $_SESSION['user_url'];
+            $query = "select role from users where url_address = :url limit 1";
             $result = $db->read($query,$arr);
+    
             if(is_array($result))
             {
-                return $result[0];
+                $result = $result[0];
+                if(in_array($result->role, $allowed)){
+                    
+                    return $result;
+                }
+
+            }else {
+                header("Location: " . ROOT . "login");
+                die;
+            }
+
+        } else {
+
+            //validate in database to make the user login
+            if(isset($_SESSION['user_url']))
+            {
+                $arr = false;
+                $arr['url'] = $_SESSION['user_url'];
+                $query = "select * from users where url_address = :url limit 1";
+                
+                $result = $db->read($query,$arr);
+
+                if(is_array($result))
+                {
+                    return $result[0];
+                }
+            }
+
+            if($redirect)
+            {
+                header("Location: " . ROOT . "login");
+                die;
             }
         }
 
-        if($redirect)
-        {
-            header("Location: " . ROOT . "login");
-            die;
-        }
+        return false;
+    }*/
 
+    function check_login($redirect = false, $allowed = array())
+{
+    if (!isset($_SESSION['user_url'])) {
+        if ($redirect) {
+            header("Location: " . ROOT . "login");
+            exit;
+        }
         return false;
     }
+
+    $db = Database::getInstance();
+    $url = $_SESSION['user_url'];
+
+    $query = "SELECT * FROM users WHERE url_address = :url LIMIT 1";
+    $result = $db->read($query, array('url' => $url));
+
+    if (!$result) {
+        if ($redirect) {
+            header("Location: " . ROOT . "login");
+            exit;
+        }
+        return false;
+    }
+
+    $user = $result[0];
+
+    if (!empty($allowed) && !in_array($user->role, $allowed)) {
+        if ($redirect) {
+            header("Location: " . ROOT . "login");
+            exit;
+        }
+        return false;
+    }
+
+    return $user;
+}
 
     //Function to logout
     public function logout()

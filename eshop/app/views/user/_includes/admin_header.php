@@ -245,7 +245,7 @@
             <!-- Admin choice -->
             <?php if(isset($data['user_data']) && $data['user_data']->role == 'admin') : ?> 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="<?=ROOT?>test">
+              <a class="dropdown-item d-flex align-items-center" href="<?=ROOT?>admin">
                 <i class="bi bi-gear"></i>
                 <span>ADMIN - Section</span>
               </a>
