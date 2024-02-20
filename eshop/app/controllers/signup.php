@@ -9,10 +9,12 @@ class Signup extends Controller
    //mostra a pagina home
    if($_SERVER['REQUEST_METHOD'] == "POST")
    {
-      show($_POST);
-      $user = $this->Load_model("User");
-     // $user->signup($_POST);
+         //show($_POST);
+
+         $User = $this->load_model("User");
+         $User->signup($_POST);
    }
+
     $this->view("signup",$data);
 }
 
