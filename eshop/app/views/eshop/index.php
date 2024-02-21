@@ -1,4 +1,4 @@
-<?php $this->view("_includes/header", $data);?>
+<?php $this->view("_includes/header", $data); ?>
 
 <section id="slider"><!--slider-->
 	<div class="container">

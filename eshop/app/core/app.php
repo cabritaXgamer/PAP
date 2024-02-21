@@ -19,6 +19,7 @@ class App
             unset($url[0]);
         }
         require "../app/controllers/" . $this->controller . ".php";
+
         $this->controller = new $this->controller;
         if (isset($url[1])) {
             $url[1] = strtolower($url[1]);
@@ -28,14 +29,14 @@ class App
             }
         }
 
-         //Validação se nao existir nada na url ele manda para a home, caso contrario
+        //Validação se nao existir nada na url ele manda para a home, caso contrario
         if (count($url) > 0) {
             $this->params = $url;
         } else {
             $this->params = ["home"];
         }
 
-        call_user_func_array([$this->controller,$this->method],$this->params);
+        call_user_func_array([$this->controller, $this->method], $this->params);
     }
 
     private function parseURL()
