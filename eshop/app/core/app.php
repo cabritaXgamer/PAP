@@ -7,7 +7,7 @@
 
 class App
 {
-    protected $controller = "login"; 
+    protected $controller = "home"; 
     protected $method ="index";
     protected $params;
 
@@ -16,6 +16,7 @@ class App
     { 
         
         $url= $this->parseURL();
+
         //show($url);
 
         //Se o ficheiro existir, ele vai substituir o controlador para aceder às funçoes do controlador especifico

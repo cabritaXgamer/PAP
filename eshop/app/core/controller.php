@@ -20,7 +20,7 @@ class Controller
             include "../app/views/" . THEME . "404.php" ;
         }
     }
-*/
+
     public function view($path, $data = [])
     {
         $fullPath = "../app/views/" . THEME .  $path . ".php";
@@ -29,8 +29,34 @@ class Controller
             include $fullPath;
         } else {
             // Se a view não existir, exibir página de erro 404
-            include "../app/views/" . THEME . "404.php";
+            // include "../app/views/" . THEME . "404.php";
+            include "eshop\\app\\views\\user\\404.php";
+
+            
         }
+    }
+*/
+
+    public function view($path, $data = [])
+    {
+        $fullPath = "../app/views/" . THEME .  "/" . $path . ".php";
+
+        try {
+            if (!file_exists($fullPath)) {
+                throw new Exception('View não encontrada');
+            }
+
+            require_once $fullPath;
+        } catch (Exception $e) {
+            $this->showErrorPage();
+        }
+    }
+
+    private function showErrorPage() {
+        require_once "../app/views/user/404.php";
+        // Ou redirecione para a página de erro 404 usando header() se preferir
+        // header("HTTP/1.0 404 Not Found");
+        // include "../app/views/user/404.php";
     }
 
 
