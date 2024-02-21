@@ -1,5 +1,7 @@
-<?php $this->view( "_includes/admin_header", $data); ?>
-  <!-- ======= Sidebar ======= -->
+<?php $this->view( "_includes/user_header", $data); ?>
+  
+
+<!-- ======= Sidebar ======= -->
   <aside id="sidebar" class="sidebar">
 
     <ul class="sidebar-nav" id="sidebar-nav">
@@ -883,4 +885,4 @@
     </section>
 
   </main><!-- End #main -->
-  <?php $this->view( "_includes/admin_footer", $data); ?>
+  <?php $this->view( "_includes/user_footer", $data); ?>
