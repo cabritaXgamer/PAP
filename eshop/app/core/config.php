@@ -12,7 +12,7 @@ define('DB_TYPE',"mysql");
 define('DB_HOST',"localhost");
 
 
-define('THEME', 'eshop/');
+//define('THEME', 'eshop/');
 
 define('DEBUG', true);
 
