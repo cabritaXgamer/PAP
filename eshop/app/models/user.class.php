@@ -205,41 +205,41 @@ Class User
     }*/
 
     function check_login($redirect = false, $allowed = array())
-{
-    if (!isset($_SESSION['user_url'])) {
-        if ($redirect) {
-            header("Location: " . ROOT . "login");
-            exit;
+    {
+        if (!isset($_SESSION['user_url'])) {
+            if ($redirect) {
+                header("Location: " . ROOT . "login");
+                exit;
+            }
+            return false;
         }
-        return false;
-    }
 
-    $db = Database::getInstance();
-    $url = $_SESSION['user_url'];
+        $db = Database::getInstance();
+        $url = $_SESSION['user_url'];
 
-    $query = "SELECT * FROM users WHERE url_address = :url LIMIT 1";
-    $result = $db->read($query, array('url' => $url));
+        $query = "SELECT * FROM users WHERE url_address = :url LIMIT 1";
+        $result = $db->read($query, array('url' => $url));
 
-    if (!$result) {
-        if ($redirect) {
-            header("Location: " . ROOT . "login");
-            exit;
+        if (!$result) {
+            if ($redirect) {
+                header("Location: " . ROOT . "login");
+                exit;
+            }
+            return false;
         }
-        return false;
-    }
 
-    $user = $result[0];
+        $user = $result[0];
 
-    if (!empty($allowed) && !in_array($user->role, $allowed)) {
-        if ($redirect) {
-            header("Location: " . ROOT . "login");
-            exit;
+        if (!empty($allowed) && !in_array($user->role, $allowed)) {
+            if ($redirect) {
+                header("Location: " . ROOT . "login");
+                exit;
+            }
+            return false;
         }
-        return false;
-    }
 
-    return $user;
-}
+        return $user;
+    }
 
     //Function to logout
     public function logout()
