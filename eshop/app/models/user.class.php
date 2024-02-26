@@ -15,7 +15,7 @@ class User
         $data['password']   = trim($POST['password']);
         $password2          = trim($POST['password2']);
 
-        var_dump("___________________ESTOU AQUI");
+        //var_dump("___________________ESTOU AQUI");
 
 
         //validação de email
@@ -28,10 +28,25 @@ class User
             $this->error .= "Please enter a valid name <br>";
         }
 
+
+        if ($data['password'] !== $password2) {
+            $this->error .= "password do not match <br>";
+        }
+
+        var_dump(($data['password'] !== $password2));
+
+
+
+
+
         //verificar se a password é igual a password2
         if (strlen($data['password']) < 4) {
             $this->error .= "Password must be at last 4 characters long! <br>";
         }
+
+
+        //ver se o email ja existe na base de dados
+
 
         if ($this->error == "") {
             // Para testar com a minha base de dados
@@ -44,9 +59,7 @@ class User
             $data['password'] = hash('sha1', $data['password']);
 
             $query = "insert into users (url_address,name,email,password,date,rank) values(:url_address,:name,:email,:password,:date,:rank)";
-
             //$query = "insert into users (url_address,name,email,password,date,role) values(:url_address,:name,:email,:password,:date,:role)";
-
             $db = Database::getInstance();
             $result = $db->write($query, $data);
 
