@@ -16,6 +16,7 @@
 	<link href="<?= ASSETS . THEME ?>css/main.css" rel="stylesheet">
 	<link href="<?= ASSETS . THEME ?>css/responsive.css" rel="stylesheet">
 
+	<?php show(ASSETS . THEME . "css/bootstrap.min.css")?>
 
     <!--[if lt IE 9]>
     <script src="<?= ASSETS . THEME ?>js/html5shiv.js"></script>
