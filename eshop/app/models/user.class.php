@@ -9,7 +9,7 @@ class User
     {
         //array para guardar os dados dos utilizadores
         $data = array();
-
+        $db = Database::getInstance();
         $data['name']       = trim($POST['name']);
         $data['email']      = trim($POST['email']);
         $data['password']   = trim($POST['password']);
@@ -33,26 +33,33 @@ class User
             $this->error .= "password do not match <br>";
         }
 
-        var_dump(($data['password'] !== $password2));
-
-
-
-
-
         //verificar se a password é igual a password2
         if (strlen($data['password']) < 4) {
             $this->error .= "Password must be at last 4 characters long! <br>";
         }
-
-
         //ver se o email ja existe na base de dados
+        $sql = "select * from users where email = : email limite 1";
+        $arr['email'] = $data['email'];
+        $check = $db->read($sql, $arr);
+        if (is_array($check)) {
+            $this->error .= "that email is already in use <br>";
+        }
 
+
+        $data['url_address'] = $this->get_random_string_max(60);
+        //verificar as URL 
+        $arr = false;
+        $sql = "select * from users where url_address = : url_address limite 1";
+        $arr['url_address'] = $data['url_address'];
+        $check = $db->read($sql, $arr);
+        if (is_array($check)) {
+            $data['url_address'] = $this->get_random_string_max(60);
+        }
 
         if ($this->error == "") {
             // Para testar com a minha base de dados
             //$data['role'] = "costumer";
             $data['rank'] = "custumer";
-            $data['url_address'] = $this->get_random_string_max(60);
             $data['date'] = date("Y-m-d H:i:s");
 
             //Hash a palavra passe
@@ -60,7 +67,7 @@ class User
 
             $query = "insert into users (url_address,name,email,password,date,rank) values(:url_address,:name,:email,:password,:date,:rank)";
             //$query = "insert into users (url_address,name,email,password,date,role) values(:url_address,:name,:email,:password,:date,:role)";
-            $db = Database::getInstance();
+
             $result = $db->write($query, $data);
 
 
