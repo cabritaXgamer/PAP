@@ -64,7 +64,6 @@ class User
 
             //Hash a palavra passe
             $data['password'] = hash('sha1', $data['password']);
-
             $query = "insert into users (url_address,name,email,password,date,rank) values(:url_address,:name,:email,:password,:date,:rank)";
             //$query = "insert into users (url_address,name,email,password,date,role) values(:url_address,:name,:email,:password,:date,:role)";
 
@@ -77,6 +76,7 @@ class User
                 die;
             }
         }
+        $_SESSION['error'] = $this->error;
     }
 
     function login($POST)
