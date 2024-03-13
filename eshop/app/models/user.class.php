@@ -5,11 +5,13 @@ class User
 
     private $error = "";
 
-    function signUp($POST)
+    function SignUp($POST)
     {
         //array para guardar os dados dos utilizadores
         $data = array();
         $db = Database::getInstance();
+
+
         $data['name']       = trim($POST['name']);
         $data['email']      = trim($POST['email']);
         $data['password']   = trim($POST['password']);
@@ -37,19 +39,27 @@ class User
         if (strlen($data['password']) < 4) {
             $this->error .= "Password must be at last 4 characters long! <br>";
         }
+
+
         //ver se o email ja existe na base de dados
-        $sql = "select * from users where email = : email limite 1";
+        //$sql = "select * from users where email = : email limite 1";
+        $sql = "select * from users where email = :email limit 1";
         $arr['email'] = $data['email'];
-        $check = $db->read($sql, $arr);
-        if (is_array($check)) {
-            $this->error .= "that email is already in use <br>";
+
+        $check= $db->read($sql,$arr);
+        if(is_array($check)){
+
+            $this->error .= "That email already exits! <br>";
+        
         }
 
-
         $data['url_address'] = $this->get_random_string_max(60);
+        
         //verificar as URL 
         $arr = false;
-        $sql = "select * from users where url_address = : url_address limite 1";
+        //$sql = "select * from users where url_address = : url_address limite 1";
+        $sql = "select * from users where url_address = :url_address limit 1";
+        
         $arr['url_address'] = $data['url_address'];
         $check = $db->read($sql, $arr);
         if (is_array($check)) {
@@ -58,16 +68,18 @@ class User
 
         if ($this->error == "") {
             // Para testar com a minha base de dados
-            //$data['role'] = "costumer";
-            $data['rank'] = "custumer";
+            $data['role'] = "costumer";
+            //$data['rank'] = "custumer";
             $data['date'] = date("Y-m-d H:i:s");
 
             //Hash a palavra passe
             $data['password'] = hash('sha1', $data['password']);
-            $query = "insert into users (url_address,name,email,password,date,rank) values(:url_address,:name,:email,:password,:date,:rank)";
-            //$query = "insert into users (url_address,name,email,password,date,role) values(:url_address,:name,:email,:password,:date,:role)";
+            //$query = "insert into users (url_address,name,email,password,date,rank) values(:url_address,:name,:email,:password,:date,:rank)";
+            $query = "insert into users (url_address,name,email,password,date,role) values(:url_address,:name,:email,:password,:date,:role)";            
 
-            $result = $db->write($query, $data);
+            $result = $db->write($query,$data);
+
+           
 
 
 
@@ -76,6 +88,7 @@ class User
                 die;
             }
         }
+
         $_SESSION['error'] = $this->error;
     }
 
