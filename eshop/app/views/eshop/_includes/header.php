@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title> <?= $data['page_title']?> </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title> <?= $data['page_title'] ?> </title>
 
 
 	<link href="<?= ASSETS . THEME ?>css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?= ASSETS . THEME ?>css/font-awesome.min.css" rel="stylesheet">
-    <link href="<?= ASSETS . THEME ?>css/prettyPhoto.css" rel="stylesheet">
-    <link href="<?= ASSETS . THEME ?>css/price-range.css" rel="stylesheet">
-    <link href="<?= ASSETS . THEME ?>css/animate.css" rel="stylesheet">
+	<link href="<?= ASSETS . THEME ?>css/font-awesome.min.css" rel="stylesheet">
+	<link href="<?= ASSETS . THEME ?>css/prettyPhoto.css" rel="stylesheet">
+	<link href="<?= ASSETS . THEME ?>css/price-range.css" rel="stylesheet">
+	<link href="<?= ASSETS . THEME ?>css/animate.css" rel="stylesheet">
 	<link href="<?= ASSETS . THEME ?>css/main.css" rel="stylesheet">
 	<link href="<?= ASSETS . THEME ?>css/responsive.css" rel="stylesheet">
 
-	<?php show(ASSETS . THEME . "css/bootstrap.min.css")?>
+	<?php show(ASSETS . THEME . "css/bootstrap.min.css") ?>
 
-    <!--[if lt IE 9]>
+	<!--[if lt IE 9]>
     <script src="<?= ASSETS . THEME ?>js/html5shiv.js"></script>
     <script src="<?= ASSETS . THEME ?>js/respond.min.js"></script>
-    <![endif]-->    
-	
+    <![endif]-->
+
 	<!-- O Icon nao esta assignado a nenhuma imagem -->
-   
+
 	<link rel="shortcut icon" href="<?= ASSETS . THEME ?>images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?= ASSETS . THEME ?>images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?= ASSETS . THEME ?>images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?= ASSETS . THEME ?>images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="<?= ASSETS . THEME ?>images/ico/apple-touch-icon-57-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?= ASSETS . THEME ?>images/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?= ASSETS . THEME ?>images/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?= ASSETS . THEME ?>images/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="<?= ASSETS . THEME ?>images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
 
 <body>
@@ -42,6 +43,10 @@
 							<ul class="nav nav-pills">
 								<li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
 								<li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
+								<!-- motra o utilizador ao dar entrada da na conta  -->
+
+								<li><a href="#"><i class="fa fa-user"></i> <?= $_SESSION['user_url'] ?> </a></li>
+
 							</ul>
 						</div>
 					</div>
@@ -59,7 +64,7 @@
 				</div>
 			</div>
 		</div><!--/header_top-->
-		
+
 		<div class="header-middle"><!--header-middle-->
 			<div class="container">
 				<div class="row">
@@ -78,7 +83,7 @@
 									<li><a href="#">UK</a></li>
 								</ul>
 							</div>
-							
+
 							<div class="btn-group">
 								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
 									DOLLAR
@@ -105,7 +110,7 @@
 				</div>
 			</div>
 		</div><!--/header-middle-->
-	
+
 		<div class="header-bottom"><!--header-bottom-->
 			<div class="container">
 				<div class="row">
@@ -122,20 +127,20 @@
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a href="index" class="active">Home</a></li>
 								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="shop">Products</a></li>
-										<li><a href="product-details">Product Details</a></li> 
-										<li><a href="checkout">Checkout</a></li> 
-										<li><a href="cart">Cart</a></li> 
-										<li><a href="login">Login</a></li> 
-                                    </ul>
-                                </li> 
+									<ul role="menu" class="sub-menu">
+										<li><a href="shop">Products</a></li>
+										<li><a href="product-details">Product Details</a></li>
+										<li><a href="checkout">Checkout</a></li>
+										<li><a href="cart">Cart</a></li>
+										<li><a href="login">Login</a></li>
+									</ul>
+								</li>
 								<li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="blog">Blog List</a></li>
+									<ul role="menu" class="sub-menu">
+										<li><a href="blog">Blog List</a></li>
 										<li><a href="blog-single">Blog Single</a></li>
-                                    </ul>
-                                </li> 
+									</ul>
+								</li>
 								<li><a href="404">404</a></li>
 								<li><a href="contact-us">Contact</a></li>
 							</ul>
@@ -143,11 +148,10 @@
 					</div>
 					<div class="col-sm-3">
 						<div class="search_box pull-right">
-							<input type="text" placeholder="Search"/>
+							<input type="text" placeholder="Search" />
 						</div>
 					</div>
 				</div>
 			</div>
 		</div><!--/header-bottom-->
 	</header><!--/header-->
-	

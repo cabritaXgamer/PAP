@@ -9,10 +9,11 @@ class Login extends Controller
       $data['page_title'] = "Login";
       //mostra a pagina home
       if ($_SERVER['REQUEST_METHOD'] == "POST") {
+         //
          $user = $this->load_model("User");
-         $user->slogin($_POST);
+         $user->login($_POST);
       }
-
+      //mostra a pagina do login
       $this->view("login", $data);
    }
 }

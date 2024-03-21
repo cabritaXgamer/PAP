@@ -3,10 +3,14 @@
 <section id="form" style="margin-top: 5px;"><!--form-->
 	<div class="container">
 		<div class="row" style="text-align: center;">
+
+			<span style="font-size:18px;color:red"><?php check_error() ?></span>
+
+
 			<div class="col-sm-4 col-sm-offset-1" style="float: none;display: inline-block;">
 				<div class="login-form"><!--login form-->
 					<h2>Login to your account</h2>
-					<form action="#">
+					<form method="post">
 						<input type="email" name="email" placeholder="Email Address" />
 						<input type="password" name="password" placeholder="password" />
 						<span>
