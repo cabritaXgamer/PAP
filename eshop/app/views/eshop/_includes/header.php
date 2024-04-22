@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<title> <?= $data['page_title'] ?> </title>
+	<title> <?= $data['page_title'] ?> | eShop </title>
 
 
 	<link href="<?= ASSETS . THEME ?>css/bootstrap.min.css" rel="stylesheet">
@@ -45,7 +45,7 @@
 								<li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
 								<!-- motra o utilizador ao dar entrada da na conta  -->
 
-								<li><a href="#"><i class="fa fa-user"></i> <?= $_SESSION['user_url'] ?> </a></li>
+								<li><a href="#"><i class="fa fa-user"></i> <?= $data['user_data'] ?> </a></li>
 
 							</ul>
 						</div>

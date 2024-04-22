@@ -142,4 +142,20 @@ class User
 
         return $random_string;
     }
+    // Função para verificar se um utilizador está autenticado ao recuperar os seus detalhes com base no URL armazenado na sessão.
+
+    function check_login()
+    {
+        if (isset($_SESSION['user_url'])) {
+            $arr['url'] = $_SESSION['user_url'];
+            $query = "select * from users where url_address = :url limit 1";
+            $db = Database::getInstance();
+
+            $result = $db->read($query, $arr);
+            if (is_array($result)) {
+                return $result[0];
+            }
+        }
+        return false;
+    }
 }
