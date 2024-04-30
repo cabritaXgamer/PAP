@@ -207,7 +207,6 @@
 
         </li><!-- End Messages Nav -->
         <li class="nav-item dropdown pe-3">
-
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
             <span class="d-none d-md-block dropdown-toggle ps-2"><?php echo $data['user_data']->name;  ?></span>
@@ -259,6 +258,7 @@
             <li>
               <hr class="dropdown-divider">
             </li>
+
             <!-- Made the logout -->
             <?php if(isset($data['user_data'])) : ?> 
             <li>
@@ -268,6 +268,27 @@
               </a>
             </li>
             <?php endif; ?>
+            <!-- End  logout logic-->
+
+            <!-- Example or logout or login
+                Depend if the user is authenticated or not -->
+            <!-- <?php //if(isset($data['user_data'])) : ?> 
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="logout">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
+            <?php //else: ?>
+              <li>
+              <a class="dropdown-item d-flex align-items-center" href="login">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Login</span>
+              </a>
+            </li>
+            <?php //endif; ?> -->
+            <!-- End  logout / login logic-->
+
           </ul><!-- End Profile Dropdown Items -->
         </li><!-- End Profile Nav -->
 

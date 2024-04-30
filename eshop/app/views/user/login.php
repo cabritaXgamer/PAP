@@ -64,7 +64,7 @@
                     <p class="text-center small">Enter your email & password to login</p>
 
                      <!-- Email span validation -->
-                     <span sytle="color:red"><?php check_error() ?></span>
+                     <span style="color:red"><?php check_error() ?></span>
                      
                   </div>
 
