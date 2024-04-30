@@ -229,7 +229,6 @@ Class User
         }
 
         $user = $result[0];
-
         if (!empty($allowed) && !in_array($user->role, $allowed)) {
             if ($redirect) {
                 header("Location: " . ROOT . "login");
