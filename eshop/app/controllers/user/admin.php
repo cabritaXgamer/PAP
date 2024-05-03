@@ -25,12 +25,13 @@ class Admin extends Controller
         //Rota onde esta a view que vai carregar
         $this->view("admin", $data);
 
-        /** Balance load page to force user view 
+        /*
         require ABSPATH . '/views/user/_includes/admin_header.php';
 
-        require ABSPATH . '/views/user/test.php';
+        require ABSPATH . '/views/user/index.php';
 
-        require ABSPATH . '/views/user/_includes/admin_footer.php';*/
+        require ABSPATH . '/views/user/_includes/admin_footer.php';
+        */
 
      }
 }
