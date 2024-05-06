@@ -2,20 +2,19 @@
 
 session_start();
 
+//Dynamic way to get ROOT folder
 $path = $_SERVER['REQUEST_SCHEME'] . "://". $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF'];
 $path = str_replace("index.php", "", $path);
 
-//Define constant to ROOT folder
+//Definiton to ROOT project
 define('ROOT', $path);
-
-//Define constant to ASSETS folder
-define ('ASSETS', $path . "assets/");
-
-//Define constant to TEMPLATE folder
-define('THEME', 'eshop/');
+//Definition to assets folder
+define('ASSETS', $path . "assets/carserv/");
 
 include "../app/init.php";
-//show($_SERVER);
+
+
+//show(ASSETS);
 
 $app = new App();
 
