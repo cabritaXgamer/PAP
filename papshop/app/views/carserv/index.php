@@ -44,7 +44,7 @@
 
                         <!-- Header Logo Start -->
                         <div class="header-logo">
-                            <a href="index.html"><img src="assets/images/logo.png" alt="Logo"></a>
+                            <a href="index.html"><img src="<?= ASSETS . THEME ?>/images/logo.png" alt="Logo"></a>
                         </div>
                         <!-- Header Logo End -->
 
@@ -121,7 +121,7 @@
                                                 <!-- Single Cart Item Start -->
                                                 <div class="single-cart-item">
                                                     <div class="cart-thumb">
-                                                        <img src="assets/images/mini-cart/cart-1.jpg" alt="Cart">
+                                                        <img src="<?= ASSETS . THEME ?>/images/mini-cart/cart-1.jpg" alt="Cart">
                                                         <span class="product-quantity">1x</span>
                                                     </div>
                                                     <div class="cart-item-content">
