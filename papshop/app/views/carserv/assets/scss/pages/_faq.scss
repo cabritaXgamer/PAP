@@ -1,0 +1,94 @@
+/*--
+/*  4.22 - FAQ'S CSS
+/*----------------------------------------*/
+
+// FAQ Accordion 
+.faq-accordion{
+    padding-top: 50px;
+
+    & .accordion{}
+
+    // Accordion Item
+    & .accordion-item{
+        border-radius: 2px !important;
+        margin-top: 20px;
+        border: 1px solid #c9d9fc !important;
+
+        & button{
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding: 17px 30px;
+            padding-right: 55px;
+            font-size: 24px;
+            font-weight: 500;
+            font-family: $heading-font;
+            border: 0;
+            color: $white;
+            background-color: $primary;
+            border-bottom: 1px solid #c9d9fc;
+            transition: $transition-default;
+            position: relative;
+
+            @media #{$large-mobile}{
+                font-size: 20px;
+            }
+            @media #{$small-mobile}{
+                font-size: 16px;
+                padding: 12px 20px;
+                padding-right: 45px;
+            }
+
+            &::before{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 30px;
+                content: '\eab9';
+                font-family: IcoFont;
+                transition: $transition-default;
+                color: $white;
+
+                @media #{$small-mobile}{
+                    right: 20px;
+                }
+            }
+            
+            &.collapsed{
+                color: $body-color;
+                background-color: transparent;
+                border-bottom-color: transparent;
+                transition: $transition-default;
+                
+                &::before{
+                    content: '\ea99';
+                    color: $body-color;
+                }
+            }
+        }
+        & .accordion-body{
+            padding: 25px 30px;
+            
+            &.show{}
+
+            & p{
+                line-height: 1.75;
+                
+                & + p{
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
+
+// FAQ Button
+.faq-btn{
+    padding-top: 80px;
+    text-align: center;
+
+    @media #{$large-mobile}{
+        padding-top: 40px;
+    }
+}
+

@@ -1,0 +1,96 @@
+/*--
+/*  3.1 - Header Top CSS
+/*----------------------------------------*/
+
+// Header Top 
+.header-top {}
+
+// Header Top Wrapper
+.header-top-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 10px;
+
+    @media #{$tablet-device, $large-mobile}{
+        display: block;
+        text-align: center;
+    }
+}
+
+// Header Top Info
+.header-top-info {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 5px;
+
+    @media #{$tablet-device, $large-mobile}{
+        display: block;
+        text-align: center;
+        padding: 5px 20px 0;
+    }
+        
+    & p{
+        font-size: 14px;
+        font-weight: 500;
+        color: $body-color;
+        position: relative;
+
+        & + p{
+            &::before{
+                content: '||';
+                color: $body-color;
+                font-size: 16px;
+                margin: 0 8px;
+                position: relative;
+                top: -1px;
+
+                @media #{$tablet-device, $large-mobile}{
+                    display: none;
+                }
+            }
+        }
+
+        & a{
+            font-weight: 700;
+            color: $secondary;
+        }
+    }
+}
+
+
+// Header Top Button
+.header-top-btn{
+    padding-top: 5px;
+
+    @media #{$tablet-device, $large-mobile}{
+        text-align: center;
+    }
+
+    & a{
+        font-size: 14px;
+        font-weight: 500;
+        color: $body-color;
+        position: relative;
+
+        & + a{
+            &::before{
+                content: '/';
+                color: $body-color;
+                font-size: 16px;
+                margin: 0 2px;
+                position: relative;
+            }
+        }
+
+        &:hover{
+            color: #858484;
+        }
+    }
+}
+
+
+
+

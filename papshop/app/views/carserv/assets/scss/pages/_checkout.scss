@@ -1,0 +1,322 @@
+/*--
+/*  4.25 - Checkout CSS
+/*----------------------------------------*/
+
+
+// Checkout Info 
+.checkout-wrapper{
+    margin-top: -30px;
+}
+
+// Checkout Info 
+.checkout-info{
+    margin-top: 30px;
+
+    & .info-header{
+        padding: 14px 30px;
+        margin: 0;
+        position: relative;
+        background-color: #eeeff2;
+        list-style: none outside !important;
+        width: auto;
+        word-wrap: break-word;
+        color: $black;
+        font-size: 14px;        
+        
+        & strong{
+            font-weight: 700;
+            color: $black;
+        }
+        & i{
+            font-size: 13px;
+            color: #6dde6d;
+            margin-right: 10px;
+        }
+        & a{
+            color: $black;
+            transition: all 0.3s linear;
+
+            &:hover{
+                color: $primary;
+            }
+        }
+
+        &.error{
+            & i{
+                color: #c43002;
+            }
+        }
+    }
+    & .card-body{
+        padding: 0;
+        
+        & p{
+            font-size: 14px;
+            color: $body-color;
+            padding-top: 25px;
+        }
+
+        & .single-form{
+            margin-top: 25px;
+
+            & .form-check{
+                margin-left: 20px;
+            }
+        }
+
+        & .forget{
+            margin-top: 15px;
+
+            & a{
+                font-weight: 400;
+                color: $body-color;
+                transition: all 0.3s linear;
+                text-decoration: none;
+                font-size: 14px;
+
+                &:hover{
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
+// Checkout Title 
+.checkout-title{
+    & .title{
+        font-size: 24px;
+        color: $heading-color;
+        position: relative;     
+        
+        &::after{           
+            content: "";
+            width: 50px;
+            display: block;
+            margin-top: 5px;
+            border-bottom: 2px solid $heading-color;          
+        }
+    }
+}
+
+// Checkout Form 
+.checkout-form{
+    margin-top: 40px;
+
+    & .checkout-checkbox{
+        margin-bottom: 0;
+        min-height: inherit;
+        margin-top: 30px;
+
+        & .form-check-input{
+            margin-top: -1px;
+        }
+    }
+
+    & .single-form{
+        margin-top: 30px;
+
+        & input{
+            & + input{
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+// checkout Account
+.checkout-account{
+    display: none;
+}
+
+// checkout Shipping
+.checkout-shipping{
+    display: none;
+}
+
+// checkout Note
+.checkout-note{
+    & textarea{
+        border: 0;
+        background-color: #f7f7f7;
+    }
+}
+
+// Checkout Order 
+.checkout-order{
+    border: 2px solid rgba($primary, 0.1);
+    padding: 40px;
+    margin-top: 50px;
+
+    @media #{$large-mobile}{
+        padding: 40px;
+    }
+
+    @media #{$small-mobile}{
+        padding: 20px;
+    }
+
+    & ul{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    & .table{
+        margin-bottom: 0;
+
+        & thead{
+            & tr{
+                & th{
+                    padding: 10px 0;
+                    border-top: 0;
+                    border-bottom: 1px solid #e1e1e1;
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: $black;
+                    vertical-align: middle;
+
+                    &.Product-name{}     
+                    &.Product-price{
+                        text-align: right;
+                    }
+                }
+            }
+        }
+
+        & tbody{
+            & tr{
+                & td{
+                    padding: 5px 0;
+                    border-top: 0;
+                    vertical-align: middle;
+
+                    & p{
+                        font-weight: 400;
+                        font-size: 14px;
+                        color: $black;
+                    }
+
+                    &.Product-name{}     
+                    &.Product-price{
+                        text-align: right;
+                    }
+                }
+                &:first-child{
+                    & td{
+                        padding-top: 20px;
+                    }
+                }
+                &:last-child{
+                    & td{
+                        padding-bottom: 20px;
+                    }
+                }
+            }
+        }
+
+        & tfoot{
+            & tr{
+                & td{
+                    padding: 10px 0;
+                    vertical-align: middle;
+
+                    & p{
+                        font-weight: 400;
+                        font-size: 14px;
+                        color: $black;
+                    }
+
+                    &.Product-name{}     
+                    &.Product-price{
+                        text-align: right;
+
+                        & .shipping-list{
+                            & .radio{
+                                & input[type="radio"]{
+                                    + label {
+                                        padding-left: 0;
+                                        white-space: pre-wrap;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.total-price{                        
+                        text-align: right;
+
+                        & p{
+                            font-size: 18px;
+                        }
+                    }
+                    & .cus-radio{                        
+                        & label{
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Checkout payment 
+.checkout-payment{
+    margin-top: 30px;
+
+    & ul{
+        & li{
+            margin-bottom: 3px;
+            :last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    & .single-payment{
+        & .payment-radio{
+
+            & input[type="radio"]{
+                + label {
+                    & span{
+                        top: 9px;
+                    }
+                }
+            } 
+            & label{
+                line-height: 32px;
+                margin-bottom: 0;
+
+                & .payment{
+                    width: 100px;
+                    padding: 0 2px;
+                }
+                & a{
+                    color: $black;
+                    text-decoration: underline;
+                    text-transform: capitalize;
+                }
+            }
+            & .payment-details{
+                display: none;
+                padding: 5px 0;
+
+                & p{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    & .checkout-btn{
+        margin-top: 20px;
+    }
+}
+
+
+
+
+
+
+

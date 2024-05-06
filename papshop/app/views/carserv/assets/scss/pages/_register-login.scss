@@ -1,0 +1,63 @@
+/*--
+/*  4.20 - Registration & Login Form CSS
+/*----------------------------------------*/
+
+
+// Register & Login Wrapper
+.register-login-wrapper{}
+
+
+// Register & Login Form
+.register-login-form{
+    margin-top: -5px;
+
+    & .title{
+        font-size: 28px;
+        line-height: 1.1;
+
+        @media #{$large-mobile}{
+            font-size: 24px;
+        }
+        @media #{$small-mobile}{
+            font-size: 20px;
+        }
+
+        & span{
+            color: $primary;
+            position: relative;
+        }
+    }
+
+    & .form-wrapper{}
+
+    & .single-form{
+        margin-top: 30px;
+        
+        & .btn{
+            & + .btn{
+                margin-top: 30px;
+            }
+
+            &::before{
+                width: 600px;
+                height: 600px;
+            }
+        }
+    }
+
+    & p{
+        font-size: 16px;
+        margin-top: 25px;
+        text-align: center;
+
+        & + p{
+            margin-top: 5px;
+        }
+    }
+}
+
+
+
+
+
+

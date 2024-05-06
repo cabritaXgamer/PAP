@@ -1,0 +1,155 @@
+/*--
+/*  4.7 - Testimonials CSS
+/*----------------------------------------*/
+
+
+// Testimonials Wrapper
+.testimonials-wrapper{
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+
+    @media #{$tablet-device, $large-mobile}{
+        display: block;
+    }
+    @media #{$large-mobile}{
+        border-radius: 15px;
+    }
+}
+
+// Testimonials Title
+.testimonials-title{
+    width: 43.5%;
+    background-color: #cee3f3;
+    padding: 60px;
+
+    @media #{$desktop-device, $large-mobile}{
+        padding: 40px;
+    }
+
+    @media #{$tablet-device, $large-mobile}{
+        width: 100%;
+    }
+    @media #{$small-mobile}{
+        padding: 30px;
+    }
+    
+    & .section-title{
+        margin-top: 0;
+        
+        & .sub-title{}
+        & .main-title{}
+    }
+}
+
+// Testimonials Items
+.testimonials-items{
+    width: 56.5%;
+    background-color: $primary;
+    overflow: hidden;
+    position: relative;
+    padding: 45px 80px;
+
+    @media #{$desktop-device, $large-mobile}{
+        padding: 40px;
+    }
+    @media #{$tablet-device, $large-mobile}{
+        width: 100%;
+    }
+    @media #{$small-mobile}{
+        padding: 30px;
+    }
+
+    & .shape{
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        opacity: 0.1;
+    }
+    & .quote{
+        position: absolute;
+        bottom: 25px;
+        right: 40px;
+        opacity: 0.85;
+        width: 55px;
+
+        @media #{$small-mobile}{
+            right: 15px;
+            bottom: 15px;
+        }
+    }
+}
+
+// Single Testimonials 
+.single-testimonials{
+    text-align: center;
+
+    & .author{
+        width: 95px;
+        border: 2px solid $white;
+        border-radius: 50%;
+    }
+    & .name{
+        font-size: 28px;
+        font-family: $heading-font;
+        font-weight: 700;
+        color: $white;
+        margin-top: 18px;
+
+        @media #{$small-mobile}{
+            font-size: 22px;
+        }
+    }
+    & p{
+        color: $white;
+        font-size: 18px;
+        margin-top: 10px;
+        line-height: 1.66;
+
+        @media #{$small-mobile}{
+            font-size: 16px;
+        }
+    }
+    & .rating{
+        padding-top: 15px;
+        
+        & i{
+            font-size: 14px;
+            color: $white;
+            margin: 0 1px;
+        }
+    }    
+}
+
+
+// Testimonials Active
+.testimonial-active{
+    position: relative;
+
+    & .swiper-pagination{
+        left: 25px;
+        bottom: 25px;
+        z-index: 1;
+
+        & .swiper-pagination-bullet {
+            width: 11px;
+            height: 11px;
+            border: 1px solid $white;
+            background: none;
+            opacity: 1;
+            margin: 0 5px;
+            outline: none;
+
+            &.swiper-pagination-bullet-active{
+                background-color: $white;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+

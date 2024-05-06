@@ -1,0 +1,140 @@
+/*--
+/*  5.2 - Footer Widget CSS
+/*----------------------------------------*/
+
+// Footer Widget Section
+.footer-widget-section {}
+
+// Footer Widget Section
+.footer-widget-wrapper {
+    margin-top: -50px;
+}
+
+// Footer Widget
+.footer-widget-title{
+    font-size: 28px;
+    font-weight: 600;
+    color: $white;
+    padding-top: 10px;
+
+    @media #{$small-mobile}{
+        font-size: 22px;
+    }
+}
+
+// Footer Widget
+.footer-widget {
+    margin-top: 50px;    
+
+
+    & .footer-logo{
+        margin-bottom: 15px;
+    }
+    & p{
+        color: #f2f2f2;
+        font-weight: 300;
+        margin-top: 5px;
+
+        & span{
+            font-weight: 400;
+        }
+    }
+    & .title{
+        font-size: 18px;
+        font-weight: 700;
+        color: $white;
+        margin-top: 20px;
+        padding-bottom: 5px;
+    }
+
+    & .widget-info{
+        & p{
+            font-size: 14px;
+        }
+    }
+
+    & .widget-link{
+        padding-top: 10px;
+
+        & li{
+            margin-top: 10px;
+
+            & a{
+                color: #f2f2f2;
+                font-weight: 300;
+            }
+        }
+    }
+
+    & .widget-subscribe{
+        padding-top: 15px;
+
+        & .subscribe-form{
+            position: relative;
+            margin-top: 20px;
+
+            & input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]){
+                border: 2px solid #3f75e5;
+                border-radius: 5px;
+                padding-left: 20px;
+                padding-right: 60px;
+                background: none;
+                color: $white;
+
+                @include placeholder{
+                    opacity: 1;
+                    color: #c4c4c4;
+                }
+
+                &:focus{
+                    border-color: $white;
+                }
+            }
+            & button{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 50px;
+                height: 50px;
+                border: 0;
+                background-color: $white;
+                font-size: 16px;
+                color: $primary;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                padding: 0;
+            }
+        }
+    }
+    
+    & .widget-opening{
+        & p{
+            font-size: 14px;
+
+            & i{
+                margin: 0 2px;
+            }
+        }
+    }
+}
+
+
+// Footer Link Wrapper
+.footer-link-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+
+    @media #{$extraBig-device, $laptop-device}{
+        padding-left: 45px;
+    }
+
+    @media #{$tablet-device, $large-mobile}{
+        justify-content: flex-end;
+    }
+
+    & .footer-widget {
+        width: 50%;
+    }
+}
+
+

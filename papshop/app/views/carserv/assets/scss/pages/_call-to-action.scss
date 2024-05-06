@@ -1,0 +1,97 @@
+/*--
+/*  4.4 - Call To Action CSS
+/*----------------------------------------*/
+
+
+// Call to Action Wrapper
+.call-to-action-wrapper{
+    background-color: $primary; 
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    border-radius: 30px;
+
+    @media #{$tablet-device, $large-mobile}{
+        display: block;
+    }
+    @media #{$large-mobile}{
+        border-radius: 15px;
+    }
+}
+
+
+// Call to Action Content
+.call-to-action-content{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 40px 70px;
+    height: 385px;  
+
+    @media #{$desktop-device, $large-mobile}{
+        padding: 40px;
+    }
+
+    @media #{$tablet-device, $large-mobile}{
+        width: 100%;
+    }
+    @media #{$small-mobile}{
+        padding: 30px;
+    }
+
+    & .shape{
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        opacity: 0.15;
+    }
+
+    & .content-wrapper{
+        & .section-title{
+            & .sub-title{}
+            & .main-title{
+                margin-top: 20px;
+            }
+        }
+        & p{
+            color: #d8d6d6;
+            margin-top: 20px;
+        }
+
+        & .btn{
+            margin-top: 32px;
+            border-bottom-color: $white;
+
+            &:hover{
+                border-bottom-color: $secondary;
+            }
+        }
+    }
+}
+
+// Call to Action Images
+.call-to-action-images{
+    width: 50%;
+    height: 385px;  
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media #{$tablet-device, $large-mobile}{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

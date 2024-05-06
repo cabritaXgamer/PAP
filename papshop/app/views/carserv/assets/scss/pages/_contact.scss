@@ -1,0 +1,159 @@
+/*--
+/*  4.19 - Contact Us CSS
+/*----------------------------------------*/
+
+
+// Contact Wrapper
+.contact-wrapper{
+    margin-top: -50px;
+}
+
+
+// Contact Image
+.contact-image{
+    padding-right: 40px;
+    margin-top: 50px;    
+
+    @media #{$tablet-device, $large-mobile}{
+        padding-right: 0;
+    }
+
+    & img{
+        width: 100%;
+        border-radius: 30px;
+        border-bottom: 3px solid $secondary;
+
+        @media #{$large-mobile}{
+            border-radius: 15px;
+        }
+    }
+}
+
+// Contact Content 
+.contact-content{
+    margin-top: 50px;
+    
+    & .title{
+        font-size: 52px;
+        font-weight: 700;
+        color: $primary;
+        line-height: 1;
+        margin-top: -5px;
+
+        @media #{$desktop-device}{
+            font-size: 48px;
+        }
+        @media #{$small-mobile}{
+            font-size: 34px;
+        }
+    }
+    & .sub-title{
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 1.2;
+        margin-top: 5px;
+
+        @media #{$large-mobile}{
+            font-size: 22px;
+        }
+    }
+}
+
+// Content Info 
+.content-info{
+    & .single-info{
+        padding-top: 40px;
+
+        & .info-title{
+            font-size: 28px;
+            font-weight: 700;
+            color: $primary;
+        }
+        & p{
+            font-size: 18px;
+        }
+        & .social{
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 15px;
+
+            & li{
+                margin-right: 15px;
+
+                &:last-child{
+                    margin-right: 0;
+                }
+
+                & a{
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    background-color: #c9d9fc;
+                    border-radius: 50%;
+                    text-align: center;
+                    color: $primary;
+                    font-size: 16px;
+                    border: 0;
+
+                    &:hover{
+                        background-color: $primary;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Form Message 
+.form-message{
+    margin-bottom: 0;
+    display: inline-block;
+
+    &.error,
+    &.success {
+        font-size:16px;
+        color:$heading-color;
+        background:#ddd;
+        padding:10px 15px;
+        margin-left:15px;
+        margin-top:15px;
+    }
+    &.error {
+        color:red
+    }
+}
+
+// Contact Form Wrapper 
+.contact-form-wrapper{
+    max-width: 770px;
+    margin: -10px auto 0;
+
+    & .title{
+        font-size: 28px;
+        font-weight: 700;
+        color: $body-color;
+        line-height: 1.2;
+    }
+
+    & .form-wrapper{
+        margin-top: -11px;
+    }
+    & .single-form{
+        margin-top: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
