@@ -5,7 +5,7 @@ define("WEBSITE_TITLE", 'MY SHOP');
 //nome da database
 
 // TODO: tenho que alterar para a minha base de dados
-define('DB_NAME', "pap_db");
+define('DB_NAME', "lmgdb");
 define('DB_USER', "root");
 define('DB_PASS', "");
 define('DB_TYPE',"mysql");
