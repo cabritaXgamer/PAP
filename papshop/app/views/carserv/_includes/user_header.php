@@ -16,7 +16,6 @@
 
     <!-- Icon Font CSS -->
     <link rel="stylesheet" href="assets/css/plugins/font-awesome.min.css">
-   
     <link rel="stylesheet" href="assets/css/plugins/icofont.min.css">
 
     <!-- Plugins CSS -->
