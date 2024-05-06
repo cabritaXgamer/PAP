@@ -1,5 +1,5 @@
        <!-- Footer Section Start -->
-       <div class="section footer-section" style="background-image: url(assets/images/footer-bg.jpg);">
+       <div class="section footer-section" style="background-image: url(<?= ASSETS . THEME ?>/images/footer-bg.jpg);">
 
 <!-- Footer Widget Start -->
 <div class="footer-widget-section section-padding">
@@ -12,7 +12,7 @@
 
                     <!-- Footer Widget Start -->
                     <div class="footer-widget" data-aos="fade-up" data-aos-delay="100">
-                        <a class="footer-logo" href="#"><img src="assets/images/logo.png" alt="Logo"></a>
+                        <a class="footer-logo" href="#"><img src="<?= ASSETS . THEME ?>/images/logo.png" alt="Logo"></a>
                         <p>Trusted and reliable service is our to main goal extremely painful. again a there anyone loves our chooses</p>
 
                         <div class="widget-info">
@@ -139,26 +139,26 @@
 ============================================ -->
 
 <!-- Modernizer & jQuery JS -->
-<script src="assets/js/vendor/modernizr-3.11.2.min.js"></script>
-<script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+<script src="<?= ASSETS . THEME ?>/js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="<?= ASSETS . THEME ?>/js/vendor/jquery-3.6.0.min.js"></script>
 
 <!-- Bootstrap JS -->
-<script src="assets/js/plugins/popper.min.js"></script>
-<script src="assets/js/plugins/bootstrap.min.js"></script>
+<script src="<?= ASSETS . THEME ?>/js/plugins/popper.min.js"></script>
+<script src="<?= ASSETS . THEME ?>/js/plugins/bootstrap.min.js"></script>
 
 <!-- Plugins JS -->
-<script src="assets/js/plugins/swiper-bundle.min.js"></script>
-<script src="assets/js/plugins/jquery-ui.min.js"></script>
-<script src="assets/js/plugins/select2.min.js"></script>
-<script src="assets/js/plugins/ajax-contact.js"></script>
-<script src="assets/js/plugins/aos.js"></script>
+<script src="<?= ASSETS . THEME ?>/js/plugins/swiper-bundle.min.js"></script>
+<script src="<?= ASSETS . THEME ?>/js/plugins/jquery-ui.min.js"></script>
+<script src="<?= ASSETS . THEME ?>/js/plugins/select2.min.js"></script>
+<script src="<?= ASSETS . THEME ?>/js/plugins/ajax-contact.js"></script>
+<script src="<?= ASSETS . THEME ?>/js/plugins/aos.js"></script>
 
 <!--====== Use the minified version files listed below for better performance and remove the files listed above ======-->
 <!-- <script src="assets/js/plugins.min.js"></script> -->
 
 
 <!-- Main JS -->
-<script src="assets/js/main.js"></script>
+<script src="<?= ASSETS . THEME ?>/js/main.js"></script>
 
 </body>
 

@@ -9,7 +9,7 @@ $path = str_replace("index.php", "", $path);
 //Definiton to ROOT project
 define('ROOT', $path);
 //Definition to assets folder
-define('ASSETS', $path . "assets/carserv/");
+define('ASSETS', $path . "assets/");
 
 include "../app/init.php";
 

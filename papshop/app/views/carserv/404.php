@@ -17,6 +17,7 @@
     <!-- Icon Font CSS -->
     <link rel="stylesheet" href="assets/css/plugins/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/plugins/icofont.min.css">
+    <?php show(ASSETS . THEME . "assets/css/plugins/font-awesome.min.css")?>
 
     <!-- Plugins CSS -->
     <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css">
