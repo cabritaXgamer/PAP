@@ -158,4 +158,12 @@ class User
         }
         return false;
     }
+    public function logout()
+    {
+        if (isset($_SESSION['user_url'])) {
+            unset($_SESSION['user_url']);
+        }
+        header("location: " . ROOT . "home");
+        die;
+    }
 }

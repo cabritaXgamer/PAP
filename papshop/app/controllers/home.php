@@ -1,5 +1,6 @@
 <?php
 
+// Controlador responsável por exibir a página inicial e verificar o status de login do usuário.
 class Home extends Controller
 {
    // Método index para renderizar a página inicial
@@ -7,11 +8,9 @@ class Home extends Controller
    {
       // Carrega o modelo de usuário e verifica o status de login
       $User = $this->load_model('User');
-      $data['user_data'] = $User->check_login();
-
-      // Verifica se os dados do usuário são um array antes de atribuí-los
-      if (is_array($data['user_data'])) {
-         $data['user_data'] = $data['user_data'];
+      $user_data = $User->check_login();
+      if (is_array($user_data)) {
+         $data['user_data'] = $user_data;
       }
 
       // Define o título da página
