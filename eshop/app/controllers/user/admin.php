@@ -23,7 +23,7 @@ class Admin extends Controller
         //$this->title = 'Admin - Dashboard';
         $data['page_title'] = "Test Admin Section";
         //Rota onde esta a view que vai carregar
-        $this->view("admin", $data);
+        $this->view("../admin/admin_test", $data);
 
         /*
         require ABSPATH . '/views/user/_includes/admin_header.php';
@@ -32,6 +32,5 @@ class Admin extends Controller
 
         require ABSPATH . '/views/user/_includes/admin_footer.php';
         */
-
      }
 }

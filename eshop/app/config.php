@@ -11,6 +11,8 @@ define('DB_HOST', "localhost");
 
 
 define('THEME', 'user/');
+
+
 //define('INCLUDES_THEME', "_includes/")
 
 

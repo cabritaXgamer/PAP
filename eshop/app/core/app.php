@@ -27,10 +27,25 @@ class App
             unset($url[0]);
         }
 
-        //Senao encontrar o controlador ele vai para a home
-        require "../app/controllers/user/" . $this->controller . ".php";
-        $this->controller = new $this->controller;
-        
+         //Senao encontrar o controlador ele vai para a home
+         require "../app/controllers/user/" . $this->controller . ".php";
+         $this->controller = new $this->controller;
+
+        // Verifica se o arquivo do controlador existe dentro da pasta 'user'
+        // if(file_exists("../app/controllers/user/" . strtolower($url[0]) . ".php")) {
+        //     $this->controller = "user\\" . strtolower($url[0]); // Prefixa 'user\' ao nome do controlador
+        //     unset($url[0]);
+        // } elseif(file_exists("../app/controllers/admin/" . strtolower($url[0]) . ".php")) {
+        //     // Se não existir dentro de 'user', verifica dentro da pasta 'admin'
+        //     $this->controller = "admin\\" . strtolower($url[0]); // Prefixa 'admin\' ao nome do controlador
+        //     unset($url[0]);
+        // }
+
+        // Carrega o controlador correspondente
+        // require_once "../app/controllers/" . str_replace("\\", "/", $this->controller) . ".php";
+        // $this->controller = new $this->controller;
+
+
         //Aqui vamos procurar um metodo dentro do controldaor no array pos [1] da URL
         if(isset($url[1]))
         {
