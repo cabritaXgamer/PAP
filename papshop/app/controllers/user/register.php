@@ -1,11 +1,12 @@
 <?php
 
-class Signup extends Controller
+class Register extends Controller
 {
 
    public function index()
    {
       $data['page_title'] = "Signup";
+
       //mostra a pagina home
       if ($_SERVER['REQUEST_METHOD'] == "POST") {
          show($_POST);
@@ -14,6 +15,6 @@ class Signup extends Controller
          $User->signup($_POST);
       }
 
-      $this->view("signup", $data);
+      $this->view("register", $data);
    }
 }
