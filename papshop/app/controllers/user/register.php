@@ -9,7 +9,7 @@ class Register extends Controller
 
       //mostra a pagina home
       if ($_SERVER['REQUEST_METHOD'] == "POST") {
-         show($_POST);
+         //show($_POST);
 
          $User = $this->load_model("User");
          $User->signup($_POST);

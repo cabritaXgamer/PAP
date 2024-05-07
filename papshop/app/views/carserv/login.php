@@ -50,20 +50,20 @@
                                 <h3 class="title">Login <span>Now</span></h3>
 
                                 <div class="form-wrapper">
-                                    <form action="#">
+                                    <form method="post">
                                         <!-- Single Form Start -->
                                         <div class="single-form">
-                                            <input type="email" placeholder="Username or Email">
+                                            <input type="email" name="email"  class="form-control" required placeholder="Email" value="<?= isset($_POST['email']) ? $_POST['email'] : ''; ?>">
                                         </div>
                                         <!-- Single Form End -->
                                         <!-- Single Form Start -->
                                         <div class="single-form">
-                                            <input type="password" placeholder="Password">
+                                            <input type="password" name="password" placeholder="Password">
                                         </div>
                                         <!-- Single Form End -->
                                         <!-- Single Form Start -->
                                         <div class="single-form">
-                                            <button class="btn btn-custom-01 w-100">Login</button>
+                                            <button type="submit" class="btn btn-custom-01 w-100">Login</button>
                                             <a class="btn btn-custom-02 w-100" href="#">Login with Google</a>
                                         </div>
                                         <!-- Single Form End -->

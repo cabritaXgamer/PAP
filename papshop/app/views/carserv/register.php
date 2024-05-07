@@ -48,34 +48,34 @@
                                 <h3 class="title">Registration <span>Now</span></h3>
 
                                 <div class="form-wrapper">
-                                    <form action="post">
+                                    <form method= "post">
                                         <!-- Single Form Start -->
                                         <div class="single-form">
-                                            <input type="text" placeholder="Name">
+                                            <input type="text" name="name" placeholder="Name" value="<?= isset($_POST['name']) ? $_POST['name'] : ''; ?>">
                                         </div>
                                         <!-- Single Form End -->
                                         <!-- Single Form Start -->
                                         <div class="single-form">
-                                            <input type="email" placeholder="Email">
+                                            <input type="email" name="email" placeholder="Email">
                                         </div>
                                         <!-- Single Form End -->
                                         <!-- Single Form Start -->
                                         <div class="single-form">
-                                            <input type="password" placeholder="Password">
+                                            <input type="password" name="password" placeholder="Password">
                                         </div>
                                         <!-- Single Form End -->
                                         <!-- Single Form Start -->
                                         <div class="single-form">
-                                            <input type="password" placeholder="Confirm Password">
+                                            <input type="password" name="password2" placeholder="Confirm Password">
                                         </div>
                                         <!-- Single Form End -->
                                         <!-- Single Form Start -->
                                         <div class="single-form">
-                                            <button class="btn btn-custom-01 w-100">Create an account</button>
+                                            <button type="submit" class="btn btn-custom-01 w-100">Create an account</button>
                                             <a class="btn btn-custom-02 w-100" href="#">Sign up with Google</a>
                                         </div>
                                         <!-- Single Form End -->
-                                        <p>Already have an account? <a href="login.html">Log in instead!</a></p>
+                                        <p>Already have an account? <a href="login">Log in instead!</a></p>
                                     </form>
                                 </div>
                             </div>
