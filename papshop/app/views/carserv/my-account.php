@@ -1,7 +1,7 @@
 <?php $this->view( "_includes/user_menu", $data); ?>
 
         <!-- Page Banner Section Start -->
-        <div class="section page-banner-section" style="background-image: url(assets/images/page-banner-bg.png);">
+        <div class="section page-banner-section" style="background-image: url(<?= ASSETS . THEME ?>/page-banner-bg.png);">
             <div class="container">
                 <!-- Page Banner Wrapper Start -->
                 <div class="page-banner-wrapper">
@@ -25,7 +25,7 @@
 
                     <!-- Page Banner Images Start -->
                     <div class="page-banner-images">
-                        <img src="assets/images/page-banner-3.png" alt="Page Banner">
+                        <img src="<?= ASSETS . THEME ?>/page-banner-3.png" alt="Page Banner">
                     </div>
                     <!-- Page Banner Images End -->
 
