@@ -24,4 +24,8 @@ class Home extends Controller
         $this->view("index", $data);
 
      }
+
+     public function login(){
+      echo ("Estou aqui com o login");
+     }
 }
