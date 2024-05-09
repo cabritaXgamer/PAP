@@ -3,7 +3,7 @@
 define("WEBSITE_TITLE", 'MY PAGE');
 
 //Database config
-define('DB_NAME', "lmgdb");
+define('DB_NAME', "carshop");
 define('DB_USER', "root");
 define('DB_PASS', "");
 define('DB_TYPE', "mysql");
