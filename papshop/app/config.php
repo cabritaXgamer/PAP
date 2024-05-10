@@ -12,6 +12,7 @@ define('DB_HOST', "localhost");
 
 define('THEME', 'carserv');
 
+define('ADMIN_THEME', 'admin');
 
 //define('INCLUDES_THEME', "_includes/")
 

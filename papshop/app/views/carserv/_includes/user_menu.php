@@ -121,6 +121,7 @@
                                     <a href="#">Profile</a>
                                     <ul class="sub-menu">
                                         <li><a href="profile">My Account</a></li>
+                                        <li><a href= "<?php ROOT ?>admin">Admin Section</a></li>
                                         <li><a href="logout">Logout</a></li>
                                     </ul>
                                     <?php endif ?>
