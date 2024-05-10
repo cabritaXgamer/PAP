@@ -25,7 +25,4 @@ class Home extends Controller
 
      }
 
-     public function login(){
-      echo ("Estou aqui com o login");
-     }
 }
