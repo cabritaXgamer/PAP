@@ -9,14 +9,14 @@ class Home extends Controller
      {
         
         $User = $this->load_model('User');
-        //$user_data = $User->check_login(true);
+        $user_data = $User->check_login(true);
 
         //validate if the user is really log in
-        // if(is_object($user_data))
-        // {
-        //     $data['user_data'] = $user_data;
-        //     //show($data['user_data']);
-        // }
+        if(is_object($user_data))
+        {
+            $data['user_data'] = $user_data;
+            //show($data['user_data']);
+        }
 
         //$this->title = 'Admin - Dashboard';
         $data['page_title'] = "Home - Dashboard";
