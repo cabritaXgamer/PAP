@@ -7,7 +7,7 @@ class Controller
     {
         $fullPath = "../app/views/" . THEME .  "/" . $path . ".php";
         
-        show($fullPath);
+        //show($fullPath);
 
         try {
             if (!file_exists($fullPath)) {
