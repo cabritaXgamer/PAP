@@ -6,6 +6,8 @@ class Controller
     public function view($path, $data = [])
     {
         $fullPath = "../app/views/" . THEME .  "/" . $path . ".php";
+        
+        //show($fullPath);
 
         try {
             if (!file_exists($fullPath)) {
