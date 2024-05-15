@@ -18,13 +18,13 @@ define('ADMIN_THEME', 'admin');
 
 
 // Caminho para a raiz
-define( 'ABSPATH', dirname( __FILE__ ) );
+define('ABSPATH', dirname(__FILE__));
 
 
 define('DEBUG', true);
 
-if(DEBUG){
+if (DEBUG) {
     ini_set('display_errors', 1);
-}else{
+} else {
     ini_set('display_errors', 0);
 }

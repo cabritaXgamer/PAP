@@ -12,7 +12,7 @@
             <div class="slider-content">
                 <h5 class="sub-title" data-aos="fade-up" data-aos-delay="100"> a garage for all models </h5>
                 <h1 class="main-title" data-aos="fade-up" data-aos-delay="400">necessitas de reparação automovel?</h1>
-                <p data-aos="fade-up" data-aos-delay="600">A manutenção de automóveis enfrenta racionalmente consequências extremamente dolorosas. Também não há ninguém que ame ou persiga </p>
+                <p data-aos="fade-up" data-aos-delay="600">Nós da cilindroenvolvente ofereçemos garantia de serviço de reparo repido do seu veiculo</p>
                 <a href="contact.html" data-aos="fade-up" data-aos-delay="800" class="btn btn-custom-01">Contacta-nos</a>
             </div>
             <!-- Slider Section End -->
@@ -129,8 +129,8 @@
                     <div class="col-lg-4 col-sm-6">
                         <!-- Single Service Start -->
                         <div class="single-service" data-aos="fade-up" data-aos-delay="200">
-                            <h4 class="title"><a href="service-details.html">Anti Lock Brake <br> Servicing</a></h4>
-                            <a href="service-details.html" class="more">Lean more</a>
+                            <h4 class="title"><a href="service-details.html">serviço de reparo <br> de sistema de travagem</a></h4>
+                            <a href="service-details.html" class="more">Mais...</a>
 
                             <div class="service-icon">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
@@ -252,8 +252,8 @@
                     <div class="col-lg-4 col-sm-6">
                         <!-- Single Service Start -->
                         <div class="single-service" data-aos="fade-up" data-aos-delay="400">
-                            <h4 class="title"><a href="service-details.html">Entire Engine <br> Servicing</a></h4>
-                            <a href="service-details.html" class="more">Lean more</a>
+                            <h4 class="title"><a href="service-details.html">Serviço completo<br> de reparo de mecanica</a></h4>
+                            <a href="service-details.html" class="more">Mais...</a>
 
                             <div class="service-icon">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
@@ -326,8 +326,8 @@
                     <div class="col-lg-4 col-sm-6">
                         <!-- Single Service Start -->
                         <div class="single-service" data-aos="fade-up" data-aos-delay="600">
-                            <h4 class="title"><a href="service-details.html">Car Wash <br> Service</a></h4>
-                            <a href="service-details.html" class="more">Lean more</a>
+                            <h4 class="title"><a href="service-details.html">Serviço de<br>limpeza </a></h4>
+                            <a href="service-details.html" class="more">Mais...</a>
 
                             <div class="service-icon">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
@@ -422,8 +422,8 @@
                     <div class="col-lg-4 col-sm-6">
                         <!-- Single Service Start -->
                         <div class="single-service" data-aos="fade-up" data-aos-delay="200">
-                            <h4 class="title"><a href="service-details.html">Battery <br> Replacement</a></h4>
-                            <a href="service-details.html" class="more">Lean more</a>
+                            <h4 class="title"><a href="service-details.html">Substituição da<br>bateria</a></h4>
+                            <a href="service-details.html" class="more">Mais...</a>
 
                             <div class="service-icon">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
@@ -464,8 +464,8 @@
                     <div class="col-lg-4 col-sm-6">
                         <!-- Single Service Start -->
                         <div class="single-service" data-aos="fade-up" data-aos-delay="400">
-                            <h4 class="title"><a href="service-details.html">Change Oil <br> and Filter</a></h4>
-                            <a href="service-details.html" class="more">Lean more</a>
+                            <h4 class="title"><a href="service-details.html">Troca de oleo <br>e filtros </a></h4>
+                            <a href="service-details.html" class="more">Mais...</a>
                             <div class="service-icon">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
                                     <path class="icon-path" d="M85.68,152.95h88.53c9.76,0,17.71-7.94,17.71-17.71V82.12c0-9.76-7.94-17.71-17.71-17.71H85.68
@@ -514,7 +514,7 @@
                         <!-- Single Service Start -->
                         <div class="single-service" data-aos="fade-up" data-aos-delay="600">
                             <h4 class="title"><a href="service-details.html">Tire Change <br> and Repair</a></h4>
-                            <a href="service-details.html" class="more">Lean more</a>
+                            <a href="service-details.html" class="more">Mais...</a>
 
                             <div class="service-icon">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
@@ -796,9 +796,9 @@
                         <div class="swiper-slide">
                             <!-- Single Testimonials Start -->
                             <div class="single-testimonials">
-                                <img class="author" src="assets/images/author/author-01.jpg" alt="Author">
-                                <h3 class="name">Crystopher Lopez</h3>
-                                <p>Great service makes me happy, my car is like the most the new one is our main goal extremely painful again is there anyone who loves our to take</p>
+                                <img class="author" src="<?= ASSETS . THEME ?>/images/author/author-01.jpg" alt="Author">
+                                <h3 class="name">ainda por escrever</h3>
+                                <p>ainda por escrever</p>
                                 <div class="rating">
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
@@ -813,8 +813,8 @@
                             <!-- Single Testimonials Start -->
                             <div class="single-testimonials">
                                 <img class="author" src="<?= ASSETS . THEME ?>/images/author/author-02.jpg" alt="Author">
-                                <h3 class="name">Crystopher Lopez</h3>
-                                <p>Great service makes me happy, my car is like the most the new one is our main goal extremely painful again is there anyone who loves our to take</p>
+                                <h3 class="name">ainda por escrever</h3>
+                                <p>ainda por escrever</p>
                                 <div class="rating">
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
@@ -829,7 +829,7 @@
                             <!-- Single Testimonials Start -->
                             <div class="single-testimonials">
                                 <img class="author" src="<?= ASSETS . THEME ?>/images/author/author-03.jpg" alt="Author">
-                                <h3 class="name">Crystopher Lopez</h3>
+                                <h3 class="name">ainda por escrever</h3>
                                 <p>Great service makes me happy, my car is like the most the new one is our main goal extremely painful again is there anyone who loves our to take</p>
                                 <div class="rating">
                                     <i class="fa fa-star"></i>
