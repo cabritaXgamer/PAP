@@ -513,7 +513,7 @@
                     <div class="col-lg-4 col-sm-6">
                         <!-- Single Service Start -->
                         <div class="single-service" data-aos="fade-up" data-aos-delay="600">
-                            <h4 class="title"><a href="service-details.html">Tire Change <br> and Repair</a></h4>
+                            <h4 class="title"><a href="service-details.html">Reparamos carros e<br>veiculos agricola</a></h4>
                             <a href="service-details.html" class="more">Mais...</a>
 
                             <div class="service-icon">
@@ -767,91 +767,91 @@
 <!-- How We Work Section End -->
 
 <!-- Testimonials Section Start -->
-<div class="section section-padding-02">
-    <div class="container">
+<!-- <div class="section section-padding-02"> -->
+<div class="container">
 
-        <!-- Testimonials Wrapper Start -->
-        <div class="testimonials-wrapper">
-            <!-- Testimonials Title Start -->
-            <div class="testimonials-title">
-                <!-- Section Title Start -->
-                <div class="section-title">
-                    <h5 class="sub-title">Testimonials</h5>
-                    <h2 class="main-title">What our Happy Clients says</h2>
-                    <p>Trusted and reliable service is our main goal extremely painful. Nor again is there anyone who loves our to take a trivial example, which of us undertakes chooses </p>
-                </div>
-                <!-- Section Title End -->
+    <!-- Testimonials Wrapper Start -->
+    <div class="testimonials-wrapper">
+        <!-- Testimonials Title Start -->
+        <div class="testimonials-title">
+            <!-- Section Title Start -->
+            <div class="section-title">
+                <h5 class="sub-title">Testimonials</h5>
+                <h2 class="main-title">What our Happy Clients says</h2>
+                <p>Trusted and reliable service is our main goal extremely painful. Nor again is there anyone who loves our to take a trivial example, which of us undertakes chooses </p>
             </div>
-            <!-- Testimonials Title End -->
+            <!-- Section Title End -->
+        </div>
+        <!-- Testimonials Title End -->
 
-            <!-- Testimonials Items Start -->
-            <div class="testimonials-items testimonial-active">
+        <!-- Testimonials Items Start -->
+        <div class="testimonials-items testimonial-active">
 
-                <img class="shape" src="<?= ASSETS . THEME ?>/images/testimonials.png" alt="Testimonials">
+            <img class="shape" src="<?= ASSETS . THEME ?>/images/testimonials.png" alt="Testimonials">
 
-                <img class="quote" src="<?= ASSETS . THEME ?>/images/quote.svg" alt="quote">
+            <img class="quote" src="<?= ASSETS . THEME ?>/images/quote.svg" alt="quote">
 
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <!-- Single Testimonials Start -->
-                            <div class="single-testimonials">
-                                <img class="author" src="<?= ASSETS . THEME ?>/images/author/author-01.jpg" alt="Author">
-                                <h3 class="name">ainda por escrever</h3>
-                                <p>ainda por escrever</p>
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <!-- Single Testimonials Start -->
+                        <div class="single-testimonials">
+                            <img class="author" src="<?= ASSETS . THEME ?>/images/author/author-01.jpg" alt="Author">
+                            <h3 class="name">ainda por escrever</h3>
+                            <p>ainda por escrever</p>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
                             </div>
-                            <!-- Single Testimonials End -->
                         </div>
-                        <div class="swiper-slide">
-                            <!-- Single Testimonials Start -->
-                            <div class="single-testimonials">
-                                <img class="author" src="<?= ASSETS . THEME ?>/images/author/author-02.jpg" alt="Author">
-                                <h3 class="name">ainda por escrever</h3>
-                                <p>ainda por escrever</p>
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
+                        <!-- Single Testimonials End -->
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- Single Testimonials Start -->
+                        <div class="single-testimonials">
+                            <img class="author" src="<?= ASSETS . THEME ?>/images/author/author-02.jpg" alt="Author">
+                            <h3 class="name">ainda por escrever</h3>
+                            <p>ainda por escrever</p>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
                             </div>
-                            <!-- Single Testimonials End -->
                         </div>
-                        <div class="swiper-slide">
-                            <!-- Single Testimonials Start -->
-                            <div class="single-testimonials">
-                                <img class="author" src="<?= ASSETS . THEME ?>/images/author/author-03.jpg" alt="Author">
-                                <h3 class="name">ainda por escrever</h3>
-                                <p>Great service makes me happy, my car is like the most the new one is our main goal extremely painful again is there anyone who loves our to take</p>
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
+                        <!-- Single Testimonials End -->
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- Single Testimonials Start -->
+                        <div class="single-testimonials">
+                            <img class="author" src="<?= ASSETS . THEME ?>/images/author/author-03.jpg" alt="Author">
+                            <h3 class="name">ainda por escrever</h3>
+                            <p>Great service makes me happy, my car is like the most the new one is our main goal extremely painful again is there anyone who loves our to take</p>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
                             </div>
-                            <!-- Single Testimonials End -->
                         </div>
+                        <!-- Single Testimonials End -->
                     </div>
                 </div>
-
-                <div class="swiper-pagination"></div>
-
             </div>
-            <!-- Testimonials Items End -->
-        </div>
-        <!-- Testimonials Wrapper End -->
 
+            <div class="swiper-pagination"></div>
+
+        </div>
+        <!-- Testimonials Items End -->
     </div>
+    <!-- Testimonials Wrapper End -->
+
+</div>
 </div>
 <!-- Testimonials Section End -->
 
