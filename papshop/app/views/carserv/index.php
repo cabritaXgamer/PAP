@@ -665,7 +665,7 @@
                                         <img src="<?= ASSETS . THEME ?>/images/choose/icon-2.svg" alt="Icon">
                                     </div>
                                     <div class="item-content">
-                                        <h4 class="title">Qulaity Services</h4>
+                                        <h4 class="title">Serviços de qualidade</h4>
                                         <p>Car servicing rationally encounter extremely anyone chooses</p>
                                     </div>
                                 </div>
@@ -680,7 +680,7 @@
                                         <img src="<?= ASSETS . THEME ?>/images/choose/icon-4.svg" alt="Icon">
                                     </div>
                                     <div class="item-content">
-                                        <h4 class="title">Fast Delivery</h4>
+                                        <h4 class="title">Entrega rapida</h4>
                                         <p>Car servicing rationally encounter extremely anyone chooses</p>
                                     </div>
                                 </div>
