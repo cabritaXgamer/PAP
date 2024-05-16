@@ -13,12 +13,12 @@
                 <!-- Section Title Start -->
                 <div class="section-title">
                     <h5 class="sub-title">Login</h5>
-                    <h2 class="main-title">Login <br> Form</h2>
+                    <h2 class="main-title">Login</h2>
                 </div>
                 <!-- Section Title End -->
 
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
                     <li class="breadcrumb-item active">Login</li>
                 </ul>
             </div>
@@ -47,7 +47,7 @@
 
                     <!-- Register & Login Form Start -->
                     <div class="register-login-form">
-                        <h3 class="title">Login <span>Now</span></h3>
+                        <h3 class="title">Login <span>agora</span></h3>
 
                         <div class="form-wrapper">
                             <form method="post">
@@ -58,17 +58,17 @@
                                 <!-- Single Form End -->
                                 <!-- Single Form Start -->
                                 <div class="single-form">
-                                    <input type="password" name="password" placeholder="Password">
+                                    <input type="password" name="password" placeholder="Palavra-passe">
                                 </div>
                                 <!-- Single Form End -->
                                 <!-- Single Form Start -->
                                 <div class="single-form">
                                     <button type="submit" class="btn btn-custom-01 w-100">Login</button>
-                                    <a class="btn btn-custom-02 w-100" href="#">Login with Google</a>
+                                    <a class="btn btn-custom-02 w-100" href="#">Login com Google</a>
                                 </div>
                                 <!-- Single Form End -->
-                                <p><a href="#">Lost your password?</a></p>
-                                <p>No account? <a href="register.html">Create one here.</a></p>
+                                <p><a href="#">esqueceste da palavra-passe?</a></p>
+                                <p>Não tens conta? <a href="register.html">Registra-te agora!</a></p>
                             </form>
                         </div>
                     </div>

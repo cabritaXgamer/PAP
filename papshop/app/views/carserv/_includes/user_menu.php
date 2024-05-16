@@ -65,16 +65,16 @@
                         <!-- Header Menu Start -->
                         <div class="primary-menu d-none d-lg-block">
                             <ul class="nav-menu">
-                                <li><a href="index.html">Home</a></li>
+                                <li><a href="index.html">Inicio</a></li>
                                 <li>
-                                    <a href="#">Services</a>
+                                    <a href="#">Serviços</a>
                                     <ul class="sub-menu">
-                                        <li><a href="service.html">Services</a></li>
-                                        <li><a href="service-details.html">Services Details</a></li>
+                                        <li><a href="service.html">Serviços</a></li>
+                                        <li><a href="service-details.html">detalhes dos serviços</a></li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#">Shop</a>
+                                    <a href="#">shop</a>
                                     <ul class="sub-menu">
                                         <li><a href="shop-grid.html">Shop Grid</a></li>
                                         <li><a href="shop-left-sidebar.html">Shop left Sidebar</a></li>
@@ -307,20 +307,20 @@
                 <!-- Mobile Menu Start -->
                 <div class="mobile-menu-items">
                     <ul class="nav-menu">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Inicio</a></li>
                         <li>
-                            <a href="#">Services</a>
+                            <a href="#">Serviços</a>
                             <ul class="sub-menu">
-                                <li><a href="service.html">Services</a></li>
-                                <li><a href="service-details.html">Services Details</a></li>
+                                <li><a href="service.html">Serviços</a></li>
+                                <li><a href="service-details.html">detalhes dos serviços</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#">Shop</a>
+                            <a href="#">Loja</a>
                             <ul class="sub-menu">
-                                <li><a href="shop-grid.html">Shop Grid</a></li>
-                                <li><a href="shop-left-sidebar.html">Shop left Sidebar</a></li>
-                                <li><a href="shop-right-sidebar.html">Shop Right Sidebar</a></li>
+                                <li><a href="shop-grid.html">tabela de produtos</a></li>
+                                <li><a href="shop-left-sidebar.html">Loja left Sidebar</a></li>
+                                <li><a href="shop-right-sidebar.html">Loja Right Sidebar</a></li>
                                 <li><a href="product-details-left-sidebar.html">Product Details Left Sidebar</a></li>
                                 <li><a href="product-details-right-sidebar.html">Product Details Right Sidebar</a></li>
                             </ul>
