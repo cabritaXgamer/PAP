@@ -11,13 +11,13 @@
 
                 <!-- Section Title Start -->
                 <div class="section-title">
-                    <h5 class="sub-title">Register</h5>
-                    <h2 class="main-title">Registration <br> Form</h2>
+                    <h5 class="sub-title">Registro</h5>
+                    <h2 class="main-title">Formulário <br>de Registo</h2>
                 </div>
                 <!-- Section Title End -->
 
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="index">inicio</a></li>
                     <li class="breadcrumb-item active">Register</li>
                 </ul>
             </div>
@@ -45,13 +45,13 @@
                 <div class="col-lg-6 col-xl-5">
                     <!-- Register & Login Form Start -->
                     <div class="register-login-form">
-                        <h3 class="title">Registration <span>Now</span></h3>
+                        <h3 class="title">Registra-te<span> agora</span></h3>
 
                         <div class="form-wrapper">
                             <form method="post">
                                 <!-- Single Form Start -->
                                 <div class="single-form">
-                                    <input type="text" name="name" placeholder="Name" value="<?= isset($_POST['name']) ? $_POST['name'] : ''; ?>">
+                                    <input type="text" name="name" placeholder="Nome" value="<?= isset($_POST['name']) ? $_POST['name'] : ''; ?>">
                                 </div>
                                 <!-- Single Form End -->
                                 <!-- Single Form Start -->
@@ -61,21 +61,21 @@
                                 <!-- Single Form End -->
                                 <!-- Single Form Start -->
                                 <div class="single-form">
-                                    <input type="password" name="password" placeholder="Password">
+                                    <input type="password" name="password" placeholder="Palavra-passe">
                                 </div>
                                 <!-- Single Form End -->
                                 <!-- Single Form Start -->
                                 <div class="single-form">
-                                    <input type="password" name="password2" placeholder="Confirm Password">
+                                    <input type="password" name="password2" placeholder="Confirmar palavra-passe">
                                 </div>
                                 <!-- Single Form End -->
                                 <!-- Single Form Start -->
                                 <div class="single-form">
-                                    <button type="submit" class="btn btn-custom-01 w-100">Create an account</button>
-                                    <a class="btn btn-custom-02 w-100" href="#">Sign up with Google</a>
+                                    <button type="submit" class="btn btn-custom-01 w-100">Criar conta</button>
+                                    <a class="btn btn-custom-02 w-100" href="#">conectar com o google</a>
                                 </div>
                                 <!-- Single Form End -->
-                                <p>Already have an account? <a href="login">Log in instead!</a></p>
+                                <p>Ja tens conta?<a href="login">Faz login!</a></p>
                             </form>
                         </div>
                     </div>

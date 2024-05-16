@@ -1,4 +1,4 @@
-<?php $this->view( "_includes/user_header", $data); ?>
+<?php $this->view("_includes/user_header", $data); ?>
 
 <body>
 
@@ -24,20 +24,20 @@
                         <!-- Header top Wrapper Start -->
                         <!-- Validation paramenters to check if the user is loggedin -->
                         <!-- Header top Info End -->
-                        <?php if(isset($data['user_data'])): ?>                        
-                        <!-- Header top Button Start -->
-                        <div class="header-top-btn">
-                            <a href="logout">Logout</a>
-                            <!-- <a href="register">Register</a> -->
-                        </div>
-                        <!-- Header top Button End -->
-                        <?php else: ?>
+                        <?php if (isset($data['user_data'])) : ?>
+                            <!-- Header top Button Start -->
                             <div class="header-top-btn">
-                            <a href="login">Entrar</a>
-                            <a href="register">Register</a>
-                        </div>
-                        <?php endif?>
-                        <!-- END  Validation paramenters to check if the user is loggedin --> 
+                                <a href="logout">Logout</a>
+                                <!-- <a href="register">Register</a> -->
+                            </div>
+                            <!-- Header top Button End -->
+                        <?php else : ?>
+                            <div class="header-top-btn">
+                                <a href="login">Entrar</a>
+                                <a href="register">Register</a>
+                            </div>
+                        <?php endif ?>
+                        <!-- END  Validation paramenters to check if the user is loggedin -->
                         <!-- Header top Wrapper End -->
 
                     </div>
@@ -57,7 +57,8 @@
                         <!-- Header Logo Start -->
                         <div class="header-logo">
                             <a href="index.html"><img src="<?= ASSETS . THEME ?>/images/logo.png" alt="Logo"></a>
-                           <?php //show(ASSETS . THEME . "/images/logo.png") ?>
+                            <?php //show(ASSETS . THEME . "/images/logo.png") 
+                            ?>
                         </div>
                         <!-- Header Logo End -->
 
@@ -112,18 +113,18 @@
                                         <li><a href="blog-details-right-sidebar.html">Blog Details Right Sidebar</a></li>
                                     </ul>
                                 </li>
-                               
-                                
+
+
                                 <li><a href="contact.html">Contact</a></li>
 
                                 <li>
-                                    <?php if(isset($data['user_data'])): ?>
-                                    <a href="#">Profile</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="profile">My Account</a></li>
-                                        <li><a href= "admin">Admin Section</a></li>
-                                        <li><a href="logout">Logout</a></li>
-                                    </ul>
+                                    <?php if (isset($data['user_data'])) : ?>
+                                        <a href="#">Profile</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="profile">My Account</a></li>
+                                            <li><a href="admin">Admin Section</a></li>
+                                            <li><a href="logout">Logout</a></li>
+                                        </ul>
                                     <?php endif ?>
                                 </li>
 
@@ -275,24 +276,24 @@
                     <p>328D, Marid Drive, Ackloand</p>
                     <p>Call us: <a href="+12025256214">+12(025) 256 214</a></p>
                 </div>
-                
+
                 <!-- Validation paramenters to check if the user is loggedin -->
                 <!-- Header top Info End -->
-                <?php if(isset($data['user_data'])): ?>                        
-                <!-- Header top Button Start -->
-                <div class="header-top-btn">
-                    <a href="logout">Logout</a>
-                    <!-- <a href="register">Register</a> -->
-                </div>
-                <!-- Header top Button End -->
-                <?php else: ?>
+                <?php if (isset($data['user_data'])) : ?>
+                    <!-- Header top Button Start -->
                     <div class="header-top-btn">
-                    <a href="login">Entrar</a>
-                    <a href="register">Register</a>
-                </div>
-                <?php endif?>
-                <!-- END  Validation paramenters to check if the user is loggedin --> 
-                    
+                        <a href="logout">Logout</a>
+                        <!-- <a href="register">Register</a> -->
+                    </div>
+                    <!-- Header top Button End -->
+                <?php else : ?>
+                    <div class="header-top-btn">
+                        <a href="login">Entrar</a>
+                        <a href="register">Register</a>
+                    </div>
+                <?php endif ?>
+                <!-- END  Validation paramenters to check if the user is loggedin -->
+
 
                 <!-- Header Search Start -->
                 <div class="header-search">
