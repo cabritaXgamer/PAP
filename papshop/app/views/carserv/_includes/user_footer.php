@@ -35,12 +35,12 @@
                                        <h3 class="footer-widget-title"></h3>
 
                                        <ul class="widget-link">
-                                           <li><a href="about.html">About us</a></li>
-                                           <li><a href="service.html">Our Services</a></li>
-                                           <li><a href="our-team.html">Our Mechanics</a></li>
-                                           <li><a href="blog-right-sidebar.html">Blog Post</a></li>
-                                           <li><a href="login.html">Login/Register</a></li>
-                                           <li><a href="contact.html">Contact</a></li>
+                                           <li><a href="about">About us</a></li>
+                                           <li><a href="service">Our Services</a></li>
+                                           <li><a href="our-team">Our Mechanics</a></li>
+                                           <li><a href="blog-right-sidebar">Blog Post</a></li>
+                                           <li><a href="login">Login/Register</a></li>
+                                           <li><a href="contact">Contact</a></li>
                                        </ul>
                                    </div>
                                    <!-- Footer Widget End -->
@@ -50,7 +50,7 @@
                                        <h3 class="footer-widget-title">Information</h3>
 
                                        <ul class="widget-link">
-                                           <li><a href="contact.html">Book Appointment</a></li>
+                                           <li><a href="contact">Book Appointment</a></li>
                                            <li><a href="#">Terms & Conditions</a></li>
                                            <li><a href="#">Return Policy</a></li>
                                            <li><a href="#">Payment</a></li>

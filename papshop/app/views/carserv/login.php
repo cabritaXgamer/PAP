@@ -68,7 +68,7 @@
                                 </div>
                                 <!-- Single Form End -->
                                 <p><a href="#">esqueceste da palavra-passe?</a></p>
-                                <p>Não tens conta? <a href="register.html">Registra-te agora!</a></p>
+                                <p>Não tens conta? <a href="register">Registra-te agora!</a></p>
                             </form>
                         </div>
                     </div>
