@@ -347,7 +347,8 @@
                                 <li><a href="blog-details-right-sidebar">Blog Details Right Sidebar</a></li>
                             </ul>
                         </li>
-                        <li><a href="contact">Contact</a></li>
+                        <li><a href="#contact">Contact</a></li>
+
                     </ul>
 
                 </div>

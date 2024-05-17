@@ -574,7 +574,7 @@
         <div class="call-to-action-wrapper">
 
             <!-- Call to Action Content Start -->
-            <div class="call-to-action-content">
+            <div class="call-to-action-content" id="contact">
                 <div class="content-wrapper">
                     <!-- Section Title Start -->
                     <div class="section-title section-title-white">
@@ -583,7 +583,7 @@
                     </div>
                     <!-- Section Title End -->
                     <p>Car servicing rationally encounter consequences extremely painful. Nor again is there anyone who loves or pursues of more than a quality servicing is very important </p>
-                    <a href="contact.html" class="btn btn-custom-01 btn-hover-white">Get a Quote</a>
+                    <a id="contq class=" btn btn-custom-01 btn-hover-white">Get a Quote</a>
                 </div>
                 <img class="shape" src="<?= ASSETS . THEME ?>/images/call-to-action.png" alt="Call to Action">
             </div>
