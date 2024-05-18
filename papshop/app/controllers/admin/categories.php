@@ -21,11 +21,18 @@ class Categories extends Controller
          //show($data['user_data']);
      }
 
+     
+
        //$this->title = 'Admin - Dashboard';
        $data['page_title'] = "Admin - Categories";
        //Rota onde esta a view que vai carregar
        $this->view("../admin/categories", $data);
     } 
+
+    public function test()
+    {
+        echo "Send from AJAX controller";
+    }
 
     
 }

@@ -30,6 +30,7 @@
     <script src="<?= ASSETS . ADMIN_THEME ?>/js/sparkline-chart.js"></script>    
 	<script src="<?= ASSETS . ADMIN_THEME ?>/js/zabuto_calendar.js"></script>	
 	
+<!--     
 	<script type="text/javascript">
         $(document).ready(function () {
         var unique_id = $.gritter.add({
@@ -49,7 +50,7 @@
 
         return false;
         });
-	</script>
+	</script> -->
 	
 	<script type="application/javascript">
         $(document).ready(function () {
