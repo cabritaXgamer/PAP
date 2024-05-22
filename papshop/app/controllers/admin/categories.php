@@ -29,9 +29,13 @@ class Categories extends Controller
        $this->view("../admin/categories", $data);
     } 
 
-    public function test()
+    public function addCategory()
     {
-        echo "Send from AJAX controller";
+        //echo "Send from AJAX controller";
+        // print_r($_POST);
+        
+        $data = file_get_contents("php://input");
+        print_r(json_decode($data,true));
     }
 
     
