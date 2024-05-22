@@ -21,22 +21,69 @@ class Categories extends Controller
          //show($data['user_data']);
      }
 
-     
-
        //$this->title = 'Admin - Dashboard';
        $data['page_title'] = "Admin - Categories";
        //Rota onde esta a view que vai carregar
        $this->view("../admin/categories", $data);
     } 
 
+    //Function to create a Category
     public function addCategory()
     {
-        //echo "Send from AJAX controller";
-        // print_r($_POST);
-        
+        // Obtenha os dados enviados pelo cliente
         $data = file_get_contents("php://input");
-        print_r(json_decode($data,true));
+        $data = json_decode($data);
+
+        //show($data);
+
+        if (is_object($data) && isset($data->data_type) && $data->data_type == 'add_category') {
+            // Carrega o modelo de categoria
+            $category = $this->load_model('Category');
+            $check = $category->create($data);
+
+            if (!empty($_SESSION['error'])) {
+                $arr['message'] = $_SESSION['error'];
+                $_SESSION['error'] = "";
+                $arr['message_type'] = "error";
+            } else {
+                $arr['message'] = "Categoria adicionada com sucesso!";
+                $arr['message_type'] = "info";
+            }
+
+            $arr['data'] = "";
+            echo json_encode($arr);
+        }
     }
 
-    
+    // public function addCategory()
+    // {
+    //     $data = file_get_contents("php://input");
+    //     $data = json_decode($data);
+
+    //     var_dump($data);
+
+    //     if (is_object($data)) {
+    //         // Assuming Category is the class name containing the create method
+    //         $category = $this->load_model('Category');
+    //         $check = $category->create($data);
+
+    //         if ($_SESSION['error'] != "") {
+    //             $arr['message'] = $_SESSION['error'];
+    //             $_SESSION['error'] = ""; // Clear the error after retrieving it
+    //             $arr['message_type'] = "error";
+    //             $arr['data'] = "";
+
+    //             echo json_encode($arr);
+    //         } else {
+    //             $arr['message'] = "Categoria adicionada com sucesso!";
+    //             $arr['message_type'] = "info";
+    //             $arr['data'] = "";
+
+    //             echo json_encode($arr);
+    //         }
+    //     }
+    // }
 }
+
+
+  

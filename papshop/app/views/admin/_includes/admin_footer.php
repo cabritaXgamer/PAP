@@ -86,6 +86,9 @@
             console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
         }
     </script>
+
+    <!-- Adicione isso antes do fechamento do </body> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   
 
   </body>

@@ -99,28 +99,74 @@
     // }
 
     // Function to get data from the form
+    // function get_data() {
+    //     let category_input = document.querySelector("#category-name");
+    //     if (category_input.value.trim() === "" || !isNaN(category_input.value.trim())) {
+    //         alert("Por favor insira um nome de categoria válido!");
+    //         return;
+    //     } 
+
+    //     var data = category_input.value.trim();
+
+    //     // Force to create an object
+    //     //You can add more datafields if you want it
+    //     send_data({
+    //         data:data, 
+    //         data_type:'add_category' //expressive with the expression
+    //     });
+    // }
+
+    // Function to get data from the form
+    // Function to get data from the form
     function get_data() {
         let category_input = document.querySelector("#category-name");
         if (category_input.value.trim() === "" || !isNaN(category_input.value.trim())) {
-            alert("Por favor insira um nome de categoria válido!");
+            Swal.fire({
+                icon: 'error',
+                title: 'Erro',
+                text: 'Por favor insira um nome de categoria válido!'
+            });
             return;
         } 
 
         var data = category_input.value.trim();
 
         // Force to create an object
-        send_data({data: data});
+        // You can add more datafields if you want it
+        send_data({
+            data: data,
+            data_type: 'add_category' // expressive with the expression
+        });
     }
 
     // Function to send data to the server
-    function send_data(data = {}) {
+    // function send_data(data = {}) {
         
+    //     var ajax = new XMLHttpRequest();
+
+    //     // Handler for AJAX response
+    //     ajax.addEventListener('readystatechange', function() {
+    //         if (ajax.readyState === 4 && ajax.status === 200) {
+    //             alert(ajax.responseText);
+    //         }
+    //     });
+
+    //     // Set request headers
+    //     ajax.open("POST", "<?=ROOT?>admin/categories/addCategory", true);
+    //     ajax.setRequestHeader("Content-Type", "application/json");
+
+    //     // Send AJAX request
+    //     ajax.send(JSON.stringify(data));
+    // }
+
+    // Function to send data to the server
+    function send_data(data = {}) {
         var ajax = new XMLHttpRequest();
 
         // Handler for AJAX response
         ajax.addEventListener('readystatechange', function() {
             if (ajax.readyState === 4 && ajax.status === 200) {
-                alert(ajax.responseText);
+                handle_result(ajax.responseText);
             }
         });
 
@@ -132,10 +178,48 @@
         ajax.send(JSON.stringify(data));
     }
 
+
+    // // Function to handle the result
+    // function handle_result(result) {
+    //     // JSON data from the response
+    //     if (result != "") {
+    //         var obj = JSON.parse(result);
+
+    //         if (obj.message_type == "info") {
+    //             alert(obj.message);
+    //             $('#categoryModal').modal('hide');
+    //             // You can add more handling for info messages if needed
+    //         } else {
+    //             alert(obj.message);
+    //         }
+    //     }
+    // }
+    // Function to handle the result
     // Function to handle the result
     function handle_result(result) {
         // JSON data from the response
-        alert(result);
+        if (result != "") {
+            var obj = JSON.parse(result);
+
+            if (obj.message_type === "info") {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Sucesso',
+                    text: obj.message
+                }).then(() => {
+                    // Close the modal after the alert is dismissed
+                    $('#categoryModal').modal('hide');
+                    // Optionally, clear the input field after successful submission
+                    document.querySelector("#category-name").value = "";
+                });
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Erro',
+                    text: obj.message
+                });
+            }
+        }
     }
 
 
