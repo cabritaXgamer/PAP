@@ -10,9 +10,9 @@
 
             <!-- Slider Section Start -->
             <div class="slider-content">
-                <h5 class="sub-title" data-aos="fade-up" data-aos-delay="100"> a garage for all models </h5>
+                <h5 class="sub-title" data-aos="fade-up" data-aos-delay="100">Uma oficina para todos os moedelos</h5>
                 <h1 class="main-title" data-aos="fade-up" data-aos-delay="400">necessitas de reparação automovel?</h1>
-                <p data-aos="fade-up" data-aos-delay="600">Nós da cilindroenvolvente ofereçemos garantia de serviço de reparo repido do seu veiculo</p>
+                <p data-aos="fade-up" data-aos-delay="600">Nós da Cilindrenvolvente ofereçemos garantia de serviço de reparo repido do seu veiculo</p>
                 <a href="#contact" data-aos="fade-up" data-aos-delay="800" class="btn btn-custom-01">Contacta-nos</a>
             </div>
             <!-- Slider Section End -->
@@ -119,7 +119,7 @@
             <!-- Section Title Start -->
             <div class="section-title text-center">
                 <h5 class="sub-title">O que nos fazemos</h5>
-                <h2 class="main-title">Nossos serviços<br> que nós fornecemos</h2>
+                <h2 class="main-title">Os serviços<br> que nós fornecemos</h2>
             </div>
             <!-- Section Title End -->
 
@@ -578,11 +578,11 @@
                 <div class="content-wrapper">
                     <!-- Section Title Start -->
                     <div class="section-title section-title-white">
-                        <h5 class="sub-title">Emergency Calls 24/7 </h5>
-                        <h2 class="main-title">+12(254) 258 741</h2>
+                        <h5 class="sub-title">Disponivel para contactar das 8H/19H</h5>
+                        <h2 class="main-title">+12(345) 678 910</h2>
                     </div>
                     <!-- Section Title End -->
-                    <p>Car servicing rationally encounter consequences extremely painful. Nor again is there anyone who loves or pursues of more than a quality servicing is very important </p>
+                    <p>Na Cilindrenvolvente, oferecemos serviços de manutenção e reparação de alta qualidade para todos os tipos de veículos. Nossa equipe de mecânicos experientes está pronta para resolver qualquer problema com rapidez e eficiência. Entre em contato conosco para agendar uma visita, solicitar um orçamento ou tirar suas dúvidas.</p>
                     <a id="contq class=" btn btn-custom-01 btn-hover-white">Get a Quote</a>
                 </div>
                 <img class="shape" src="<?= ASSETS . THEME ?>/images/call-to-action.png" alt="Call to Action">
