@@ -13,7 +13,7 @@
                 <h5 class="sub-title" data-aos="fade-up" data-aos-delay="100"> a garage for all models </h5>
                 <h1 class="main-title" data-aos="fade-up" data-aos-delay="400">necessitas de reparação automovel?</h1>
                 <p data-aos="fade-up" data-aos-delay="600">Nós da cilindroenvolvente ofereçemos garantia de serviço de reparo repido do seu veiculo</p>
-                <a href="contact.html" data-aos="fade-up" data-aos-delay="800" class="btn btn-custom-01">Contacta-nos</a>
+                <a href="#contact" data-aos="fade-up" data-aos-delay="800" class="btn btn-custom-01">Contacta-nos</a>
             </div>
             <!-- Slider Section End -->
 

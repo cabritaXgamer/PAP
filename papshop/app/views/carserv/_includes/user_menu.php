@@ -77,21 +77,21 @@
                                     <a href="#">Loja</a>
                                     <ul class="sub-menu">
                                         <li><a href="shop-grid">tabela de produtos</a></li>
-                                        <li><a href="shop-left-sidebar">Loja left Sidebar</a></li>
-                                        <li><a href="shop-right-sidebar">Loja Right Sidebar</a></li>
-                                        <li><a href="product-details-left-sidebar">Product Details Left Sidebar</a></li>
-                                        <li><a href="product-details-right-sidebar">Product Details Right Sidebar</a></li>
+                                        <!-- <li><a href="shop-left-sidebar">Loja left Sidebar</a></li> -->
+                                        <!-- <li><a href="shop-right-sidebar">Loja Right Sidebar</a></li> -->
+                                        <!-- <li><a href="product-details-left-sidebar">Product Details Left Sidebar</a></li> -->
+                                        <!-- <li><a href="product-details-right-sidebar">Product Details Right Sidebar</a></li> -->
                                     </ul>
                                 </li>
                                 <li>
                                     <a href="#">menu</a>
                                     <ul class="sub-menu">
-                                        <li><a href="about">About Us</a></li>
-                                        <li><a href="cart">Cart</a></li>
-                                        <li><a href="compare">Compare</a></li>
+                                        <li><a href="about">Sobre nos</a></li>
+                                        <!-- <li><a href="cart">Cart</a></li> -->
+                                        <!-- <li><a href="compare">Compare</a></li> -->
                                         <li><a href="wishlist">Wishlist</a></li>
-                                        <li><a href="my-account">My Account</a></li>
-                                        <li><a href="project-details">Project Details</a></li>
+                                        <!-- <li><a href="my-account">My Account</a></li> -->
+                                        <!-- <li><a href="project-details">Project Details</a></li> -->
                                         <li><a href="faq">FAQ</a></li>
                                     </ul>
                                 </li>
@@ -107,14 +107,14 @@
                                 </li> -->
 
 
-                                <li><a href="contact">Contact</a></li>
+                                <li><a href="#contact">Contacto</a></li>
 
                                 <li>
                                     <?php if (isset($data['user_data'])) : ?>
-                                        <a href="#">Profile</a>
+                                        <a href="#">Perfil</a>
                                         <ul class="sub-menu">
-                                            <li><a href="profile">My Account</a></li>
-                                            <li><a href="admin">Admin Section</a></li>
+                                            <li><a href="profile">Minha Conta</a></li>
+                                            <li><a href="admin">Secção Admin</a></li>
                                             <li><a href="logout">Logout</a></li>
                                         </ul>
                                     <?php endif ?>
