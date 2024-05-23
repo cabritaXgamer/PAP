@@ -76,6 +76,7 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                 <button type="button" class="btn btn-primary" onclick="get_data()">Save</button>
+                <button type="button" class="btn btn-primary" onclick="send_data(event)">Save2</button>
             </div>
         </div>
     </div>
@@ -94,60 +95,43 @@
 
 <script>
 
-    // function myAlertFunction() {
-    // alert("I am an alert box!");
-    // }
 
-    // Function to get data from the form
+// WORK WELL
+
+    // // function myAlertFunction() {
+    // // alert("I am an alert box!");
+    // // }
+
+    // // Function to get data from the form
     // function get_data() {
     //     let category_input = document.querySelector("#category-name");
     //     if (category_input.value.trim() === "" || !isNaN(category_input.value.trim())) {
-    //         alert("Por favor insira um nome de categoria válido!");
+    //         Swal.fire({
+    //             icon: 'error',
+    //             title: 'Erro',
+    //             text: 'Por favor insira um nome de categoria válido!'
+    //         });
     //         return;
     //     } 
 
     //     var data = category_input.value.trim();
 
     //     // Force to create an object
-    //     //You can add more datafields if you want it
+    //     // You can add more datafields if you want it
     //     send_data({
-    //         data:data, 
-    //         data_type:'add_category' //expressive with the expression
+    //         data: data,
+    //         data_type: 'add_category' // expressive with the expression
     //     });
     // }
 
-    // Function to get data from the form
-    // Function to get data from the form
-    function get_data() {
-        let category_input = document.querySelector("#category-name");
-        if (category_input.value.trim() === "" || !isNaN(category_input.value.trim())) {
-            Swal.fire({
-                icon: 'error',
-                title: 'Erro',
-                text: 'Por favor insira um nome de categoria válido!'
-            });
-            return;
-        } 
-
-        var data = category_input.value.trim();
-
-        // Force to create an object
-        // You can add more datafields if you want it
-        send_data({
-            data: data,
-            data_type: 'add_category' // expressive with the expression
-        });
-    }
-
-    // Function to send data to the server
+    // // Function to send data to the server
     // function send_data(data = {}) {
-        
     //     var ajax = new XMLHttpRequest();
 
     //     // Handler for AJAX response
     //     ajax.addEventListener('readystatechange', function() {
     //         if (ajax.readyState === 4 && ajax.status === 200) {
-    //             alert(ajax.responseText);
+    //             handle_result(ajax.responseText);
     //         }
     //     });
 
@@ -159,100 +143,84 @@
     //     ajax.send(JSON.stringify(data));
     // }
 
-    // Function to send data to the server
-    function send_data(data = {}) {
-        var ajax = new XMLHttpRequest();
-
-        // Handler for AJAX response
-        ajax.addEventListener('readystatechange', function() {
-            if (ajax.readyState === 4 && ajax.status === 200) {
-                handle_result(ajax.responseText);
-            }
-        });
-
-        // Set request headers
-        ajax.open("POST", "<?=ROOT?>admin/categories/addCategory", true);
-        ajax.setRequestHeader("Content-Type", "application/json");
-
-        // Send AJAX request
-        ajax.send(JSON.stringify(data));
-    }
-
-
     // // Function to handle the result
     // function handle_result(result) {
     //     // JSON data from the response
     //     if (result != "") {
     //         var obj = JSON.parse(result);
 
-    //         if (obj.message_type == "info") {
-    //             alert(obj.message);
-    //             $('#categoryModal').modal('hide');
-    //             // You can add more handling for info messages if needed
+    //         if (obj.message_type === "info") {
+    //             Swal.fire({
+    //                 icon: 'success',
+    //                 title: 'Sucesso',
+    //                 text: obj.message
+    //             }).then(() => {
+    //                 // Close the modal after the alert is dismissed
+    //                 $('#categoryModal').modal('hide');
+    //                 // Optionally, clear the input field after successful submission
+    //                 document.querySelector("#category-name").value = "";
+    //             });
     //         } else {
-    //             alert(obj.message);
+    //             Swal.fire({
+    //                 icon: 'error',
+    //                 title: 'Erro',
+    //                 text: obj.message
+    //             });
     //         }
     //     }
     // }
-    // Function to handle the result
-    // Function to handle the result
-    function handle_result(result) {
-        // JSON data from the response
-        if (result != "") {
-            var obj = JSON.parse(result);
-
-            if (obj.message_type === "info") {
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Sucesso',
-                    text: obj.message
-                }).then(() => {
-                    // Close the modal after the alert is dismissed
-                    $('#categoryModal').modal('hide');
-                    // Optionally, clear the input field after successful submission
-                    document.querySelector("#category-name").value = "";
-                });
-            } else {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Erro',
-                    text: obj.message
-                });
-            }
-        }
-    }
-
-
- 
-
 
 
     /**
     * Function to send data to controller AJAX
-    *  Need to vreate a AJAX controller
+    *  Need to create a AJAX controller
+    * 
+    * Students TEST
     */ 
 
+    // // Function to get data from the form
+    // function get_data() {
+    //     let category_input = document.querySelector("#category-name");
+    //     if (category_input.value.trim() === "" || !isNaN(category_input.value.trim())) {
+    //         alert("Por favor insira um nome de categoria válido!");
+    //         return;
+    //     } 
 
-    //  function send_data(data){
+    //     var data = category_input.value.trim();
 
-    //     var ajax = new XMLHttpRequest();
+    //     // Force to create an object
+    //     send_data({data: data});
+    // }
 
-    //     //Sending data with form
-    //     var form = new FormData();
-    //     form.append('data',data);
+    // // Function to send data to the server
+    function send_data(data = {}) {
+        var ajax = new XMLHttpRequest();
 
-    //     //Handler listener events on page
-    //     ajax.addEventListener('readystatechange',function(){
+        // Handler for AJAX response
+        ajax.addEventListener('readystatechange', function() {
+            if (ajax.readyState === 4 && ajax.status === 200) {
+                alert(ajax.responseText);
+            }
+        });
 
-    //         if(ajax.readyState == 4 && ajax.status == 200 )
-    //         {
-    //             alert(ajax.responseText);
-    //         }
-    //         })
+        // Set request headers
+        ajax.open("POST", "<?=ROOT?>admin/ajax", true);
+        ajax.setRequestHeader("Content-Type", "application/json");
 
-    //     //put true to dont freeze the url page
-    //     ajax.open("POST","<?=ROOT?>admin/ajax",true);
-    //     ajax.send(JSON.stringify(data));
-    //  } 
+        var obj = {};
+
+        obj.name = "Helder";
+        obj.age  = "39";
+
+        // Send AJAX request
+        ajax.send(JSON.stringify(obj));
+    }
+
+    // Function to handle the result
+    // function handle_result(result) {
+    //     // JSON data from the response
+    //     alert(result);
+    // }
+
 
 </script>

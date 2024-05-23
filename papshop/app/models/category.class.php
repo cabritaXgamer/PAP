@@ -18,14 +18,11 @@ Class Category
                 $_SESSION['error'] = "Por favor insira um nome de categoria correto!";
                 return false;
             }
-
             // Construa a consulta SQL para inserção
             $query = "INSERT INTO categories (category) VALUES (:category)";
             $params = array(':category' => $category);
-
             // Executa a consulta SQL
             $check = $DB->write($query, $params);
-
             if ($check) {
                 return true;
             } else {
@@ -35,7 +32,6 @@ Class Category
         } else {
             $_SESSION['error'] = "Dados inválidos para adicionar categoria.";
         }
-
         return false;
     }
 

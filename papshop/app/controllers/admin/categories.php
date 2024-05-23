@@ -30,8 +30,9 @@ class Categories extends Controller
     //Function to create a Category
     public function addCategory()
     {
-        // Obtenha os dados enviados pelo cliente
+        //Obtenha os dados enviados pelo cliente
         $data = file_get_contents("php://input");
+        //print_r($data);  
         $data = json_decode($data);
 
         //show($data);

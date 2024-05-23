@@ -87,6 +87,7 @@
         }
     </script>
 
+    <!-- Sweet Alert 2 -->
     <!-- Adicione isso antes do fechamento do </body> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   

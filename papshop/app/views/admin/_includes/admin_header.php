@@ -20,6 +20,8 @@
     <!-- Sweat Alert -->
     <!-- Adicione isso no <head> do seu documento HTML -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"> -->
+
+    <!-- Sweet Alert 2 -->
     <!-- Adicione isso no <head> do seu documento HTML -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
