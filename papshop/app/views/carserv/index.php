@@ -856,26 +856,26 @@
 <!-- Testimonials Section End -->
 
 <!-- Blog Section Start -->
-<div class="section section-padding-02">
-    <div class="container">
+<!-- <div class="section section-padding-02">
+    <div class="container"> -->
 
-        <!-- Blog Wrapper Start -->
-        <div class="blog-wrapper">
+<!-- Blog Wrapper Start -->
+<!-- <div class="blog-wrapper"> -->
 
-            <!-- Section Title Start -->
-            <div class="section-title">
+<!-- Section Title Start -->
+<!-- <div class="section-title">
                 <h5 class="sub-title">Our Blog</h5>
                 <h2 class="main-title">Latest Blog Post</h2>
                 <p>Trusted and reliable service is our main goal extremely <br> painful. Nor again is there anyone who loves </p>
             </div>
-            <!-- Section Title End -->
+             Section Title End -->
 
-            <!-- Blog Items Start -->
-            <div class="blog-items">
+<!-- Blog Items Start -->
+<!-- <div class="blog-items">
                 <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <!-- Single Blog Start -->
-                        <div class="single-blog" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-lg-4 col-md-6"> -->
+<!-- Single Blog Start -->
+<!-- <div class="single-blog" data-aos="fade-up" data-aos-delay="200">
                             <div class="blog-image">
                                 <a href="blog-details-right-sidebar.html"><img src="<?= ASSETS . THEME ?>/images/blog/blog-01.jpg" alt="Blog"></a>
                             </div>
@@ -887,12 +887,12 @@
                                 <h3 class="title"><a href="blog-details-right-sidebar.html">Anti-lock Brake Servicing is very important for your vehical</a></h3>
                                 <a href="blog-details-right-sidebar.html" class="more">+ Read more</a>
                             </div>
-                        </div>
-                        <!-- Single Blog End -->
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <!-- Single Blog Start -->
-                        <div class="single-blog" data-aos="fade-up" data-aos-delay="400">
+                        </div> -->
+<!-- Single Blog End -->
+<!-- </div>
+                    <div class="col-lg-4 col-md-6"> -->
+<!-- Single Blog Start -->
+<!-- <div class="single-blog" data-aos="fade-up" data-aos-delay="400">
                             <div class="blog-image">
                                 <a href="blog-details-right-sidebar.html"><img src="<?= ASSETS . THEME ?>/images/blog/blog-02.jpg" alt="Blog"></a>
                             </div>
@@ -904,12 +904,12 @@
                                 <h3 class="title"><a href="blog-details-right-sidebar.html">Don’t do these 4 things if you want your car to retain its value</a></h3>
                                 <a href="blog-details-right-sidebar.html" class="more">+ Read more</a>
                             </div>
-                        </div>
-                        <!-- Single Blog End -->
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <!-- Single Blog Start -->
-                        <div class="single-blog" data-aos="fade-up" data-aos-delay="600">
+                        </div> -->
+<!-- Single Blog End -->
+<!-- </div>
+                    <div class="col-lg-4 col-md-6"> -->
+<!-- Single Blog Start -->
+<!-- <div class="single-blog" data-aos="fade-up" data-aos-delay="600">
                             <div class="blog-image">
                                 <a href="blog-details-right-sidebar.html"><img src="<?= ASSETS . THEME ?>/images/blog/blog-03.jpg" alt="Blog"></a>
                             </div>
@@ -921,23 +921,23 @@
                                 <h3 class="title"><a href="blog-details-right-sidebar.html">Full car Diagnostic is important for every year maintainance</a></h3>
                                 <a href="blog-details-right-sidebar.html" class="more">+ Read more</a>
                             </div>
-                        </div>
-                        <!-- Single Blog End -->
-                    </div>
-                </div>
-            </div>
-            <!-- Blog Items End -->
-
-            <!-- Blog Button Start -->
-            <div class="blog-btn">
-                <a href="blog-right-sidebar.html" class="btn btn-custom-01">View More</a>
-            </div>
-            <!-- Blog Button End -->
-
-        </div>
-        <!-- Blog Wrapper End -->
-
+                        </div> -->
+<!-- Single Blog End -->
+<!-- </div>
     </div>
+</div> -->
+<!-- Blog Items End -->
+
+<!-- Blog Button Start -->
+<!-- <div class="blog-btn">
+    <a href="blog-right-sidebar.html" class="btn btn-custom-01">View More</a>
+</div> -->
+<!-- Blog Button End -->
+
+</div>
+<!-- Blog Wrapper End -->
+
+</div>
 </div>
 <!-- Blog Section End -->
 
