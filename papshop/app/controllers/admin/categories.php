@@ -21,11 +21,33 @@ class Categories extends Controller
          //show($data['user_data']);
      }
 
+
+     /*//get category list
+     */
+     
+     $categoryList =$this->load_model('Category');
+     $result = $categoryList->get_categories($data);
+
+     show($result);
+    //  if ($categoryList["statusCode"] === 401){
+    //      //faz o refresh do accessToken
+    //      //$this->userTokenRefresh();
+
+    //      $groupsList = $modelo->get_categories();
+    //  }
+    //  if ($categoryList["statusCode"] === 200){
+         
+    //     show($categoryList);
+    //     // $this->userdata['$categoryList'] = array_orderby($categoryList["body"]["groups"], "dateCreated", SORT_DESC);
+    //  }
+
        //$this->title = 'Admin - Dashboard';
        $data['page_title'] = "Admin - Categories";
        //Rota onde esta a view que vai carregar
        $this->view("../admin/categories", $data);
     } 
+
+
 
     //Function to create a Category
     public function addCategory()

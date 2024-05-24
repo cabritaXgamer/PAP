@@ -3,6 +3,18 @@
 
 Class Category
 {
+    public function get_categories()
+    {
+        $DB = Database::newInstance();
+
+        $query    = "select * from categories";
+        $result = $DB->read($query);
+       
+
+        return json_decode(json_encode($result), true);
+        
+    }
+
 
     public function create($data)
     {

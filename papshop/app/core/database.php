@@ -35,6 +35,12 @@ Class Database
         return $instance = new self();
     }
 
+    public static function newInstance()
+    {
+        //self::$con = new self();
+        return $instance = new self();
+    }
+
     //read data from database
     public function read($query, $data = array())
     {
