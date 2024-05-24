@@ -33,19 +33,26 @@
                               </tr>
                               </thead>
                               <tbody>
-                              <tr>
-                                  <td><a href="basic_table.html#">Descrition</a></td>
-                                  <td class="hidden-phone">Lorem Ipsum dolor</td>
-                                  <td>12000.00$ </td>
-                                  <td><span class="label label-info label-mini">Enable</span></td>
-                                  <td>
-                                      <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                      <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                      <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                                  </td>
-                              </tr>
-                            
-                              </tbody>
+                                    <?php if (!empty($data['categories'])): ?>
+                                        <?php foreach ($data['categories'] as $index => $category): ?>
+                                            <tr>
+                                                <td><?php echo $index + 1; ?></td>
+                                                <td><?php echo htmlspecialchars($category['category']); ?></td> <!-- Access as array -->
+                                                <td>12000.00$</td>
+                                                <td><span class="label label-info label-mini">Enable</span></td>
+                                                <td>
+                                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
+                                                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
+                                                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i></button>
+                                                </td>
+                                            </tr>
+                                        <?php endforeach; ?>
+                                    <?php else: ?>
+                                        <tr>
+                                            <td colspan="5">No categories found.</td>
+                                        </tr>
+                                    <?php endif; ?>
+                                </tbody>
                           </table>
                       </div><!-- /content-panel -->
                   </div><!-- /col-md-12 -->

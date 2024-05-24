@@ -25,10 +25,11 @@ class Categories extends Controller
      /*//get category list
      */
      
-     $categoryList =$this->load_model('Category');
-     $result = $categoryList->get_categories($data);
+    // Get category list
+    $categoryModel = $this->load_model('Category');
+    $data['categories'] = $categoryModel->get_categories();
 
-     show($result);
+    // //show($result);
     //  if ($categoryList["statusCode"] === 401){
     //      //faz o refresh do accessToken
     //      //$this->userTokenRefresh();
