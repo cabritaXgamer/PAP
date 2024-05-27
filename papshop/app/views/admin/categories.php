@@ -58,42 +58,36 @@
                   </div><!-- /col-md-12 -->
               </div><!-- /row -->
                   
-                  
 
-
-<!-- Modal -->
-<!-- Modal -->
-<div class="modal fade" id="categoryModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Add new category</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form id="categoryForm">
-                    <div class="form-group">
-                        <label for="category-name" class="col-form-label">Category:</label>
-                        <input type="text" class="form-control" id="category-name" name="category">
+            <!-- Modal -->
+            <div class="modal fade" id="categoryModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Add new category</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="categoryForm">
+                                <div class="form-group">
+                                    <label for="category-name" class="col-form-label">Category:</label>
+                                    <input type="text" class="form-control" id="category-name" name="category">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary" onclick="get_data()">Save</button>
+                        </div>
                     </div>
-                </form>
+                </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-primary" onclick="get_data()">Save</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-     
+            <!-- END Modal -->
+            
           </section>
       </section>
-
-
-
       <!--main content end-->
    
 <?php $this->view("../admin/_includes/admin_footer", $data); ?>
@@ -165,6 +159,8 @@
                     $('#categoryModal').modal('hide');
                     // Optionally, clear the input field after successful submission
                     document.querySelector("#category-name").value = "";
+                    // Reload the page to show updated data
+                    location.reload();
                 });
             } else {
                 Swal.fire({
