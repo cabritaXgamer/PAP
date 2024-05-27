@@ -27,7 +27,7 @@
                               <tr>
                                   <th><i class="fa fa-bullhorn"></i> Category</th>
                                   <th class="hidden-phone"><i class="fa fa-question-circle"></i> Descrition</th>
-                                  <th><i class="fa fa-bookmark"></i> Price</th>
+                                  <!-- <th><i class="fa fa-bookmark"></i> Price</th> -->
                                   <th><i class=" fa fa-edit"></i> Status</th>
                                   <th></th>
                               </tr>
@@ -38,8 +38,14 @@
                                             <tr>
                                                 <td><?php echo $index + 1; ?></td>
                                                 <td><?php echo htmlspecialchars($category['category']); ?></td> <!-- Access as array -->
-                                                <td>12000.00$</td>
-                                                <td><span class="label label-info label-mini">Enable</span></td>
+                                                <!--<td><?php //echo htmlspecialchars($category['disabled']); ?></td>  Access as array -->
+                                                <td>
+                                                    <?php if ($category['disabled'] === 0): ?>
+                                                        <span class="label label-info label-mini">Disabled</span>
+                                                    <?php else: ?>
+                                                        <span class="label label-success label-mini">Enabled</span>
+                                                    <?php endif; ?>
+                                                </td>
                                                 <td>
                                                     <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
                                                     <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
@@ -85,7 +91,7 @@
                 </div>
             </div>
             <!-- END Modal -->
-            
+
           </section>
       </section>
       <!--main content end-->
