@@ -54,9 +54,12 @@ Class Category
         
     }
 
-    public function delete()
+    public function delete($id)
     {
-        
+        $DB = Database::newInstance();
+        $id = (int)$id;
+        $query = "delete from categories where id = '$id' limit 1";
+        $DB->write($query);
     }
 
 }

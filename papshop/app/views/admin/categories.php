@@ -25,31 +25,52 @@
 	                  	  	  <hr>
                               <thead>
                               <tr>
-                                  <th><i class="fa fa-bullhorn"></i> Category</th>
-                                  <th class="hidden-phone"><i class="fa fa-question-circle"></i> Descrition</th>
+                                  <th><i class="fa fa-bullhorn"></i> ID</th>
+                                  <th class="hidden-phone"><i class="fa fa-question-circle"></i> Category</th>
                                   <!-- <th><i class="fa fa-bookmark"></i> Price</th> -->
                                   <th><i class=" fa fa-edit"></i> Status</th>
                                   <th></th>
                               </tr>
                               </thead>
                               <tbody>
-                                    <?php if (!empty($data['categories'])): ?>
-                                        <?php foreach ($data['categories'] as $index => $category): ?>
-                                            <tr>
-                                                <td><?php echo $index + 1; ?></td>
-                                                <td><?php echo htmlspecialchars($category['category']); ?></td> <!-- Access as array -->
-                                                <!--<td><?php //echo htmlspecialchars($category['disabled']); ?></td>  Access as array -->
+                              <?php if (!empty($data['categories'])): ?>
+                                <?php foreach ($data['categories'] as $index => $category): ?>
+                                    <?php $status = $category['disabled'] ? "Disabled" : "Enabled"; ?>
+                                    <tr>
+                                        <td><?php echo $index + 1; ?></td>
+                                        <td><?php echo htmlspecialchars($category['category']); ?></td> <!-- Access as array -->
+                                        <td>
+                                        <?php if ($category['disabled']): ?>
+                                            <span class="label label-warning label-mini" style="cursor:pointer" onclick="disabled_row(<?php echo $category['id']; ?>, <?php echo $category['disabled']; ?>)">Disabled</span>
+                                        <?php else: ?>
+                                            <span class="label label-success label-mini" style="cursor:pointer" onclick="disabled_row(<?php echo $category['id']; ?>, <?php echo $category['disabled']; ?>)">Enabled</span>
+                                        <?php endif; ?>
+                                        </td>  
+                                        
+
+                                        
                                                 <td>
-                                                    <?php if ($category['disabled'] === 0): ?>
-                                                        <span class="label label-info label-mini">Disabled</span>
-                                                    <?php else: ?>
-                                                        <span class="label label-success label-mini">Enabled</span>
-                                                    <?php endif; ?>
-                                                </td>
-                                                <td>
-                                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i></button>
+                                                    <!-- Need to put the onclick this away to avoid some issues with the icon button -->
+                                                <!-- <button class="btn btn-primary btn-xs" onclick="edit_row(event, <?php echo htmlspecialchars($category['id']); ?>)">
+                                                    <i class="fa fa-pencil"></i>
+                                                </button>
+                                                <button class="btn btn-danger btn-xs"  onclick="delete_row(event, <?php echo htmlspecialchars($category['id']); ?>)">
+                                                    <i class="fa fa-trash-o"></i>
+                                                </button> -->
+
+                                                                            
+                                                <!-- Button trigger modal --> 
+                                                <!-- <button type="button" class="btn btn-primary" id="<?php echo $category['id'] ?>" data-toggle="modal" data-target="#deleteGroupModal"> 
+                                                <i class="fa fa-trash-o"></i>               -->
+                                                <!-- END Button trigger modal -->
+
+                                                <!-- Botão de Exclusão -->
+                                                <button class="btn btn-danger btn-xs" onclick="openDeleteModal(<?php echo htmlspecialchars($category['id']); ?>)">
+                                                    <i class="fa fa-trash-o"></i>
+                                                </button>
+
+                                                
+
                                                 </td>
                                             </tr>
                                         <?php endforeach; ?>
@@ -65,7 +86,7 @@
               </div><!-- /row -->
                   
 
-            <!-- Modal -->
+            <!-- ADD Modal -->
             <div class="modal fade" id="categoryModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
@@ -91,6 +112,56 @@
                 </div>
             </div>
             <!-- END Modal -->
+
+            <!-- Edit Modal -->
+            <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModalLabel">Edit Category</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editForm">
+                    <input type="hidden" id="editCategoryId">
+                    <div class="mb-3">
+                        <label for="categoryName" class="form-label">Category Name</label>
+                        <input type="text" class="form-control" id="categoryName" required>
+                    </div>
+                    <!-- Add other fields as necessary -->
+                    <button type="button" class="btn btn-primary" onclick="saveEdit()">Save changes</button>
+                    </form>
+                </div>
+                </div>
+            </div>
+            </div>
+            <!-- END Edit Modal -->
+
+
+            <!-- Delete Modal HTML -->
+        <div id="deleteGroupModal" class="modal fade" tabindex="-1" aria-labelledby="deleteGroupModal-Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form id="deleteGroup">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Apagar grupo</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Tem a certeza que quer apagar este grupo?</p>
+                            <p class="text-warning"><small>A ação não pode ser defeita.</small></p>
+                            <input id="deleteGroupId" name="deleteGroupId" type="hidden" class="form-control" value="">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <input type="submit" class="btn btn-danger" value="Apagar" onclick="delete_row(this, document.getElementById('deleteGroupId').value)">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
 
           </section>
       </section>
@@ -142,40 +213,126 @@
         });
 
         // Set request headers
-        ajax.open("POST", "<?=ROOT?>admin/categories/addCategory", true);
+        ajax.open("POST", "<?=ROOT?>admin/categories/category", true);
         ajax.setRequestHeader("Content-Type", "application/json");
 
         // Send AJAX request
         ajax.send(JSON.stringify(data));
     }
 
-    // Function to handle the result
-    function handle_result(result) {
-        // JSON data from the response
-        if (result != "") {
-            var obj = JSON.parse(result);
+    // Function to edit row
+    function edit_row(obj,id)
+    {
+        send_data(data = {
+            data_type:""
+        }) 
+    }
 
-            if (obj.message_type === "info") {
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Sucesso',
-                    text: obj.message
-                }).then(() => {
-                    // Close the modal after the alert is dismissed
-                    $('#categoryModal').modal('hide');
-                    // Optionally, clear the input field after successful submission
-                    document.querySelector("#category-name").value = "";
+    // Function to change the state
+    function disabled_row(id,state)
+    {
+        //console.log(state);
+        send_data(data = {
+            data_type:"disabled_row",
+            id:id,
+            current_state:state
+        }) 
+    }
+ 
+    // Function to delete row
+    function delete_row(obj,id)
+    {
+        send_data(data = {
+            data_type:"delete_row",
+            id:id
+        })
+        
+    }
+
+    /**
+     * HANDLERS
+     */
+
+    // Function to handler the result
+    function handle_result(result) {
+        // Check if the result is not empty
+        if (result !== "") {
+            try {
+                // Parse the JSON data from the response
+                var obj = JSON.parse(result);
+
+                // Handle adding a new category
+                if (obj.data_type === "add_new") {
+                    // Display a success message if the message_type is "info"
+                    if (obj.message_type === "info") {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Sucesso',
+                            text: obj.message
+                        }).then(() => {
+                            // Close the modal after the alert is dismissed
+                            $('#categoryModal').modal('hide');
+                            // Clear the input field after successful submission
+                            document.querySelector("#category-name").value = "";
+                            // Reload the page to show updated data
+                            location.reload();
+                        });
+                    } else {
+                        // Display an error message if the message_type is not "info"
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Erro',
+                            text: obj.message
+                        });
+                    }
+                }
+
+                // Handle disabling/enabling a category
+                if (obj.data_type === "disabled_row") {
                     // Reload the page to show updated data
                     location.reload();
-                });
-            } else {
+                }
+
+                // Handle deleting a category
+                if (obj.data_type === "delete_row") {
+                    // Display a success message if the message_type is "info"
+                    if (obj.message_type === "info") {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Sucesso',
+                            text: obj.message
+                        }).then(() => {
+                            // Reload the page to show updated data
+                            location.reload();
+                        });
+                    } else {
+                        // Display an error message if the message_type is not "info"
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Erro',
+                            text: obj.message
+                        });
+                    }
+                }
+            } catch (e) {
+                // Handle any errors that occur during JSON parsing
                 Swal.fire({
                     icon: 'error',
                     title: 'Erro',
-                    text: obj.message
+                    text: 'Ocorreu um erro ao processar a resposta do servidor.'
                 });
             }
         }
+    }
+
+
+    //Function to handler the delete modal
+    function openDeleteModal(id) {
+        // Define o valor do campo oculto no modal de exclusão
+        document.getElementById('deleteGroupId').value = id;
+        console.log(id);
+        // Abre o modal de exclusão
+        $('#deleteGroupModal').modal('show');
     }
 
 
