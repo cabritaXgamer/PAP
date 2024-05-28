@@ -33,116 +33,87 @@ class Categories extends Controller
 
 
 
-   // Function to handle category-related actions
-public function category()
-{
-    // GEt instance to conect to database
-    $DB = Database::getInstance();
-    $category = $this->load_model('Category');
-    // Get the data sent from the client
-    $data = file_get_contents("php://input");
-    $data = json_decode($data);
+    // Function to handle category-related actions
+    public function category()
+    {
+        // GEt instance to conect to database
+        $DB = Database::getInstance();
+        //Load modal globally
+        $category = $this->load_model('Category');
+        // Get the data sent from the client
+        $data = file_get_contents("php://input");
+        $data = json_decode($data);
 
-    // Verify that data is an object and has the required property
-    if (is_object($data) && isset($data->data_type)) {
-        // Handle adding a new category
-        if ($data->data_type == 'add_category') {
-            // Load the Category model
-            //$category = $this->load_model('Category');
-            $check = $category->create($data);
+        // Verify that data is an object and has the required property
+        if (is_object($data) && isset($data->data_type)) {
+            // Handle adding a new category
+            if ($data->data_type == 'add_category') {
+                // Load the Category model
+                //$category = $this->load_model('Category');
+                $check = $category->create($data);
 
-            // Check if there were any errors
-            if (!empty($_SESSION['error'])) {
-                $arr['message'] = $_SESSION['error'];
-                $_SESSION['error'] = "";
-                $arr['message_type'] = "error";
-                $arr['data_type'] = "add_new";
-            } else {
-                $arr['message'] = "Categoria adicionada com sucesso!";
-                $arr['message_type'] = "info";
-                $arr['data_type'] = "add_new";
+                // Check if there were any errors
+                if (!empty($_SESSION['error'])) {
+                    $arr['message'] = $_SESSION['error'];
+                    $_SESSION['error'] = "";
+                    $arr['message_type'] = "error";
+                    $arr['data_type'] = "add_new";
+                } else {
+                    $arr['message'] = "Categoria adicionada com sucesso!";
+                    $arr['message_type'] = "info";
+                    $arr['data_type'] = "add_new";
+                }
+
+                $arr['data'] = "";
+                echo json_encode($arr);
             }
 
-            $arr['data'] = "";
-            echo json_encode($arr);
-        }
+            // Handle change state of a category
+            elseif ($data->data_type == 'disabled_row') {
 
-        // Handle change state of a category
-        elseif ($data->data_type == 'disabled_row') {
+                $id = $data->id;
+                $disabled = $data->current_state ? 0 : 1;
 
-            $id = $data->id;
-            $disabled = $data->current_state ? 0 : 1;
+                $query = "UPDATE categories SET disabled = '$disabled' WHERE id = '$id' LIMIT 1";
+                $DB->write($query);
 
-            $query = "UPDATE categories SET disabled = '$disabled' WHERE id = '$id' LIMIT 1";
-            $DB->write($query);
+                $arr['message'] = "";
+                $_SESSION['error'] = "";
+                $arr['message_type'] = "info";
+                $arr['data'] = "";
+                $arr['data_type'] = "disabled_row";
 
-            $arr['message'] = "";
-            $_SESSION['error'] = "";
-            $arr['message_type'] = "info";
-            $arr['data'] = "";
-            $arr['data_type'] = "disabled_row";
+                echo json_encode($arr);
+            }
 
-            echo json_encode($arr);
-        }
+            // Handle deleting a category
+            elseif ($data->data_type == 'delete_row') {
+                // Assuming a delete function exists in the Category model
+                $category->delete($data->id);
 
-        // Handle deleting a category
-        elseif ($data->data_type == 'delete_row') {
-            // Assuming a delete function exists in the Category model
-            $category->delete($data->id);
+                $arr['message'] = "A sua categoria foi removida com sucesso!";
+                $_SESSION['error'] = "";
+                $arr['message_type'] = "info";
+                $arr['data'] = "";
+                $arr['data_type'] = "delete_row";
 
-            $arr['message'] = "A sua categoria foi removida com sucesso!";
-            $_SESSION['error'] = "";
-            $arr['message_type'] = "info";
-            $arr['data'] = "";
-            $arr['data_type'] = "delete_row";
-
-            echo json_encode($arr);
-        }
-        else {
-            // Handle unknown data_type
-            $arr['message'] = "Ação desconhecida!";
+                echo json_encode($arr);
+            }
+            else {
+                // Handle unknown data_type
+                $arr['message'] = "Ação desconhecida!";
+                $arr['message_type'] = "error";
+                $arr['data'] = "";
+                echo json_encode($arr);
+            }
+        } else {
+            // Handle invalid data
+            $arr['message'] = "Dados inválidos recebidos!";
             $arr['message_type'] = "error";
             $arr['data'] = "";
             echo json_encode($arr);
         }
-    } else {
-        // Handle invalid data
-        $arr['message'] = "Dados inválidos recebidos!";
-        $arr['message_type'] = "error";
-        $arr['data'] = "";
-        echo json_encode($arr);
     }
-}
-
-
-    // public function addCategory()
-    // {
-    //     $data = file_get_contents("php://input");
-    //     $data = json_decode($data);
-
-    //     var_dump($data);
-
-    //     if (is_object($data)) {
-    //         // Assuming Category is the class name containing the create method
-    //         $category = $this->load_model('Category');
-    //         $check = $category->create($data);
-
-    //         if ($_SESSION['error'] != "") {
-    //             $arr['message'] = $_SESSION['error'];
-    //             $_SESSION['error'] = ""; // Clear the error after retrieving it
-    //             $arr['message_type'] = "error";
-    //             $arr['data'] = "";
-
-    //             echo json_encode($arr);
-    //         } else {
-    //             $arr['message'] = "Categoria adicionada com sucesso!";
-    //             $arr['message_type'] = "info";
-    //             $arr['data'] = "";
-
-    //             echo json_encode($arr);
-    //         }
-    //     }
-    // }
 }
 
 
