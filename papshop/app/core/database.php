@@ -5,53 +5,118 @@ Class Database
 
     //Make conection to database mysql
 
-    public static $con;
+    // public static $con;
 
-    public function __construct()
+    // public function __construct()
+    // {
+    //     try{
+
+    //         $string = DB_TYPE . ":host=" . DB_HOST . ";dbname=" . DB_NAME;
+    //         //echo($string);
+    //         self::$con = new PDO($string , DB_USER , DB_PASS);
+
+    //     }
+    //     catch (PDOException $e){
+
+    //         die($e->getMessage());
+
+    //     }
+
+    // }
+
+    // public static function getInstance()
+    // {
+    //     if(self::$con)
+    //     {
+    //         return self::$con;
+    //     }
+
+    //     //self::$con = new self();
+    //     return $instance = new self();
+    // }
+
+    // public static function newInstance()
+    // {
+    //     //self::$con = new self();
+    //     return $instance = new self();
+    // }
+
+    // //read data from database
+    // public function read($query, $data = array())
+    // {
+    //     $stm = self::$con->prepare($query);
+    //     $result = $stm->execute($data);
+
+    //     if($result)
+    //     {
+    //         $data = $stm->fetchAll(PDO::FETCH_OBJ);
+    //         if(is_array($data) && count($data) > 0)
+    //         {
+    //             return $data;
+    //         }
+    //     }
+
+    //     return false;
+    // }
+
+    // //write to database
+    // public function write($query, $data = array())
+    // {
+    //     $stm = self::$con->prepare($query);
+    //     $result = $stm->execute($data);
+
+    //     if($result)
+    //     {
+    //         return true;
+    //     }
+
+    //     return false;
+    // }
+
+  
+    // Variável estática para armazenar a instância do Database
+    private static $instance = null;
+
+    // Variável para armazenar a conexão PDO
+    private $con;
+
+    private function __construct()
     {
-        try{
-
+        try {
             $string = DB_TYPE . ":host=" . DB_HOST . ";dbname=" . DB_NAME;
-            //echo($string);
-            self::$con = new PDO($string , DB_USER , DB_PASS);
-
-        }
-        catch (PDOException $e){
-
+            $this->con = new PDO($string, DB_USER, DB_PASS);
+            // Defina o modo de erro PDO para exceção
+            $this->con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (PDOException $e) {
             die($e->getMessage());
-
         }
-
     }
 
+    // Método para obter a instância única
     public static function getInstance()
     {
-        if(self::$con)
-        {
-            return self::$con;
+        if (self::$instance === null) {
+            self::$instance = new self();
         }
 
-        //self::$con = new self();
-        return $instance = new self();
+        return self::$instance;
     }
 
-    public static function newInstance()
+    // Método para obter a conexão PDO
+    public function getConnection()
     {
-        //self::$con = new self();
-        return $instance = new self();
+        return $this->con;
     }
 
-    //read data from database
+    // Método para ler dados do banco de dados
     public function read($query, $data = array())
     {
-        $stm = self::$con->prepare($query);
+        $stm = $this->con->prepare($query);
         $result = $stm->execute($data);
 
-        if($result)
-        {
+        if ($result) {
             $data = $stm->fetchAll(PDO::FETCH_OBJ);
-            if(is_array($data) && count($data) > 0)
-            {
+            if (is_array($data) && count($data) > 0) {
                 return $data;
             }
         }
@@ -59,20 +124,20 @@ Class Database
         return false;
     }
 
-    //write to database
+    // Método para escrever dados no banco de dados
     public function write($query, $data = array())
     {
-        $stm = self::$con->prepare($query);
+        $stm = $this->con->prepare($query);
         $result = $stm->execute($data);
 
-        if($result)
-        {
+        if ($result) {
             return true;
         }
 
         return false;
     }
 }
+
 /*
 $db = Database::getInstance();
 $data = $db->read("describe users");

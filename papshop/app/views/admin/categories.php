@@ -154,7 +154,8 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                            <input type="submit" class="btn btn-danger" value="Apagar" onclick="delete_row(this, document.getElementById('deleteGroupId').value)">
+                            <!-- <input type="submit" class="btn btn-danger" value="Apagar" onclick="delete_row(this, document.getElementById('deleteGroupId').value)"> -->
+                            <input  class="btn btn-danger" value="Apagar" onclick="delete_row(this, document.getElementById('deleteGroupId').value)">
                         </div>
                     </form>
                 </div>
@@ -256,11 +257,12 @@
     // Function to handler the result
     function handle_result(result) {
         // Check if the result is not empty
+        console.log("The result is" + result);
         if (result !== "") {
             try {
                 // Parse the JSON data from the response
                 var obj = JSON.parse(result);
-
+                console.log(obj);
                 // Handle adding a new category
                 if (obj.data_type === "add_new") {
                     // Display a success message if the message_type is "info"
@@ -330,7 +332,7 @@
     function openDeleteModal(id) {
         // Define o valor do campo oculto no modal de exclusão
         document.getElementById('deleteGroupId').value = id;
-        console.log(id);
+        //console.log(id);
         // Abre o modal de exclusão
         $('#deleteGroupModal').modal('show');
     }
