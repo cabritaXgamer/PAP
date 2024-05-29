@@ -84,14 +84,28 @@ class Categories extends Controller
                 echo json_encode($arr);
             }
     
-             // Handle deleting a category
+            // Handle deleting a category
             elseif ($data->data_type == 'delete_row') {
                 
                 $check = $category->delete($data->id);
                 //var_dump($check);
-                if ($check) {
+                // if ($check) {
+                //     $arr['message'] = "A sua categoria foi removida com sucesso!";
+                //     $arr['message_type'] = "info";
+                // } else {
+                //     $arr['message'] = "Erro ao remover a categoria!";
+                //     $arr['message_type'] = "error";
+                // }
+                // $_SESSION['error'] = "";
+                // $arr['data'] = "";
+                // $arr['data_type'] = "delete_row";
+
+                if ($check === true) {
                     $arr['message'] = "A sua categoria foi removida com sucesso!";
                     $arr['message_type'] = "info";
+                } elseif ($check === "Não é possível excluir a categoria enquanto o estado estiver ativado.") {
+                    $arr['message'] = $check;
+                    $arr['message_type'] = "error";
                 } else {
                     $arr['message'] = "Erro ao remover a categoria!";
                     $arr['message_type'] = "error";

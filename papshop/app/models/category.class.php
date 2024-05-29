@@ -112,16 +112,48 @@ Class Category
         // Implemente a lógica de edição de categoria, se necessário
     }
 
+    // public function delete($id)
+    // {
+    //     $DB = Database::getInstance();
+    //     $id = (int)$id;
+
+    //     $query = "DELETE FROM categories WHERE id = '$id' LIMIT 1";
+    //     return $DB->write($query);
+    // }
+    
+    //Function model delete with enabling /disabling validation
     public function delete($id)
     {
         $DB = Database::getInstance();
         $id = (int)$id;
-        $query = "DELETE FROM categories WHERE id = '$id' LIMIT 1";
-        return $DB->write($query);
+    
+        // Verificar se o estado de desativação está ativo para esta categoria
+        $query_check_disable = "SELECT disabled FROM categories WHERE id = :id";
+        $params_check_disable = array(':id' => $id);
+        $disable_result = $DB->read($query_check_disable, $params_check_disable);
+    
+        // Se o estado de desativação estiver ativo, proceda com a exclusão
+        if (!empty($disable_result) && $disable_result[0]->disabled == 1) {
+            $query = "DELETE FROM categories WHERE id = :id LIMIT 1";
+            $params = array(':id' => $id);
+            $delete_result = $DB->write($query, $params);
+    
+            // Se a exclusão for bem-sucedida, retornar true
+            if ($delete_result) {
+                return true;
+            } else {
+                // Se ocorrer algum erro durante a exclusão, retornar false
+                return false;
+            }
+        } else {
+            // Se o estado de desativação não estiver ativo, retornar uma mensagem explicativa
+            return "Não é possível excluir a categoria enquanto o estado estiver ativado.";
+        }
     }
-//}
-
-
+    
 }
+
+
+//}
 
 

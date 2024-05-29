@@ -69,9 +69,7 @@ Class User
         $data['url_address'] = $this->get_random_string_max (60);
         }
 
-        
-
-        
+           
         if ($this->error ==""){
             // Para testar com a minha base de dados
             $data['role'] = "costumer";
