@@ -88,7 +88,6 @@ class Categories extends Controller
             elseif ($data->data_type == 'delete_row') {
                 
                 $check = $category->delete($data->id);
-                //var_dump($check);
                 // if ($check) {
                 //     $arr['message'] = "A sua categoria foi removida com sucesso!";
                 //     $arr['message_type'] = "info";

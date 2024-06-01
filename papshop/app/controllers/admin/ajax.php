@@ -30,7 +30,43 @@ class Ajax extends Controller
             }
 
             $arr['data'] = "";
-            echo json_encode($arr);
-        }
-    }     
+            
+            // Handle deleting a category
+            elseif ($data->data_type == 'delete_row') {
+                
+                $check = $category->delete($data->id);
+                if ($check) {
+                    $arr['message'] = "A sua categoria foi removida com sucesso!";
+                    $arr['message_type'] = "info";
+                } else {
+                    $arr['message'] = "Erro ao remover a categoria!";
+                    $arr['message_type'] = "error";
+                }
+                $_SESSION['error'] = "";
+                $arr['data'] = "";
+                $arr['data_type'] = "delete_row";
+                
+                echo json_encode($arr);
+            }
+
+             // Handle change state of a category
+            elseif ($data->data_type == 'disabled_row') {
+                $id = $data->id;
+                $disabled = $data->current_state ? 0 : 1;
+    
+                $query = "UPDATE categories SET disabled = :disabled WHERE id = :id LIMIT 1";
+                $params = array(':disabled' => $disabled, ':id' => $id);
+                $DB = Database::getInstance();
+                $DB->write($query, $params);
+    
+                $arr['message'] = "";
+                $_SESSION['error'] = "";
+                $arr['message_type'] = "info";
+                $arr['data'] = "";
+                $arr['data_type'] = "disabled_row";
+    
+                echo json_encode($arr);
+            }
+    
+    }    } 
 }  

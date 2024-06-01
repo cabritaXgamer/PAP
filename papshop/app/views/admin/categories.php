@@ -41,37 +41,33 @@
                                         <td><?php echo htmlspecialchars($category['category']); ?></td> <!-- Access as array -->
                                         <td>
                                         <?php if ($category['disabled']): ?>
-                                            <span class="label label-warning label-mini" style="cursor:pointer" onclick="disabled_row(<?php echo $category['id']; ?>, <?php echo $category['disabled']; ?>)">Disabled</span>
+                                            <span class="label label-warning label-mini" style="cursor:pointer" 
+                                                onclick="disabled_row(<?php echo $category['id']; ?>, <?php echo $category['disabled']; ?>)">Disabled</span>
                                         <?php else: ?>
-                                            <span class="label label-success label-mini" style="cursor:pointer" onclick="disabled_row(<?php echo $category['id']; ?>, <?php echo $category['disabled']; ?>)">Enabled</span>
+                                            <span class="label label-success label-mini" style="cursor:pointer" 
+                                                onclick="disabled_row(<?php echo $category['id']; ?>, <?php echo $category['disabled']; ?>)">Enabled</span>
                                         <?php endif; ?>
                                         </td>  
                                         
 
                                         
-                                                <td>
-                                                    <!-- Need to put the onclick this away to avoid some issues with the icon button -->
-                                                <!-- <button class="btn btn-primary btn-xs" onclick="edit_row(event, <?php echo htmlspecialchars($category['id']); ?>)">
-                                                    <i class="fa fa-pencil"></i>
-                                                </button>
-                                                <button class="btn btn-danger btn-xs"  onclick="delete_row(event, <?php echo htmlspecialchars($category['id']); ?>)">
-                                                    <i class="fa fa-trash-o"></i>
-                                                </button> -->
+                                     
 
-                                                                            
-                                                <!-- Button trigger modal --> 
-                                                <!-- <button type="button" class="btn btn-primary" id="<?php echo $category['id'] ?>" data-toggle="modal" data-target="#deleteGroupModal"> 
-                                                <i class="fa fa-trash-o"></i>               -->
-                                                <!-- END Button trigger modal -->
-
-                                                <!-- Botão de Exclusão -->
-                                                <button class="btn btn-danger btn-xs" onclick="openDeleteModal(<?php echo htmlspecialchars($category['id']); ?>)">
-                                                    <i class="fa fa-trash-o"></i>
-                                                </button>
+                                                    <td>
+                                                    <!-- EDIT trigger modal --> 
+                                                    <button class="btn btn-primary btn-xs" onclick="openEditModal(<?php echo htmlspecialchars($category['id']); ?>, 
+                                                        '<?php echo htmlspecialchars($category['category']); ?>')">
+                                                            <i class="fa fa-pencil"></i></button>
+                                                    <!-- END EDIT trigger modal -->
+                                                    <!-- DELETE trigger modal -->
+                                                    <button class="btn btn-danger btn-xs" onclick="openDeleteModal(<?php echo htmlspecialchars($category['id'], ); ?>)">
+                                                        <i class="fa fa-trash-o "></i></button>
+                                                    <!-- END DELETE trigger modal -->
+                                                    </td>
 
                                                 
 
-                                                </td>
+                                           
                                             </tr>
                                         <?php endforeach; ?>
                                     <?php else: ?>
@@ -114,48 +110,54 @@
             <!-- END Modal -->
 
             <!-- Edit Modal -->
-            <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="editModalLabel">Edit Category</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="editForm">
-                    <input type="hidden" id="editCategoryId">
-                    <div class="mb-3">
-                        <label for="categoryName" class="form-label">Category Name</label>
-                        <input type="text" class="form-control" id="categoryName" required>
+            <div class="modal fade" id="editCatModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Edit category</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="categoryForm">
+                                <div class="form-group">
+                                    <label for="category-name" class="col-form-label">Category:</label>
+                                    <input type="text" class="form-control" id="editCategory" name="editCategory">
+                                    <input id="editCatId" name="editCatId" type="hidden" class="form-control" value="">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary" onclick="get_data()">Save</button>
+                        </div>
                     </div>
-                    <!-- Add other fields as necessary -->
-                    <button type="button" class="btn btn-primary" onclick="saveEdit()">Save changes</button>
-                    </form>
                 </div>
-                </div>
-            </div>
             </div>
             <!-- END Edit Modal -->
 
 
             <!-- Delete Modal HTML -->
-        <div id="deleteGroupModal" class="modal fade" tabindex="-1" aria-labelledby="deleteGroupModal-Label" aria-hidden="true">
+        <div id="deleteCatModal" class="modal fade" tabindex="-1" 
+                aria-labelledby="deleteCatModal-Label" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <form id="deleteGroup">
                         <div class="modal-header">
                             <h4 class="modal-title">Apagar grupo</h4>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" 
+                                aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <p>Tem a certeza que quer apagar este grupo?</p>
                             <p class="text-warning"><small>A ação não pode ser defeita.</small></p>
-                            <input id="deleteGroupId" name="deleteGroupId" type="hidden" class="form-control" value="">
+                            <input id="deleteCatId" name="deleteCatId" type="hidden" class="form-control" value="">
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                            <!-- <input type="submit" class="btn btn-danger" value="Apagar" onclick="delete_row(this, document.getElementById('deleteGroupId').value)"> -->
-                            <input  class="btn btn-danger" value="Apagar" onclick="delete_row(this, document.getElementById('deleteGroupId').value)">
+                            <input  class="btn btn-danger" value="Apagar" 
+                                onclick="delete_row(document.getElementById('deleteCatId').value)">
                         </div>
                     </form>
                 </div>
@@ -241,7 +243,7 @@
     }
  
     // Function to delete row
-    function delete_row(obj,id)
+    function delete_row(id)
     {
         send_data(data = {
             data_type:"delete_row",
@@ -331,10 +333,20 @@
     //Function to handler the delete modal
     function openDeleteModal(id) {
         // Define o valor do campo oculto no modal de exclusão
-        document.getElementById('deleteGroupId').value = id;
+        document.getElementById('deleteCatId').value = id;
         //console.log(id);
         // Abre o modal de exclusão
-        $('#deleteGroupModal').modal('show');
+        $('#deleteCatModal').modal('show');
+    }
+
+    //Function to handler the delete modal
+    function openEditModal(id,category) {
+        // Define o valor do campo oculto no modal de exclusão
+        document.getElementById('editCatId').value = id;
+        document.getElementById('editCategory').value = category;
+        //console.log(id);
+        // Abre o modal de exclusão
+        $('#editCatModal').modal('show');
     }
 
 

@@ -99,7 +99,7 @@ Class Category
                 return true;
             } else {
                 // Se houver um erro ao inserir, defina uma mensagem de erro na sessão
-                $_SESSION['error'] = "Erro ao inserir categoria no banco de dados.";
+                $_SESSION['error'] = "Erro ao inserir categoria na base de dados.";
             }
         } else {
             $_SESSION['error'] = "Dados inválidos para adicionar categoria.";
