@@ -64,6 +64,28 @@ class Categories extends Controller
                 $arr['data'] = "";
                 echo json_encode($arr);
             }
+
+            // Handle editing a category
+            elseif ($data->data_type == 'edit_category') {
+                $id = $data->id;
+                $new_category = $data->data;
+
+                // Call the model's edit method
+                $check = $category->edit($id, $new_category);
+
+                if ($check) {
+                    $arr['message'] = "Categoria editada com sucesso!";
+                    $arr['message_type'] = "info";
+                } else {
+                    $arr['message'] = "Erro ao editar a categoria!";
+                    $arr['message_type'] = "error";
+                }
+                $_SESSION['error'] = "";
+                $arr['data'] = "";
+                $arr['data_type'] = "edit_row";
+
+                echo json_encode($arr);
+            }
     
             // Handle change state of a category
             elseif ($data->data_type == 'disabled_row') {

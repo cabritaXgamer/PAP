@@ -33,44 +33,35 @@
                               </tr>
                               </thead>
                               <tbody>
-                              <?php if (!empty($data['categories'])): ?>
-                                <?php foreach ($data['categories'] as $index => $category): ?>
-                                    <?php $status = $category['disabled'] ? "Disabled" : "Enabled"; ?>
-                                    <tr>
-                                        <td><?php echo $index + 1; ?></td>
-                                        <td><?php echo htmlspecialchars($category['category']); ?></td> <!-- Access as array -->
-                                        <td>
-                                        <?php if ($category['disabled']): ?>
-                                            <span class="label label-warning label-mini" style="cursor:pointer" 
-                                                onclick="disabled_row(<?php echo $category['id']; ?>, <?php echo $category['disabled']; ?>)">Disabled</span>
-                                        <?php else: ?>
-                                            <span class="label label-success label-mini" style="cursor:pointer" 
-                                                onclick="disabled_row(<?php echo $category['id']; ?>, <?php echo $category['disabled']; ?>)">Enabled</span>
-                                        <?php endif; ?>
-                                        </td>  
-                                        
-
-                                        
-                                     
-
+                                <?php if (!empty($data['categories'])): ?>
+                                    <?php foreach ($data['categories'] as $index => $category): ?>
+                                        <?php $status = $category['disabled'] ? "Disabled" : "Enabled"; ?>
+                                        <tr>
+                                            <td><?php echo $index + 1; ?></td>
+                                            <td><?php echo htmlspecialchars($category['category']); ?></td> <!-- Access as array -->
+                                            <td>
+                                                <?php if ($category['disabled']): ?>
+                                                    <span class="label label-warning label-mini" style="cursor:pointer" 
+                                                        onclick="disabled_row(<?php echo $category['id']; ?>, <?php echo $category['disabled']; ?>)">Disabled</span>
+                                                <?php else: ?>
+                                                    <span class="label label-success label-mini" style="cursor:pointer" 
+                                                        onclick="disabled_row(<?php echo $category['id']; ?>, <?php echo $category['disabled']; ?>)">Enabled</span>
+                                                <?php endif; ?>
+                                            </td>  
                                                     <td>
-                                                    <!-- EDIT trigger modal --> 
-                                                    <button class="btn btn-primary btn-xs" onclick="openEditModal(<?php echo htmlspecialchars($category['id']); ?>, 
-                                                        '<?php echo htmlspecialchars($category['category']); ?>')">
-                                                            <i class="fa fa-pencil"></i></button>
-                                                    <!-- END EDIT trigger modal -->
-                                                    <!-- DELETE trigger modal -->
-                                                    <button class="btn btn-danger btn-xs" onclick="openDeleteModal(<?php echo htmlspecialchars($category['id'], ); ?>)">
-                                                        <i class="fa fa-trash-o "></i></button>
-                                                    <!-- END DELETE trigger modal -->
+                                                        <!-- EDIT trigger modal --> 
+                                                        <button class="btn btn-primary btn-xs" onclick="openEditModal(<?php echo htmlspecialchars($category['id']); ?>, 
+                                                            '<?php echo htmlspecialchars($category['category']); ?>')">
+                                                                <i class="fa fa-pencil"></i></button>
+                                                        <!-- END EDIT trigger modal -->
+                                                        <!-- DELETE trigger modal -->
+                                                        <button class="btn btn-danger btn-xs" onclick="openDeleteModal(<?php echo htmlspecialchars($category['id'], ); ?>)">
+                                                            <i class="fa fa-trash-o "></i></button>
+                                                        <!-- END DELETE trigger modal -->
                                                     </td>
-
-                                                
-
-                                           
-                                            </tr>
-                                        <?php endforeach; ?>
-                                    <?php else: ?>
+                                                </tr>
+                                            <?php endforeach; ?>
+                                        <?php else: ?>
                                         <tr>
                                             <td colspan="5">No categories found.</td>
                                         </tr>
@@ -110,7 +101,8 @@
             <!-- END Modal -->
 
             <!-- Edit Modal -->
-            <div class="modal fade" id="editCatModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="editCatModal" tabindex="-1" role="dialog" 
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -130,7 +122,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-                            <button type="button" class="btn btn-primary" onclick="get_data()">Save</button>
+                            <button type="button" class="btn btn-primary" onclick="edit_row()">Save</button>
                         </div>
                     </div>
                 </div>
@@ -224,11 +216,28 @@
     }
 
     // Function to edit row
-    function edit_row(obj,id)
+    function edit_row()
     {
-        send_data(data = {
-            data_type:""
-        }) 
+        let category_input = document.querySelector("#editCategory");
+        let id_input = document.querySelector("#editCatId");
+
+        if (category_input.value.trim() === "" || !isNaN(category_input.value.trim())) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Erro',
+                text: 'Por favor insira um nome de categoria válido!'
+            });
+            return;
+        }
+
+        let data = category_input.value.trim();
+        let id = id_input.value;
+
+        send_data({
+            id: id,
+            data: data,
+            data_type: 'edit_category'
+        });
     }
 
     // Function to change the state
@@ -295,6 +304,30 @@
                 if (obj.data_type === "disabled_row") {
                     // Reload the page to show updated data
                     location.reload();
+                }
+
+                // Handle editing a category
+                if (obj.data_type === "edit_row") {
+                    // Display a success message if the message_type is "info"
+                    if (obj.message_type === "info") {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Sucesso',
+                            text: obj.message
+                        }).then(() => {
+                            // Close the modal after the alert is dismissed
+                            $('#editCatModal').modal('hide');
+                            // Reload the page to show updated data
+                            location.reload();
+                        });
+                    } else {
+                        // Display an error message if the message_type is not "info"
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Erro',
+                            text: obj.message
+                        });
+                    }
                 }
 
                 // Handle deleting a category
