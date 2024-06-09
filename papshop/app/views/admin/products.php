@@ -29,15 +29,15 @@
                                     <tr>
                                         <td><?php echo $index + 1; ?></td>
                                         <td><?php echo htmlspecialchars($product['description']); ?></td>
-                                        <td>
+                                        <!-- <td>
                                             <?php if ($product['disabled']): ?>
                                                 <span class="label label-warning label-mini" style="cursor:pointer" 
-                                                    onclick="disabled_row(<?php echo $product['id']; ?>, <?php echo $product['disabled']; ?>)">Disabled</span>
+                                                    onclick="disabled_row(<?php //echo $product['id']; ?>, <?php //echo $product['disabled']; ?>)">Disabled</span>
                                             <?php else: ?>
                                                 <span class="label label-success label-mini" style="cursor:pointer" 
-                                                    onclick="disabled_row(<?php echo $product['id']; ?>, <?php echo $product['disabled']; ?>)">Enabled</span>
+                                                    onclick="disabled_row(<?php //echo $product['id']; ?>, <?php //echo $product['disabled']; ?>)">Enabled</span>
                                             <?php endif; ?>
-                                        </td>
+                                        </td> -->
                                         <td>
                                             <!-- EDIT trigger modal --> 
                                             <button class="btn btn-primary btn-xs" onclick="openEditModal(<?php echo htmlspecialchars($product['id']); ?>, 

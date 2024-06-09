@@ -23,7 +23,7 @@ class Products extends Controller
 
         // Get category list
         $categoryModel = $this->load_model('Product');
-        $data['categories'] = $categoryModel->get_product();
+        $data['products'] = $categoryModel->get_product();
 
        //show($data['categories']);
        //$this->title = 'Admin - Dashboard';
