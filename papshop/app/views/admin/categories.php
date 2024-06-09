@@ -33,35 +33,35 @@
                               </tr>
                               </thead>
                               <tbody>
-                                <?php if (!empty($data['categories'])): ?>
-                                    <?php foreach ($data['categories'] as $index => $category): ?>
-                                        <?php $status = $category['disabled'] ? "Disabled" : "Enabled"; ?>
-                                        <tr>
-                                            <td><?php echo $index + 1; ?></td>
-                                            <td><?php echo htmlspecialchars($category['category']); ?></td> <!-- Access as array -->
-                                            <td>
-                                                <?php if ($category['disabled']): ?>
-                                                    <span class="label label-warning label-mini" style="cursor:pointer" 
-                                                        onclick="disabled_row(<?php echo $category['id']; ?>, <?php echo $category['disabled']; ?>)">Disabled</span>
-                                                <?php else: ?>
-                                                    <span class="label label-success label-mini" style="cursor:pointer" 
-                                                        onclick="disabled_row(<?php echo $category['id']; ?>, <?php echo $category['disabled']; ?>)">Enabled</span>
-                                                <?php endif; ?>
-                                            </td>  
-                                                    <td>
-                                                        <!-- EDIT trigger modal --> 
-                                                        <button class="btn btn-primary btn-xs" onclick="openEditModal(<?php echo htmlspecialchars($category['id']); ?>, 
-                                                            '<?php echo htmlspecialchars($category['category']); ?>')">
-                                                                <i class="fa fa-pencil"></i></button>
-                                                        <!-- END EDIT trigger modal -->
-                                                        <!-- DELETE trigger modal -->
-                                                        <button class="btn btn-danger btn-xs" onclick="openDeleteModal(<?php echo htmlspecialchars($category['id'], ); ?>)">
-                                                            <i class="fa fa-trash-o "></i></button>
-                                                        <!-- END DELETE trigger modal -->
-                                                    </td>
-                                                </tr>
-                                            <?php endforeach; ?>
-                                        <?php else: ?>
+                              <?php if (!empty($data['categories'])): ?>
+                                <?php foreach ($data['categories'] as $index => $category): ?>
+                                    <?php $status = $category['disabled'] ? "Disabled" : "Enabled"; ?>
+                                    <tr>
+                                        <td><?php echo $index + 1; ?></td>
+                                        <td><?php echo htmlspecialchars($category['category']); ?></td> <!-- Access as array -->
+                                        <td>
+                                            <?php if ($category['disabled']): ?>
+                                                <span class="label label-warning label-mini" style="cursor:pointer" 
+                                                    onclick="disabled_row(<?php echo $category['id']; ?>, <?php echo $category['disabled']; ?>)">Disabled</span>
+                                            <?php else: ?>
+                                                <span class="label label-success label-mini" style="cursor:pointer" 
+                                                    onclick="disabled_row(<?php echo $category['id']; ?>, <?php echo $category['disabled']; ?>)">Enabled</span>
+                                            <?php endif; ?>
+                                        </td>  
+                                                <td>
+                                                    <!-- EDIT trigger modal --> 
+                                                    <button class="btn btn-primary btn-xs" onclick="openEditModal(<?php echo htmlspecialchars($category['id']); ?>, 
+                                                        '<?php echo htmlspecialchars($category['category']); ?>')">
+                                                            <i class="fa fa-pencil"></i></button>
+                                                    <!-- END EDIT trigger modal -->
+                                                    <!-- DELETE trigger modal -->
+                                                    <button class="btn btn-danger btn-xs" onclick="openDeleteModal(<?php echo htmlspecialchars($category['id'], ); ?>)">
+                                                        <i class="fa fa-trash-o "></i></button>
+                                                    <!-- END DELETE trigger modal -->
+                                                </td>
+                                            </tr>
+                                        <?php endforeach; ?>
+                                    <?php else: ?>
                                         <tr>
                                             <td colspan="5">No categories found.</td>
                                         </tr>
