@@ -76,7 +76,27 @@
                         <form id="productForm">
                             <div class="form-group">
                                 <label for="product-name" class="col-form-label">Product:</label>
-                                <input type="text" class="form-control" id="product-name" name="product">
+                                <input type="text" class="form-control" id="product-name" name="product-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="product-quantity" class="col-form-label">Quantity:</label>
+                                <input type="number" class="form-control" value="1" id="product-quantity" name="product-quantity" min="0" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="category-name" class="col-form-label">Category:</label>
+                                <select name="category-name" id="category-name" class="form-control" required>
+                                    <?php if (!empty($data['categories'])): ?>
+                                        <?php foreach ($data['categories'] as $category): ?>
+                                            <option value="<?php echo htmlspecialchars($category['category']); ?>"><?php echo htmlspecialchars($category['category']); ?></option>
+                                        <?php endforeach; ?>
+                                    <?php else: ?>
+                                        <option value="" disabled>No categories available</option>
+                                    <?php endif; ?>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="price-name" class="col-form-label">Price:</label>
+                                <input type="number" class="form-control" id="price-name" name="price-name" placeholder="0.00" min="0.00" step="0.01" required>
                             </div>
                         </form>
                     </div>
@@ -149,24 +169,34 @@
 <?php $this->view("../admin/_includes/admin_footer", $data); ?>
 
 <script>
+
     function get_data() {
-        let product_input = document.querySelector("#product-name");
-        if (product_input.value.trim() === "" || !isNaN(product_input.value.trim())) {
+
+        let product_name = document.querySelector("#product-name").value.trim();
+        let product_quantity = parseInt(document.querySelector("#product-quantity").value.trim());
+        let category_name = document.querySelector("#category-name").value.trim();
+        let price_name = parseFloat(document.querySelector("#price-name").value.trim());
+
+        if (!product_name || isNaN(product_quantity)) {
             Swal.fire({
                 icon: 'error',
                 title: 'Error',
-                text: 'Please enter a valid product name!'
+                text: 'Please enter a valid product name and quantity!'
             });
             return;
         } 
 
-        var data = product_input.value.trim();
-
-        send_data({
-            data: data,
+        let data = {
+            product_name: product_name,
+            product_quantity: product_quantity,
+            category_name: category_name,
+            price_name: price_name,
             data_type: 'add_product'
-        });
+        };
+
+        send_data(data);
     }
+
 
     function send_data(data = {}) {
         var ajax = new XMLHttpRequest();

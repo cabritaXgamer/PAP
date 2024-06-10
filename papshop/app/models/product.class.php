@@ -15,38 +15,62 @@ Class Product
         return json_decode(json_encode($result), true);
     }
 
+    public function get_categories()
+    {
+        // Utilize a instância única do Database
+        $DB = Database::getInstance();
+
+        $query = "SELECT * FROM categories WHERE disabled = 0";
+        $result = $DB->read($query);
+
+        // Converta o resultado para um array associativo
+        return json_decode(json_encode($result), true);
+    }
+
     public function create_product($data)
     {
         $DB = Database::getInstance();
-    
-        // Verifique se os dados são válidos antes de inserir
-        if (isset($data->data) && isset($data->data_type) && $data->data_type == 'add_product') {
-            // Prepare os dados para inserção
-            $product = ucwords(trim($data->data));
-    
-            // Verifique se o nome da categoria é válido (permitindo letras e espaços)
-            if (!preg_match("/^[a-zA-Z\s]+$/", $product)) {
-                $_SESSION['error'] = "Por favor insira um nome de produto correto!";
+
+        // Validação dos dados antes de inserir
+        if (!empty($data->product_name) && !empty($data->product_quantity)) {
+            $description = trim($data->product_name);
+            $quantity = (int)$data->product_quantity;
+            $categoryId = trim($data->category_name);
+            $price = (float)$data->price_name;
+
+            // Verifique se a descrição é válida
+            if ($description === "") {
+                $_SESSION['error'] = "A descrição do produto é obrigatória.";
                 return false;
             }
-    
-            // Construa a consulta SQL para inserção
-            $query = "INSERT INTO products (description) VALUES (:description)";
-            $params = array(':description' => $product);
-    
-            // Execute a consulta SQL
+
+            // Verifique se a quantidade é um número não negativo
+            if ($quantity < 0) {
+                $_SESSION['error'] = "A quantidade do produto deve ser um número não negativo.";
+                return false;
+            }
+
+            // Construa e execute a consulta SQL para inserção
+            $query = "INSERT INTO products (description, quantity, categoryId, price) VALUES (:description, :quantity, :categoryId, :price)";
+            $params = array(
+                ':description' => $description,
+                ':quantity' => $quantity,
+                ':categoryId' => $categoryId,
+                ':price' => $price
+            );
             $check = $DB->write($query, $params);
+
             if ($check) {
                 return true;
             } else {
-                // Se houver um erro ao inserir, defina uma mensagem de erro na sessão
-                $_SESSION['error'] = "Erro ao inserir o produto na base de dados.";
+                $_SESSION['error'] = "Erro ao inserir produto na base de dados.";
             }
         } else {
-            $_SESSION['error'] = "Dados inválidos para adicionar produto.";
+            $_SESSION['error'] = "A descrição e a quantidade do produto são obrigatórias.";
         }
         return false;
     }
+
     
 
     //Function model edit category
