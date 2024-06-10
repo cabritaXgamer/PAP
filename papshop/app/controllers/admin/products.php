@@ -110,24 +110,10 @@ class Products extends Controller
             // Handle deleting a category
             elseif ($data->data_type == 'delete_row') {
                 
-                $check = $category->delete($data->id);
-                // if ($check) {
-                //     $arr['message'] = "A sua categoria foi removida com sucesso!";
-                //     $arr['message_type'] = "info";
-                // } else {
-                //     $arr['message'] = "Erro ao remover a categoria!";
-                //     $arr['message_type'] = "error";
-                // }
-                // $_SESSION['error'] = "";
-                // $arr['data'] = "";
-                // $arr['data_type'] = "delete_row";
-
-                if ($check === true) {
-                    $arr['message'] = "A sua categoria foi removida com sucesso!";
+                $check = $product->delete_product($data->id);
+                if ($check) {
+                    $arr['message'] = "O seu produto foi removido com sucesso!";
                     $arr['message_type'] = "info";
-                } elseif ($check === "Não é possível excluir a categoria enquanto o estado estiver ativado.") {
-                    $arr['message'] = $check;
-                    $arr['message_type'] = "error";
                 } else {
                     $arr['message'] = "Erro ao remover a categoria!";
                     $arr['message_type'] = "error";
