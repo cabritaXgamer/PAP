@@ -114,13 +114,18 @@
                                         <a href="#">Perfil</a>
                                         <ul class="sub-menu">
                                             <li><a href="profile">Minha Conta</a></li>
-                                            <li><a href="admin">Secção Admin</a></li>
+                                            <?php if ($data['user_data']->role == 'admin') : ?>
+                                                <li><a href="admin">Secção Admin</a></li>
+                                            <?php endif; ?>
+
                                             <li><a href="logout">Logout</a></li>
                                         </ul>
                                     <?php endif ?>
                                 </li>
 
+
                             </ul>
+
 
                         </div>
                         <!-- Header Menu End -->

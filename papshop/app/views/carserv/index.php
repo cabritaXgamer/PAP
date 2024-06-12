@@ -10,7 +10,7 @@
 
             <!-- Slider Section Start -->
             <div class="slider-content">
-                <h5 class="sub-title" data-aos="fade-up" data-aos-delay="100">Uma oficina para todos os moedelos</h5>
+                <h5 class="sub-title" data-aos="fade-up" data-aos-delay="100">Uma oficina para todos os modelos</h5>
                 <h1 class="main-title" data-aos="fade-up" data-aos-delay="400">necessitas de reparação automovel?</h1>
                 <p data-aos="fade-up" data-aos-delay="600">Nós da Cilindrenvolvente ofereçemos garantia de serviço de reparo repido do seu veiculo</p>
                 <a href="#contact" data-aos="fade-up" data-aos-delay="800" class="btn btn-custom-01">Contacta-nos</a>
@@ -65,7 +65,7 @@
 
                     <!-- Section Title Start -->
                     <div class="section-title">
-                        <h5 class="sub-title">Bem vindo <strong>algartracto</strong>.</h5>
+                        <h5 class="sub-title">Bem vindo <strong>Cilindrenvolvente</strong>.</h5>
                         <h2 class="main-title">Equipamentos mais recentes com serviço confiável</h2>
                     </div>
                     <!-- Section Title End -->
@@ -130,7 +130,7 @@
                         <!-- Single Service Start -->
                         <div class="single-service" data-aos="fade-up" data-aos-delay="200">
                             <h4 class="title"><a href="service-details.html">serviço de reparo <br> de sistema de travagem</a></h4>
-                            <a href="service-details.html" class="more">Mais...</a>
+                            <!-- <a href="service-details.html" class="more">Mais...</a> -->
 
                             <div class="service-icon">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
@@ -253,7 +253,7 @@
                         <!-- Single Service Start -->
                         <div class="single-service" data-aos="fade-up" data-aos-delay="400">
                             <h4 class="title"><a href="service-details.html">Serviço completo<br> de reparo de mecanica</a></h4>
-                            <a href="service-details.html" class="more">Mais...</a>
+                            <!-- <a href="service-details.html" class="more">Mais...</a> -->
 
                             <div class="service-icon">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
@@ -327,7 +327,7 @@
                         <!-- Single Service Start -->
                         <div class="single-service" data-aos="fade-up" data-aos-delay="600">
                             <h4 class="title"><a href="service-details.html">Serviço de<br>limpeza </a></h4>
-                            <a href="service-details.html" class="more">Mais...</a>
+                            <!-- <a href="service-details.html" class="more">Mais...</a> -->
 
                             <div class="service-icon">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
@@ -423,7 +423,7 @@
                         <!-- Single Service Start -->
                         <div class="single-service" data-aos="fade-up" data-aos-delay="200">
                             <h4 class="title"><a href="service-details.html">Substituição da<br>bateria</a></h4>
-                            <a href="service-details.html" class="more">Mais...</a>
+                            <!-- <a href="service-details.html" class="more">Mais...</a> -->
 
                             <div class="service-icon">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
@@ -465,7 +465,7 @@
                         <!-- Single Service Start -->
                         <div class="single-service" data-aos="fade-up" data-aos-delay="400">
                             <h4 class="title"><a href="service-details.html">Troca de oleo <br>e filtros </a></h4>
-                            <a href="service-details.html" class="more">Mais...</a>
+                            <!-- <a href="service-details.html" class="more">Mais...</a> -->
                             <div class="service-icon">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
                                     <path class="icon-path" d="M85.68,152.95h88.53c9.76,0,17.71-7.94,17.71-17.71V82.12c0-9.76-7.94-17.71-17.71-17.71H85.68
@@ -514,7 +514,7 @@
                         <!-- Single Service Start -->
                         <div class="single-service" data-aos="fade-up" data-aos-delay="600">
                             <h4 class="title"><a href="service-details.html">Reparamos carros e<br>veiculos agricola</a></h4>
-                            <a href="service-details.html" class="more">Mais...</a>
+                            <!-- <a href="service-details.html" class="more">Mais...</a> -->
 
                             <div class="service-icon">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
