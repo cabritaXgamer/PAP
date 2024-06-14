@@ -612,12 +612,12 @@
                     <div class="choose-content" data-aos="fade-right" data-aos-delay="300">
                         <!-- Section Title Start -->
                         <div class="section-title">
-                            <h5 class="sub-title">Why Choose Us</h5>
-                            <h2 class="main-title">Trust and Service is our Priority</h2>
+                            <h5 class="sub-title">Porque escolher-nos</h5>
+                            <h2 class="main-title">Confiança e serviço são nossa prioridade</h2>
                         </div>
                         <!-- Section Title End -->
 
-                        <p>Trusted and reliable service is our main goal extremely painful. Nor again is there anyone who loves our to take a trivial example, which of us undertakes chooses</p>
+                        <p>Um serviço confiável e um cliente satisfeito é o nosso principal objetivo</p>
 
                         <img src="<?= ASSETS . THEME ?>/images/choose/choose.png" alt="Choose">
                     </div>
@@ -635,8 +635,8 @@
                                         <img src="<?= ASSETS . THEME ?>/images/choose/icon-1.svg" alt="Icon">
                                     </div>
                                     <div class="item-content">
-                                        <h4 class="title">Latest Equipments</h4>
-                                        <p>Car servicing rationally encounter extremely anyone chooses</p>
+                                        <h4 class="title">equipamentos de ultima geração</h4>
+                                        <p>equipamentos de ultima geração preparados para as atualidades automoveis</p>
                                     </div>
                                 </div>
                                 <!-- Single Choose Item End -->
@@ -650,8 +650,8 @@
                                         <img src="<?= ASSETS . THEME ?>/images/choose/icon-3.svg" alt="Icon">
                                     </div>
                                     <div class="item-content">
-                                        <h4 class="title">Expert Mecanics</h4>
-                                        <p>Car servicing rationally encounter extremely anyone chooses</p>
+                                        <h4 class="title">Mecanicos Experientes</h4>
+                                        <p>A experiencia leva ao sucesso e satisfação ao cliente</p>
                                     </div>
                                 </div>
                                 <!-- Single Choose Item End -->
@@ -666,7 +666,7 @@
                                     </div>
                                     <div class="item-content">
                                         <h4 class="title">Serviços de qualidade</h4>
-                                        <p>Car servicing rationally encounter extremely anyone chooses</p>
+                                        <p>Garantimos o conserto do seu carro e higiene</p>
                                     </div>
                                 </div>
                                 <!-- Single Choose Item End -->
@@ -681,7 +681,7 @@
                                     </div>
                                     <div class="item-content">
                                         <h4 class="title">Entrega rapida</h4>
-                                        <p>Car servicing rationally encounter extremely anyone chooses</p>
+                                        <p>garantia de rapides e prioridade do seu automovel</p>
                                     </div>
                                 </div>
                                 <!-- Single Choose Item End -->
@@ -705,9 +705,9 @@
 
         <!-- Section Title Start -->
         <div class="section-title text-center">
-            <h5 class="sub-title">Working Process</h5>
-            <h2 class="main-title">How we work</h2>
-            <p>Trusted and reliable service is our main goal extremely <br> painful. Nor again is there anyone who loves </p>
+            <h5 class="sub-title">processo do trabalho</h5>
+            <h2 class="main-title">Como nos trabalhamos</h2>
+            <p>A sua satisfação e garantia do serviço é a nossa prioridade</p>
         </div>
         <!-- Section Title End -->
 
@@ -720,7 +720,7 @@
                         <span class="number">01</span>
                         <div class="content-wrapper">
                             <img src="<?= ASSETS . THEME ?>/images/work/work-1.png" alt="Work">
-                            <h4 class="title"><a href="#">Book appointment</a></h4>
+                            <h4 class="title"><a href="#">Marcamos atendimento</a></h4>
                         </div>
                     </div>
                     <!-- Single Work End -->
@@ -731,7 +731,7 @@
                         <span class="number">02</span>
                         <div class="content-wrapper">
                             <img src="<?= ASSETS . THEME ?>/images/work/work-2.png" alt="Work">
-                            <h4 class="title"><a href="#">Bring your Vehical</a></h4>
+                            <h4 class="title"><a href="#">rebocamos o seu veiculo</a></h4>
                         </div>
                     </div>
                     <!-- Single Work End -->
@@ -742,7 +742,7 @@
                         <span class="number">03</span>
                         <div class="content-wrapper">
                             <img src="<?= ASSETS . THEME ?>/images/work/work-3.png" alt="Work">
-                            <h4 class="title"><a href="#">Get it Repair</a></h4>
+                            <h4 class="title"><a href="#">Reparamos o seu automovel</a></h4>
                         </div>
                     </div>
                     <!-- Single Work End -->
@@ -753,7 +753,7 @@
                         <span class="number">04</span>
                         <div class="content-wrapper">
                             <img src="<?= ASSETS . THEME ?>/images/work/work-4.png" alt="Work">
-                            <h4 class="title"><a href="#">Ready for Deliver</a></h4>
+                            <h4 class="title"><a href="#">Pronto para levar</a></h4>
                         </div>
                     </div>
                     <!-- Single Work End -->

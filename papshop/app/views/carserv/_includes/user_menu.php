@@ -67,7 +67,7 @@
                             <ul class="nav-menu">
                                 <li><a href="index">Inicio</a></li>
                                 <li>
-                                    <a href="services">Serviços</a>
+                                    <a href="service">Serviços</a>
                                     <ul class="sub-menu">
                                         <li><a href="service">Serviços</a></li>
                                         <li><a href="service-details">detalhes dos serviços</a></li>

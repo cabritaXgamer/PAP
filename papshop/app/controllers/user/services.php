@@ -1,7 +1,7 @@
 <?php
 
 
-class services extends Controller
+class Services extends Controller
 {
     //Public default metodo index, mesmo que o utilizador coloque ou não qualquer URL, o Index vai sempre correr
 
@@ -9,7 +9,7 @@ class services extends Controller
     {
 
         $User = $this->load_model('User');
-        $user_data = $User->check_login();
+        $user_data = $User->check_login(true);
 
         //validate if the user is really log in
         if (is_object($user_data)) {
