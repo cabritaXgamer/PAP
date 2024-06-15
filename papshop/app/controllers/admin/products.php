@@ -45,9 +45,14 @@ class Products extends Controller
         $data = file_get_contents("php://input");
         $data = json_decode($data);
 
+        show($_POST);
+        show($_FILES);
+        die;
+
         // Verify that data is an object and has the required property
         if (is_object($data) && isset($data->data_type)) {
             
+          
             // Handle adding a new category
             if ($data->data_type == 'add_product') {
                 $check = $product->create_product($data);

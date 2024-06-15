@@ -33,30 +33,44 @@ Class Product
 
         // Validação dos dados antes de inserir
         if (!empty($data->product_name) && !empty($data->product_quantity)) {
-            $description = trim($data->product_name);
-            $quantity = (int)$data->product_quantity;
-            $categoryId = trim($data->category_name);
-            $price = (float)$data->price_name;
+            
+            $description    = ucwords($data->product_name);
+            $quantity       = $data->product_quantity;
+            $categoryId     = $data->category_name;  // Assuming category_id is passed correctly
+            $price          = $data->price_name; 
+            $date           = date("Y-m-d H:i:s");
+            $user_url       = $_SESSION['user_url'];
 
-            // Verifique se a descrição é válida
-            if ($description === "") {
-                $_SESSION['error'] = "A descrição do produto é obrigatória.";
+            // Verifique se o nome do produto é válido
+            if (!preg_match("/^[a-zA-Z\s]+$/", $description)){
+                $_SESSION['error'] = "Insira um nome de produto válido.";
                 return false;
             }
 
             // Verifique se a quantidade é um número não negativo
-            if ($quantity < 0) {
+            if (!is_numeric($quantity) || $quantity < 0) {
                 $_SESSION['error'] = "A quantidade do produto deve ser um número não negativo.";
                 return false;
             }
 
+            // Verifique se o preço é um número
+            if (!is_numeric($price) || $price < 0) {
+                $_SESSION['error'] = "O preço do produto deve ser um número não negativo.";
+                return false;
+            }
+
+            // Converte e formata o preço para float com duas casas decimais
+            $price = number_format((float)$price, 2, '.', '');
+
             // Construa e execute a consulta SQL para inserção
-            $query = "INSERT INTO products (description, quantity, categoryId, price) VALUES (:description, :quantity, :categoryId, :price)";
+            $query = "INSERT INTO products (description, quantity, categoryId, price, date, user_url) VALUES (:description, :quantity, :categoryId, :price, :date, :user_url)";
             $params = array(
-                ':description' => $description,
-                ':quantity' => $quantity,
-                ':categoryId' => $categoryId,
-                ':price' => $price
+                ':description'  => $description,
+                ':quantity'     => $quantity,
+                ':categoryId'   => $categoryId,
+                ':price'        => $price,
+                ':date'         => $date,
+                ':user_url'     => $user_url
             );
             $check = $DB->write($query, $params);
 
@@ -66,12 +80,10 @@ Class Product
                 $_SESSION['error'] = "Erro ao inserir produto na base de dados.";
             }
         } else {
-            $_SESSION['error'] = "A descrição e a quantidade do produto são obrigatórias.";
+            $_SESSION['error'] = "O nome do produto e a quantidade são obrigatórios.";
         }
         return false;
     }
-
-    
 
     //Function model edit category
     public function edit_product($id, $new_category) {

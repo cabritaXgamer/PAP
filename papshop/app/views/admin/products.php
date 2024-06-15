@@ -87,7 +87,7 @@
                                 <select name="category-name" id="category-name" class="form-control" required>
                                     <?php if (!empty($data['categories'])): ?>
                                         <?php foreach ($data['categories'] as $category): ?>
-                                            <option value="<?php echo htmlspecialchars($category['category']); ?>"><?php echo htmlspecialchars($category['category']); ?></option>
+                                            <option value="<?php echo htmlspecialchars($category['id']); ?>"><?php echo htmlspecialchars($category['category']); ?></option>
                                         <?php endforeach; ?>
                                     <?php else: ?>
                                         <option value="" disabled>No categories available</option>
@@ -98,6 +98,10 @@
                                 <label for="price-name" class="col-form-label">Price:</label>
                                 <input type="number" class="form-control" id="price-name" name="price-name" placeholder="0.00" min="0.00" step="0.01" required>
                             </div>
+                            <div class="form-group">
+                                <label for="price-name" class="col-form-label">Picture 1:</label>
+                                <input type="file" id="product-image" accept="image/*" required>
+                           </div>
                         </form>
                     </div>
                     <div class="modal-footer">
@@ -172,28 +176,79 @@
 
     function get_data() {
 
-        let product_name = document.querySelector("#product-name").value.trim();
-        let product_quantity = parseInt(document.querySelector("#product-quantity").value.trim());
-        let category_name = document.querySelector("#category-name").value.trim();
-        let price_name = parseFloat(document.querySelector("#price-name").value.trim());
+        let product_name        = document.querySelector("#product-name").value.trim();
+        let product_quantity    = parseInt(document.querySelector("#product-quantity").value.trim());
+        let category_name       = document.querySelector("#category-name").value.trim();
+        let price_name          = parseFloat(document.querySelector("#price-name").value.trim()); 
+        let product_image       = document.querySelector("#product-image").files[0];
 
-        if (!product_name || isNaN(product_quantity)) {
+        // Validação
+        if (!product_name) {
             Swal.fire({
                 icon: 'error',
-                title: 'Error',
-                text: 'Please enter a valid product name and quantity!'
+                title: 'Erro',
+                text: 'O nome do produto é obrigatório.'
             });
             return;
-        } 
+        }
 
-        let data = {
-            product_name: product_name,
-            product_quantity: product_quantity,
-            category_name: category_name,
-            price_name: price_name,
-            data_type: 'add_product'
-        };
+        if (isNaN(product_quantity) || product_quantity < 0) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Erro',
+                text: 'A quantidade do produto deve ser um número não negativo.'
+            });
+            return;
+        }
 
+        if (!category_name) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Erro',
+                text: 'O nome da categoria é obrigatório.'
+            });
+            return;
+        }
+
+        if (isNaN(price_name) || price_name < 0) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Erro',
+                text: 'O preço do produto deve ser um número não negativo.'
+            });
+            return;
+        }
+
+        if (!product_image) 
+        {
+            Swal.fire({
+                icon: 'error',
+                title: 'Erro',
+                text: 'A imagem do produto é obrigatória.'
+            });
+            return;
+        }
+
+        var data = new FormData();
+        data.append('product_name', product_name);
+        data.append('product_quantity', product_quantity);
+        data.append('category_name', category_name);
+        data.append('price_name', price_name);
+        data.append('product_image', product_image);
+        data.append('data_type', 'add_product');
+
+
+
+        // let data = {
+        //     product_name: product_name,
+        //     product_quantity: product_quantity,
+        //     category_name: category_name,
+        //     price_name: price_name,
+        //     data_type: 'add_product'
+        // };
+        
+        
+        console.log(data);
         send_data(data);
     }
 
@@ -208,9 +263,25 @@
         });
 
         ajax.open("POST", "<?=ROOT?>admin/products/product", true);
-        ajax.setRequestHeader("Content-Type", "application/json");
+        //ajax.setRequestHeader("Content-Type", "application/json");
 
-        ajax.send(JSON.stringify(data));
+        ajax.send((data));
+    }
+
+    function send_data_files(formData) {
+        
+        var ajax = new XMLHttpRequest();
+
+        ajax.addEventListener('readystatechange', function() {
+            if (ajax.readyState === 4 && ajax.status === 200) {
+                handle_result(ajax.responseText);
+            }
+        });
+
+        ajax.open("POST", "<?=ROOT?>admin/products/product", true);
+        //ajax.setRequestHeader("Content-Type", "application/json");
+
+        ajax.send(formData);
     }
 
     function edit_row() {

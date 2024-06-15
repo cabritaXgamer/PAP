@@ -177,6 +177,7 @@
     // Function to get data from the form
     function get_data() {
         let category_input = document.querySelector("#category-name");
+        
         if (category_input.value.trim() === "" || !isNaN(category_input.value.trim())) {
             Swal.fire({
                 icon: 'error',
@@ -218,8 +219,8 @@
     // Function to edit row
     function edit_row()
     {
-        let category_input = document.querySelector("#editCategory");
-        let id_input = document.querySelector("#editCatId");
+        let category_input  = document.querySelector("#editCategory");
+        let id_input        = document.querySelector("#editCatId");
 
         if (category_input.value.trim() === "" || !isNaN(category_input.value.trim())) {
             Swal.fire({
