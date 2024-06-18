@@ -9,30 +9,30 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="<?= ASSETS . THEME ?>/images/favicon.ico">
 
     <!-- CSS
 	============================================ -->
 
     <!-- Icon Font CSS -->
-    <link rel="stylesheet" href="assets/css/plugins/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/icofont.min.css">
+    <link rel="stylesheet" href="<?= ASSETS . THEME ?>/css/plugins/font-awesome.min.css">
+    <link rel="stylesheet" href="<?= ASSETS . THEME ?>/css/plugins/icofont.min.css">
 
     <!-- Plugins CSS -->
-    <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/animate.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/jquery-ui.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/select2.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/aos.css">
+    <link rel="stylesheet" href="<?= ASSETS . THEME ?>/css/plugins/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= ASSETS . THEME ?>/css/plugins/animate.min.css">
+    <link rel="stylesheet" href="<?= ASSETS . THEME ?>/css/plugins/jquery-ui.min.css">
+    <link rel="stylesheet" href="<?= ASSETS . THEME ?>/css/plugins/select2.min.css">
+    <link rel="stylesheet" href="<?= ASSETS . THEME ?>/css/plugins/swiper-bundle.min.css">
+    <link rel="stylesheet" href="<?= ASSETS . THEME ?>/css/plugins/aos.css">
 
     <!-- Main Style CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="<?= ASSETS . THEME ?>/css/style.css">
 
 
     <!--====== Use the minified version files listed below for better performance and remove the files listed above ======-->
-    <!-- <link rel="stylesheet" href="assets/css/vendor/plugins.min.css">
-    <link rel="stylesheet" href="assets/css/style.min.css"> -->
+    <!-- <link rel="stylesheet" href="<?= ASSETS . THEME ?>/css/vendor/plugins.min.css">
+    <link rel="stylesheet" href="<?= ASSETS . THEME ?>/css/style.min.css"> -->
 
 </head>
 
@@ -80,7 +80,7 @@
 
                         <!-- Header Logo Start -->
                         <div class="header-logo">
-                            <a href="index.html"><img src="assets/images/logo.png" alt="Logo"></a>
+                            <a href="index.html"><img src="<?= ASSETS . THEME ?>/images/logo.png" alt="Logo"></a>
                         </div>
                         <!-- Header Logo End -->
 
@@ -157,7 +157,7 @@
                                                 <!-- Single Cart Item Start -->
                                                 <div class="single-cart-item">
                                                     <div class="cart-thumb">
-                                                        <img src="assets/images/mini-cart/cart-1.jpg" alt="Cart">
+                                                        <img src="<?= ASSETS . THEME ?>/images/mini-cart/cart-1.jpg" alt="Cart">
                                                         <span class="product-quantity">1x</span>
                                                     </div>
                                                     <div class="cart-item-content">
@@ -175,7 +175,7 @@
                                                 <!-- Single Cart Item Start -->
                                                 <div class="single-cart-item">
                                                     <div class="cart-thumb">
-                                                        <img src="assets/images/mini-cart/cart-2.jpg" alt="Cart">
+                                                        <img src="<?= ASSETS . THEME ?>/images/mini-cart/cart-2.jpg" alt="Cart">
                                                         <span class="product-quantity">1x</span>
                                                     </div>
                                                     <div class="cart-item-content">
@@ -193,7 +193,7 @@
                                                 <!-- Single Cart Item Start -->
                                                 <div class="single-cart-item">
                                                     <div class="cart-thumb">
-                                                        <img src="assets/images/mini-cart/cart-3.jpg" alt="Cart">
+                                                        <img src="<?= ASSETS . THEME ?>/images/mini-cart/cart-3.jpg" alt="Cart">
                                                         <span class="product-quantity">1x</span>
                                                     </div>
                                                     <div class="cart-item-content">
@@ -365,7 +365,7 @@
 
 
         <!-- Page Banner Section Start -->
-        <div class="section page-banner-section" style="background-image: url(assets/images/page-banner-bg.png);">
+        <div class="section page-banner-section" style="background-image: url(<?= ASSETS . THEME ?>/images/page-banner-bg.png);">
             <div class="container">
                 <!-- Page Banner Wrapper Start -->
                 <div class="page-banner-wrapper">
@@ -389,7 +389,7 @@
 
                     <!-- Page Banner Images Start -->
                     <div class="page-banner-images">
-                        <img src="assets/images/page-banner.png" alt="Page Banner">
+                        <img src="<?= ASSETS . THEME ?>/images/page-banner.png" alt="Page Banner">
                     </div>
                     <!-- Page Banner Images End -->
 
@@ -410,7 +410,7 @@
                             <!-- About Images Start -->
                             <div class="about-images images-03 pt-5" data-aos="fade-right" data-aos-delay="200">
                                 <div class="images">
-                                    <img src="assets/images/about/about-3.png" alt="About">
+                                    <img src="<?= ASSETS . THEME ?>/images/about/about-3.png" alt="About">
                                 </div>
                                 <div class="exprience" data-aos="fade-up" data-aos-delay="400">
                                     <p><strong>30</strong> years Exprience</p>
@@ -450,7 +450,7 @@
             <div class="container">
                 <div class="section-padding-02 position-relative">
 
-                    <img class="services-shape" src="assets/images/services.png" alt="Service">
+                    <img class="services-shape" src="<?= ASSETS . THEME ?>/images/services.png" alt="Service">
 
                     <!-- Section Title Start -->
                     <div class="section-title text-center">
@@ -923,16 +923,16 @@
                     <!-- Testimonials Items Start -->
                     <div class="testimonials-items testimonial-active">
 
-                        <img class="shape" src="assets/images/testimonials.png" alt="Testimonials">
+                        <img class="shape" src="<?= ASSETS . THEME ?>/images/testimonials.png" alt="Testimonials">
 
-                        <img class="quote" src="assets/images/quote.svg" alt="quote">
+                        <img class="quote" src="<?= ASSETS . THEME ?>/images/quote.svg" alt="quote">
 
                         <div class="swiper-container">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <!-- Single Testimonials Start -->
                                     <div class="single-testimonials">
-                                        <img class="author" src="assets/images/author/author-01.jpg" alt="Author">
+                                        <img class="author" src="<?= ASSETS . THEME ?>/images/author/author-01.jpg" alt="Author">
                                         <h3 class="name">Crystopher Lopez</h3>
                                         <p>Great service makes me happy, my car is like the most the new one is our main goal extremely painful again is there anyone who loves our to take</p>
                                         <div class="rating">
@@ -948,7 +948,7 @@
                                 <div class="swiper-slide">
                                     <!-- Single Testimonials Start -->
                                     <div class="single-testimonials">
-                                        <img class="author" src="assets/images/author/author-02.jpg" alt="Author">
+                                        <img class="author" src="<?= ASSETS . THEME ?>/images/author/author-02.jpg" alt="Author">
                                         <h3 class="name">Crystopher Lopez</h3>
                                         <p>Great service makes me happy, my car is like the most the new one is our main goal extremely painful again is there anyone who loves our to take</p>
                                         <div class="rating">
@@ -964,7 +964,7 @@
                                 <div class="swiper-slide">
                                     <!-- Single Testimonials Start -->
                                     <div class="single-testimonials">
-                                        <img class="author" src="assets/images/author/author-03.jpg" alt="Author">
+                                        <img class="author" src="<?= ASSETS . THEME ?>/images/author/author-03.jpg" alt="Author">
                                         <h3 class="name">Crystopher Lopez</h3>
                                         <p>Great service makes me happy, my car is like the most the new one is our main goal extremely painful again is there anyone who loves our to take</p>
                                         <div class="rating">
@@ -1011,7 +1011,7 @@
                             <div class="single-work" data-aos="fade-up" data-aos-delay="100">
                                 <span class="number">01</span>
                                 <div class="content-wrapper">
-                                    <img src="assets/images/work/work-1.png" alt="Work">
+                                    <img src="<?= ASSETS . THEME ?>/images/work/work-1.png" alt="Work">
                                     <h4 class="title"><a href="#">Book appointment</a></h4>
                                 </div>
                             </div>
@@ -1022,7 +1022,7 @@
                             <div class="single-work" data-aos="fade-up" data-aos-delay="200">
                                 <span class="number">02</span>
                                 <div class="content-wrapper">
-                                    <img src="assets/images/work/work-2.png" alt="Work">
+                                    <img src="<?= ASSETS . THEME ?>/images/work/work-2.png" alt="Work">
                                     <h4 class="title"><a href="#">Bring your Vehical</a></h4>
                                 </div>
                             </div>
@@ -1033,7 +1033,7 @@
                             <div class="single-work" data-aos="fade-up" data-aos-delay="300">
                                 <span class="number">03</span>
                                 <div class="content-wrapper">
-                                    <img src="assets/images/work/work-3.png" alt="Work">
+                                    <img src="<?= ASSETS . THEME ?>/images/work/work-3.png" alt="Work">
                                     <h4 class="title"><a href="#">Get it Repair</a></h4>
                                 </div>
                             </div>
@@ -1044,7 +1044,7 @@
                             <div class="single-work" data-aos="fade-up" data-aos-delay="400">
                                 <span class="number">04</span>
                                 <div class="content-wrapper">
-                                    <img src="assets/images/work/work-4.png" alt="Work">
+                                    <img src="<?= ASSETS . THEME ?>/images/work/work-4.png" alt="Work">
                                     <h4 class="title"><a href="#">Ready for Deliver</a></h4>
                                 </div>
                             </div>
@@ -1070,7 +1070,7 @@
 
                                 <!-- Single Brand Start -->
                                 <div class="single-brand">
-                                    <img src="assets/images/brand/brand-01.png" alt="Brand">
+                                    <img src="<?= ASSETS . THEME ?>/images/brand/brand-01.png" alt="Brand">
                                 </div>
                                 <!-- Single Brand End -->
 
@@ -1079,7 +1079,7 @@
 
                                 <!-- Single Brand Start -->
                                 <div class="single-brand">
-                                    <img src="assets/images/brand/brand-02.png" alt="Brand">
+                                    <img src="<?= ASSETS . THEME ?>/images/brand/brand-02.png" alt="Brand">
                                 </div>
                                 <!-- Single Brand End -->
 
@@ -1088,7 +1088,7 @@
 
                                 <!-- Single Brand Start -->
                                 <div class="single-brand">
-                                    <img src="assets/images/brand/brand-03.png" alt="Brand">
+                                    <img src="<?= ASSETS . THEME ?>/images/brand/brand-03.png" alt="Brand">
                                 </div>
                                 <!-- Single Brand End -->
 
@@ -1097,7 +1097,7 @@
 
                                 <!-- Single Brand Start -->
                                 <div class="single-brand">
-                                    <img src="assets/images/brand/brand-04.png" alt="Brand">
+                                    <img src="<?= ASSETS . THEME ?>/images/brand/brand-04.png" alt="Brand">
                                 </div>
                                 <!-- Single Brand End -->
 
@@ -1112,7 +1112,7 @@
         <!-- Brand Section End -->
 
         <!-- Footer Section Start -->
-        <div class="section footer-section" style="background-image: url(assets/images/footer-bg.jpg);">
+        <div class="section footer-section" style="background-image: url(<?= ASSETS . THEME ?>/images/footer-bg.jpg);">
 
             <!-- Footer Widget Start -->
             <div class="footer-widget-section section-padding">
@@ -1125,7 +1125,7 @@
 
                                 <!-- Footer Widget Start -->
                                 <div class="footer-widget" data-aos="fade-up" data-aos-delay="100">
-                                    <a class="footer-logo" href="#"><img src="assets/images/logo.png" alt="Logo"></a>
+                                    <a class="footer-logo" href="#"><img src="<?= ASSETS . THEME ?>/images/logo.png" alt="Logo"></a>
                                     <p>Trusted and reliable service is our to main goal extremely painful. again a there anyone loves our chooses</p>
 
                                     <div class="widget-info">
@@ -1252,26 +1252,26 @@
     ============================================ -->
 
     <!-- Modernizer & jQuery JS -->
-    <script src="assets/js/vendor/modernizr-3.11.2.min.js"></script>
-    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="<?= ASSETS . THEME ?>/js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="<?= ASSETS . THEME ?>/js/vendor/jquery-3.6.0.min.js"></script>
 
     <!-- Bootstrap JS -->
-    <script src="assets/js/plugins/popper.min.js"></script>
-    <script src="assets/js/plugins/bootstrap.min.js"></script>
+    <script src="<?= ASSETS . THEME ?>/js/plugins/popper.min.js"></script>
+    <script src="<?= ASSETS . THEME ?>/js/plugins/bootstrap.min.js"></script>
 
     <!-- Plugins JS -->
-    <script src="assets/js/plugins/swiper-bundle.min.js"></script>
-    <script src="assets/js/plugins/jquery-ui.min.js"></script>
-    <script src="assets/js/plugins/select2.min.js"></script>
-    <script src="assets/js/plugins/ajax-contact.js"></script>
-    <script src="assets/js/plugins/aos.js"></script>
+    <script src="<?= ASSETS . THEME ?>/js/plugins/swiper-bundle.min.js"></script>
+    <script src="<?= ASSETS . THEME ?>/js/plugins/jquery-ui.min.js"></script>
+    <script src="<?= ASSETS . THEME ?>/js/plugins/select2.min.js"></script>
+    <script src="<?= ASSETS . THEME ?>/js/plugins/ajax-contact.js"></script>
+    <script src="<?= ASSETS . THEME ?>/js/plugins/aos.js"></script>
 
     <!--====== Use the minified version files listed below for better performance and remove the files listed above ======-->
-    <!-- <script src="assets/js/plugins.min.js"></script> -->
+    <!-- <script src="<?= ASSETS . THEME ?>/js/plugins.min.js"></script> -->
 
 
     <!-- Main JS -->
-    <script src="assets/js/main.js"></script>
+    <script src="<?= ASSETS . THEME ?>/js/main.js"></script>
 
 </body>
 

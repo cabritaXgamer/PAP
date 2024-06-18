@@ -35,11 +35,9 @@
                                        <h3 class="footer-widget-title"></h3>
 
                                        <ul class="widget-link">
-                                           <li><a href="about">About us</a></li>
-                                           <li><a href="service">Our Services</a></li>
-                                           <li><a href="our-team">Our Mechanics</a></li>
-                                           <li><a href="blog-right-sidebar">Blog Post</a></li>
-                                           <li><a href="login">Login/Register</a></li>
+                                           <li><a href="about">Sobre nos</a></li>
+                                           <li><a href="service">Nossos serviços</a></li>
+                                           <li><a href="login">Login</a><a href="Register">register</a></li>
                                            <li><a href="contact">Contact</a></li>
                                        </ul>
                                    </div>
