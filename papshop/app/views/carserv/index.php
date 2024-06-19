@@ -10,10 +10,10 @@
 
             <!-- Slider Section Start -->
             <div class="slider-content">
-                <h5 class="sub-title" data-aos="fade-up" data-aos-delay="100"> a garage for all models </h5>
+                <h5 class="sub-title" data-aos="fade-up" data-aos-delay="100">Uma oficina para todos os modelos</h5>
                 <h1 class="main-title" data-aos="fade-up" data-aos-delay="400">necessitas de reparação automovel?</h1>
-                <p data-aos="fade-up" data-aos-delay="600">A manutenção de automóveis enfrenta racionalmente consequências extremamente dolorosas. Também não há ninguém que ame ou persiga </p>
-                <a href="contact.html" data-aos="fade-up" data-aos-delay="800" class="btn btn-custom-01">Contacta-nos</a>
+                <p data-aos="fade-up" data-aos-delay="600">Nós da Cilindrenvolvente ofereçemos garantia de serviço de reparo repido do seu veiculo</p>
+                <a href="#contact" data-aos="fade-up" data-aos-delay="800" class="btn btn-custom-01">Contacta-nos</a>
             </div>
             <!-- Slider Section End -->
 
@@ -65,7 +65,7 @@
 
                     <!-- Section Title Start -->
                     <div class="section-title">
-                        <h5 class="sub-title">Bem vindo <strong>algartracto</strong>.</h5>
+                        <h5 class="sub-title">Bem vindo <strong>Cilindrenvolvente</strong>.</h5>
                         <h2 class="main-title">Equipamentos mais recentes com serviço confiável</h2>
                     </div>
                     <!-- Section Title End -->
@@ -119,7 +119,7 @@
             <!-- Section Title Start -->
             <div class="section-title text-center">
                 <h5 class="sub-title">O que nos fazemos</h5>
-                <h2 class="main-title">Nossos serviços<br> que nós fornecemos</h2>
+                <h2 class="main-title">Os serviços<br> que nós fornecemos</h2>
             </div>
             <!-- Section Title End -->
 
@@ -129,8 +129,8 @@
                     <div class="col-lg-4 col-sm-6">
                         <!-- Single Service Start -->
                         <div class="single-service" data-aos="fade-up" data-aos-delay="200">
-                            <h4 class="title"><a href="service-details.html">Anti Lock Brake <br> Servicing</a></h4>
-                            <a href="service-details.html" class="more">Lean more</a>
+                            <h4 class="title"><a href="service-details.html">serviço de reparo <br> de sistema de travagem</a></h4>
+                            <!-- <a href="service-details.html" class="more">Mais...</a> -->
 
                             <div class="service-icon">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
@@ -252,8 +252,8 @@
                     <div class="col-lg-4 col-sm-6">
                         <!-- Single Service Start -->
                         <div class="single-service" data-aos="fade-up" data-aos-delay="400">
-                            <h4 class="title"><a href="service-details.html">Entire Engine <br> Servicing</a></h4>
-                            <a href="service-details.html" class="more">Lean more</a>
+                            <h4 class="title"><a href="service-details.html">Serviço completo<br> de reparo de mecanica</a></h4>
+                            <!-- <a href="service-details.html" class="more">Mais...</a> -->
 
                             <div class="service-icon">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
@@ -326,8 +326,8 @@
                     <div class="col-lg-4 col-sm-6">
                         <!-- Single Service Start -->
                         <div class="single-service" data-aos="fade-up" data-aos-delay="600">
-                            <h4 class="title"><a href="service-details.html">Car Wash <br> Service</a></h4>
-                            <a href="service-details.html" class="more">Lean more</a>
+                            <h4 class="title"><a href="service-details.html">Serviço de<br>limpeza </a></h4>
+                            <!-- <a href="service-details.html" class="more">Mais...</a> -->
 
                             <div class="service-icon">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
@@ -422,8 +422,8 @@
                     <div class="col-lg-4 col-sm-6">
                         <!-- Single Service Start -->
                         <div class="single-service" data-aos="fade-up" data-aos-delay="200">
-                            <h4 class="title"><a href="service-details.html">Battery <br> Replacement</a></h4>
-                            <a href="service-details.html" class="more">Lean more</a>
+                            <h4 class="title"><a href="service-details.html">Substituição da<br>bateria</a></h4>
+                            <!-- <a href="service-details.html" class="more">Mais...</a> -->
 
                             <div class="service-icon">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
@@ -464,8 +464,8 @@
                     <div class="col-lg-4 col-sm-6">
                         <!-- Single Service Start -->
                         <div class="single-service" data-aos="fade-up" data-aos-delay="400">
-                            <h4 class="title"><a href="service-details.html">Change Oil <br> and Filter</a></h4>
-                            <a href="service-details.html" class="more">Lean more</a>
+                            <h4 class="title"><a href="service-details.html">Troca de oleo <br>e filtros </a></h4>
+                            <!-- <a href="service-details.html" class="more">Mais...</a> -->
                             <div class="service-icon">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
                                     <path class="icon-path" d="M85.68,152.95h88.53c9.76,0,17.71-7.94,17.71-17.71V82.12c0-9.76-7.94-17.71-17.71-17.71H85.68
@@ -513,8 +513,8 @@
                     <div class="col-lg-4 col-sm-6">
                         <!-- Single Service Start -->
                         <div class="single-service" data-aos="fade-up" data-aos-delay="600">
-                            <h4 class="title"><a href="service-details.html">Tire Change <br> and Repair</a></h4>
-                            <a href="service-details.html" class="more">Lean more</a>
+                            <h4 class="title"><a href="service-details.html">Reparamos carros e<br>veiculos agricola</a></h4>
+                            <!-- <a href="service-details.html" class="more">Mais...</a> -->
 
                             <div class="service-icon">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
@@ -574,16 +574,16 @@
         <div class="call-to-action-wrapper">
 
             <!-- Call to Action Content Start -->
-            <div class="call-to-action-content">
+            <div class="call-to-action-content" id="contact">
                 <div class="content-wrapper">
                     <!-- Section Title Start -->
                     <div class="section-title section-title-white">
-                        <h5 class="sub-title">Emergency Calls 24/7 </h5>
-                        <h2 class="main-title">+12(254) 258 741</h2>
+                        <h5 class="sub-title">Disponivel para contactar das 8H/19H</h5>
+                        <h2 class="main-title">+12(345) 678 910</h2>
                     </div>
                     <!-- Section Title End -->
-                    <p>Car servicing rationally encounter consequences extremely painful. Nor again is there anyone who loves or pursues of more than a quality servicing is very important </p>
-                    <a href="contact.html" class="btn btn-custom-01 btn-hover-white">Get a Quote</a>
+                    <p>Na Cilindrenvolvente, oferecemos serviços de manutenção e reparação de alta qualidade para todos os tipos de veículos. Nossa equipe de mecânicos experientes está pronta para resolver qualquer problema com rapidez e eficiência. Entre em contato conosco para agendar uma visita, solicitar um orçamento ou tirar suas dúvidas.</p>
+                    <a id="contq class=" btn btn-custom-01 btn-hover-white">Get a Quote</a>
                 </div>
                 <img class="shape" src="<?= ASSETS . THEME ?>/images/call-to-action.png" alt="Call to Action">
             </div>
@@ -612,12 +612,12 @@
                     <div class="choose-content" data-aos="fade-right" data-aos-delay="300">
                         <!-- Section Title Start -->
                         <div class="section-title">
-                            <h5 class="sub-title">Why Choose Us</h5>
-                            <h2 class="main-title">Trust and Service is our Priority</h2>
+                            <h5 class="sub-title">Porque escolher-nos</h5>
+                            <h2 class="main-title">Confiança e serviço são nossa prioridade</h2>
                         </div>
                         <!-- Section Title End -->
 
-                        <p>Trusted and reliable service is our main goal extremely painful. Nor again is there anyone who loves our to take a trivial example, which of us undertakes chooses</p>
+                        <p>Um serviço confiável e um cliente satisfeito é o nosso principal objetivo</p>
 
                         <img src="<?= ASSETS . THEME ?>/images/choose/choose.png" alt="Choose">
                     </div>
@@ -635,8 +635,8 @@
                                         <img src="<?= ASSETS . THEME ?>/images/choose/icon-1.svg" alt="Icon">
                                     </div>
                                     <div class="item-content">
-                                        <h4 class="title">Latest Equipments</h4>
-                                        <p>Car servicing rationally encounter extremely anyone chooses</p>
+                                        <h4 class="title">equipamentos de ultima geração</h4>
+                                        <p>equipamentos de ultima geração preparados para as atualidades automoveis</p>
                                     </div>
                                 </div>
                                 <!-- Single Choose Item End -->
@@ -650,8 +650,8 @@
                                         <img src="<?= ASSETS . THEME ?>/images/choose/icon-3.svg" alt="Icon">
                                     </div>
                                     <div class="item-content">
-                                        <h4 class="title">Expert Mecanics</h4>
-                                        <p>Car servicing rationally encounter extremely anyone chooses</p>
+                                        <h4 class="title">Mecanicos Experientes</h4>
+                                        <p>A experiencia leva ao sucesso e satisfação ao cliente</p>
                                     </div>
                                 </div>
                                 <!-- Single Choose Item End -->
@@ -665,8 +665,8 @@
                                         <img src="<?= ASSETS . THEME ?>/images/choose/icon-2.svg" alt="Icon">
                                     </div>
                                     <div class="item-content">
-                                        <h4 class="title">Qulaity Services</h4>
-                                        <p>Car servicing rationally encounter extremely anyone chooses</p>
+                                        <h4 class="title">Serviços de qualidade</h4>
+                                        <p>Garantimos o conserto do seu carro e higiene</p>
                                     </div>
                                 </div>
                                 <!-- Single Choose Item End -->
@@ -680,8 +680,8 @@
                                         <img src="<?= ASSETS . THEME ?>/images/choose/icon-4.svg" alt="Icon">
                                     </div>
                                     <div class="item-content">
-                                        <h4 class="title">Fast Delivery</h4>
-                                        <p>Car servicing rationally encounter extremely anyone chooses</p>
+                                        <h4 class="title">Entrega rapida</h4>
+                                        <p>garantia de rapides e prioridade do seu automovel</p>
                                     </div>
                                 </div>
                                 <!-- Single Choose Item End -->
@@ -705,9 +705,9 @@
 
         <!-- Section Title Start -->
         <div class="section-title text-center">
-            <h5 class="sub-title">Working Process</h5>
-            <h2 class="main-title">How we work</h2>
-            <p>Trusted and reliable service is our main goal extremely <br> painful. Nor again is there anyone who loves </p>
+            <h5 class="sub-title">processo do trabalho</h5>
+            <h2 class="main-title">Como nos trabalhamos</h2>
+            <p>A sua satisfação e garantia do serviço é a nossa prioridade</p>
         </div>
         <!-- Section Title End -->
 
@@ -720,7 +720,7 @@
                         <span class="number">01</span>
                         <div class="content-wrapper">
                             <img src="<?= ASSETS . THEME ?>/images/work/work-1.png" alt="Work">
-                            <h4 class="title"><a href="#">Book appointment</a></h4>
+                            <h4 class="title"><a href="#">Marcamos atendimento</a></h4>
                         </div>
                     </div>
                     <!-- Single Work End -->
@@ -731,7 +731,7 @@
                         <span class="number">02</span>
                         <div class="content-wrapper">
                             <img src="<?= ASSETS . THEME ?>/images/work/work-2.png" alt="Work">
-                            <h4 class="title"><a href="#">Bring your Vehical</a></h4>
+                            <h4 class="title"><a href="#">rebocamos o seu veiculo</a></h4>
                         </div>
                     </div>
                     <!-- Single Work End -->
@@ -742,7 +742,7 @@
                         <span class="number">03</span>
                         <div class="content-wrapper">
                             <img src="<?= ASSETS . THEME ?>/images/work/work-3.png" alt="Work">
-                            <h4 class="title"><a href="#">Get it Repair</a></h4>
+                            <h4 class="title"><a href="#">Reparamos o seu automovel</a></h4>
                         </div>
                     </div>
                     <!-- Single Work End -->
@@ -753,7 +753,7 @@
                         <span class="number">04</span>
                         <div class="content-wrapper">
                             <img src="<?= ASSETS . THEME ?>/images/work/work-4.png" alt="Work">
-                            <h4 class="title"><a href="#">Ready for Deliver</a></h4>
+                            <h4 class="title"><a href="#">Pronto para levar</a></h4>
                         </div>
                     </div>
                     <!-- Single Work End -->
@@ -767,115 +767,115 @@
 <!-- How We Work Section End -->
 
 <!-- Testimonials Section Start -->
-<div class="section section-padding-02">
-    <div class="container">
+<!-- <div class="section section-padding-02"> -->
+<div class="container">
 
-        <!-- Testimonials Wrapper Start -->
-        <div class="testimonials-wrapper">
-            <!-- Testimonials Title Start -->
-            <div class="testimonials-title">
-                <!-- Section Title Start -->
-                <div class="section-title">
-                    <h5 class="sub-title">Testimonials</h5>
-                    <h2 class="main-title">What our Happy Clients says</h2>
-                    <p>Trusted and reliable service is our main goal extremely painful. Nor again is there anyone who loves our to take a trivial example, which of us undertakes chooses </p>
-                </div>
-                <!-- Section Title End -->
+    <!-- Testimonials Wrapper Start -->
+    <div class="testimonials-wrapper">
+        <!-- Testimonials Title Start -->
+        <div class="testimonials-title">
+            <!-- Section Title Start -->
+            <div class="section-title">
+                <h5 class="sub-title">Testimonials</h5>
+                <h2 class="main-title">What our Happy Clients says</h2>
+                <p>Trusted and reliable service is our main goal extremely painful. Nor again is there anyone who loves our to take a trivial example, which of us undertakes chooses </p>
             </div>
-            <!-- Testimonials Title End -->
+            <!-- Section Title End -->
+        </div>
+        <!-- Testimonials Title End -->
 
-            <!-- Testimonials Items Start -->
-            <div class="testimonials-items testimonial-active">
+        <!-- Testimonials Items Start -->
+        <div class="testimonials-items testimonial-active">
 
-                <img class="shape" src="<?= ASSETS . THEME ?>/images/testimonials.png" alt="Testimonials">
+            <img class="shape" src="<?= ASSETS . THEME ?>/images/testimonials.png" alt="Testimonials">
 
-                <img class="quote" src="<?= ASSETS . THEME ?>/images/quote.svg" alt="quote">
+            <img class="quote" src="<?= ASSETS . THEME ?>/images/quote.svg" alt="quote">
 
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <!-- Single Testimonials Start -->
-                            <div class="single-testimonials">
-                                <img class="author" src="assets/images/author/author-01.jpg" alt="Author">
-                                <h3 class="name">Crystopher Lopez</h3>
-                                <p>Great service makes me happy, my car is like the most the new one is our main goal extremely painful again is there anyone who loves our to take</p>
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <!-- Single Testimonials Start -->
+                        <div class="single-testimonials">
+                            <img class="author" src="<?= ASSETS . THEME ?>/images/author/author-01.jpg" alt="Author">
+                            <h3 class="name">ainda por escrever</h3>
+                            <p>ainda por escrever</p>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
                             </div>
-                            <!-- Single Testimonials End -->
                         </div>
-                        <div class="swiper-slide">
-                            <!-- Single Testimonials Start -->
-                            <div class="single-testimonials">
-                                <img class="author" src="<?= ASSETS . THEME ?>/images/author/author-02.jpg" alt="Author">
-                                <h3 class="name">Crystopher Lopez</h3>
-                                <p>Great service makes me happy, my car is like the most the new one is our main goal extremely painful again is there anyone who loves our to take</p>
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
+                        <!-- Single Testimonials End -->
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- Single Testimonials Start -->
+                        <div class="single-testimonials">
+                            <img class="author" src="<?= ASSETS . THEME ?>/images/author/author-02.jpg" alt="Author">
+                            <h3 class="name">ainda por escrever</h3>
+                            <p>ainda por escrever</p>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
                             </div>
-                            <!-- Single Testimonials End -->
                         </div>
-                        <div class="swiper-slide">
-                            <!-- Single Testimonials Start -->
-                            <div class="single-testimonials">
-                                <img class="author" src="<?= ASSETS . THEME ?>/images/author/author-03.jpg" alt="Author">
-                                <h3 class="name">Crystopher Lopez</h3>
-                                <p>Great service makes me happy, my car is like the most the new one is our main goal extremely painful again is there anyone who loves our to take</p>
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
+                        <!-- Single Testimonials End -->
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- Single Testimonials Start -->
+                        <div class="single-testimonials">
+                            <img class="author" src="<?= ASSETS . THEME ?>/images/author/author-03.jpg" alt="Author">
+                            <h3 class="name">ainda por escrever</h3>
+                            <p>Great service makes me happy, my car is like the most the new one is our main goal extremely painful again is there anyone who loves our to take</p>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
                             </div>
-                            <!-- Single Testimonials End -->
                         </div>
+                        <!-- Single Testimonials End -->
                     </div>
                 </div>
-
-                <div class="swiper-pagination"></div>
-
             </div>
-            <!-- Testimonials Items End -->
-        </div>
-        <!-- Testimonials Wrapper End -->
 
+            <div class="swiper-pagination"></div>
+
+        </div>
+        <!-- Testimonials Items End -->
     </div>
+    <!-- Testimonials Wrapper End -->
+
+</div>
 </div>
 <!-- Testimonials Section End -->
 
 <!-- Blog Section Start -->
-<div class="section section-padding-02">
-    <div class="container">
+<!-- <div class="section section-padding-02">
+    <div class="container"> -->
 
-        <!-- Blog Wrapper Start -->
-        <div class="blog-wrapper">
+<!-- Blog Wrapper Start -->
+<!-- <div class="blog-wrapper"> -->
 
-            <!-- Section Title Start -->
-            <div class="section-title">
+<!-- Section Title Start -->
+<!-- <div class="section-title">
                 <h5 class="sub-title">Our Blog</h5>
                 <h2 class="main-title">Latest Blog Post</h2>
                 <p>Trusted and reliable service is our main goal extremely <br> painful. Nor again is there anyone who loves </p>
             </div>
-            <!-- Section Title End -->
+             Section Title End -->
 
-            <!-- Blog Items Start -->
-            <div class="blog-items">
+<!-- Blog Items Start -->
+<!-- <div class="blog-items">
                 <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <!-- Single Blog Start -->
-                        <div class="single-blog" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-lg-4 col-md-6"> -->
+<!-- Single Blog Start -->
+<!-- <div class="single-blog" data-aos="fade-up" data-aos-delay="200">
                             <div class="blog-image">
                                 <a href="blog-details-right-sidebar.html"><img src="<?= ASSETS . THEME ?>/images/blog/blog-01.jpg" alt="Blog"></a>
                             </div>
@@ -887,12 +887,12 @@
                                 <h3 class="title"><a href="blog-details-right-sidebar.html">Anti-lock Brake Servicing is very important for your vehical</a></h3>
                                 <a href="blog-details-right-sidebar.html" class="more">+ Read more</a>
                             </div>
-                        </div>
-                        <!-- Single Blog End -->
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <!-- Single Blog Start -->
-                        <div class="single-blog" data-aos="fade-up" data-aos-delay="400">
+                        </div> -->
+<!-- Single Blog End -->
+<!-- </div>
+                    <div class="col-lg-4 col-md-6"> -->
+<!-- Single Blog Start -->
+<!-- <div class="single-blog" data-aos="fade-up" data-aos-delay="400">
                             <div class="blog-image">
                                 <a href="blog-details-right-sidebar.html"><img src="<?= ASSETS . THEME ?>/images/blog/blog-02.jpg" alt="Blog"></a>
                             </div>
@@ -904,12 +904,12 @@
                                 <h3 class="title"><a href="blog-details-right-sidebar.html">Don’t do these 4 things if you want your car to retain its value</a></h3>
                                 <a href="blog-details-right-sidebar.html" class="more">+ Read more</a>
                             </div>
-                        </div>
-                        <!-- Single Blog End -->
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <!-- Single Blog Start -->
-                        <div class="single-blog" data-aos="fade-up" data-aos-delay="600">
+                        </div> -->
+<!-- Single Blog End -->
+<!-- </div>
+                    <div class="col-lg-4 col-md-6"> -->
+<!-- Single Blog Start -->
+<!-- <div class="single-blog" data-aos="fade-up" data-aos-delay="600">
                             <div class="blog-image">
                                 <a href="blog-details-right-sidebar.html"><img src="<?= ASSETS . THEME ?>/images/blog/blog-03.jpg" alt="Blog"></a>
                             </div>
@@ -921,23 +921,23 @@
                                 <h3 class="title"><a href="blog-details-right-sidebar.html">Full car Diagnostic is important for every year maintainance</a></h3>
                                 <a href="blog-details-right-sidebar.html" class="more">+ Read more</a>
                             </div>
-                        </div>
-                        <!-- Single Blog End -->
-                    </div>
-                </div>
-            </div>
-            <!-- Blog Items End -->
-
-            <!-- Blog Button Start -->
-            <div class="blog-btn">
-                <a href="blog-right-sidebar.html" class="btn btn-custom-01">View More</a>
-            </div>
-            <!-- Blog Button End -->
-
-        </div>
-        <!-- Blog Wrapper End -->
-
+                        </div> -->
+<!-- Single Blog End -->
+<!-- </div>
     </div>
+</div> -->
+<!-- Blog Items End -->
+
+<!-- Blog Button Start -->
+<!-- <div class="blog-btn">
+    <a href="blog-right-sidebar.html" class="btn btn-custom-01">View More</a>
+</div> -->
+<!-- Blog Button End -->
+
+</div>
+<!-- Blog Wrapper End -->
+
+</div>
 </div>
 <!-- Blog Section End -->
 
