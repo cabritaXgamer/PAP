@@ -19,6 +19,10 @@
                             <tr>
                                 <th><i class="fa fa-bullhorn"></i> ID</th>
                                 <th class="hidden-phone"><i class="fa fa-question-circle"></i> Product</th>
+                                <th class="hidden-phone"><i class="fa fa-question-circle"></i> Quantity</th>
+                                <th class="hidden-phone"><i class="fa fa-question-circle"></i> Category</th>
+                                <th class="hidden-phone"><i class="fa fa-question-circle"></i> Date</th>
+                                <th class="hidden-phone"><i class="fa fa-question-circle"></i> Price</th>
                                 <th><i class=" fa fa-edit"></i> Status</th>
                                 <th></th>
                             </tr>
@@ -29,6 +33,12 @@
                                     <tr>
                                         <td><?php echo $index + 1; ?></td>
                                         <td><?php echo htmlspecialchars($product['description']); ?></td>
+                                        <td><?php echo htmlspecialchars($product['quantity']); ?></td>
+
+                                        <td><?php echo htmlspecialchars($product['categoryName']); ?></td>
+
+                                        <td><?php echo htmlspecialchars($product['price']); ?></td>
+                                        <td><?php echo htmlspecialchars($product['date']); ?></td>
                                         <!-- <td>
                                             <?php if ($product['disabled']): ?>
                                                 <span class="label label-warning label-mini" style="cursor:pointer" 

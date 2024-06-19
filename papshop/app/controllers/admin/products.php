@@ -25,8 +25,25 @@ class Products extends Controller
         $categoryModel = $this->load_model('Product');
         $data['products'] = $categoryModel->get_product();
         $data['categories'] = $categoryModel->get_categories();
+        
+           // Mapeia os IDs de categoria para os nomes correspondentes
+        $categoryNames = [];
+        foreach ($data['categories'] as $category) {
+            $categoryNames[$category['id']] = $category['category'];
+        }
 
-       //show($data['categories']);
+        // Adiciona o nome da categoria aos dados de cada produto
+        foreach ($data['products'] as &$product) {
+            if (isset($categoryNames[$product['categoryId']])) {
+                $product['categoryName'] = $categoryNames[$product['categoryId']];
+            } else {
+                $product['categoryName'] = 'Categoria Desconhecida'; // Trate casos em que a categoria não existe
+            }
+        }
+        unset($product); // Limpa a referência ao último produto
+
+
+       //show( $data['category_name']);
        //$this->title = 'Admin - Dashboard';
        $data['page_title'] = "Admin - Products";
        //Rota onde esta a view que vai carregar
@@ -41,13 +58,16 @@ class Products extends Controller
         // Load the Product model
         $product = $this->load_model('Product');
         
+        //Código antigo, temos que modificar para o POST por causa das imagens
         // Get the data sent from the client
-        $data = file_get_contents("php://input");
-        $data = json_decode($data);
+        //$data = file_get_contents("php://input");
+        //$data = json_decode($data);
 
-        show($_POST);
-        show($_FILES);
-        die;
+        // show($_POST);
+        // show($_FILES);
+        // die;
+
+        $data = (object)$_POST;
 
         // Verify that data is an object and has the required property
         if (is_object($data) && isset($data->data_type)) {
@@ -55,7 +75,7 @@ class Products extends Controller
           
             // Handle adding a new category
             if ($data->data_type == 'add_product') {
-                $check = $product->create_product($data);
+                $check = $product->create_product($data, $_FILES);
 
                 $arr = array();
                 if (!empty($_SESSION['error'])) {
