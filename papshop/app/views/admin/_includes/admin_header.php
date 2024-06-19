@@ -17,6 +17,14 @@
     <link rel="stylesheet" type="text/css" href="<?= ASSETS . ADMIN_THEME ?> /css/zabuto_calendar.css">
     <link rel="stylesheet" type="text/css" href="<?= ASSETS . ADMIN_THEME ?> /js/gritter/css/jquery.gritter.css" />
     <link rel="stylesheet" type="text/css" href="<?= ASSETS . ADMIN_THEME ?> /lineicons/style.css">    
+    <!-- Sweat Alert -->
+    <!-- Adicione isso no <head> do seu documento HTML -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"> -->
+
+    <!-- Sweet Alert 2 -->
+    <!-- Adicione isso no <head> do seu documento HTML -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
     
     <!-- Custom styles for this template -->
     <link href="<?= ASSETS . ADMIN_THEME ?> /css/style.css" rel="stylesheet">

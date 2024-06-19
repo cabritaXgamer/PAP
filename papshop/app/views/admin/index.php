@@ -12,7 +12,7 @@
               <div class="row">
                   <div class="col-lg-9 main-chart">
                   
-                  	
+                  <h1> This is my ADMIN HOME webpage </h1>
                       <!--custom chart end-->
 					</div><!-- /row -->	
 					

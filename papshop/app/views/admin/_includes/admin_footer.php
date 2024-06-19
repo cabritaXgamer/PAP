@@ -30,6 +30,7 @@
     <script src="<?= ASSETS . ADMIN_THEME ?>/js/sparkline-chart.js"></script>    
 	<script src="<?= ASSETS . ADMIN_THEME ?>/js/zabuto_calendar.js"></script>	
 	
+<!--     
 	<script type="text/javascript">
         $(document).ready(function () {
         var unique_id = $.gritter.add({
@@ -49,7 +50,7 @@
 
         return false;
         });
-	</script>
+	</script> -->
 	
 	<script type="application/javascript">
         $(document).ready(function () {
@@ -85,6 +86,10 @@
             console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
         }
     </script>
+
+    <!-- Sweet Alert 2 -->
+    <!-- Adicione isso antes do fechamento do </body> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   
 
   </body>
