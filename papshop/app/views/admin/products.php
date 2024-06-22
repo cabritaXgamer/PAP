@@ -177,7 +177,21 @@
                                 <label for="edit-price-name" class="col-form-label">Price:</label>
                                 <input type="number" class="form-control" id="edit-price-name" name="edit-price-name" placeholder="0.00" min="0.00" step="0.01" required>
                             </div>
+                            <!-- Editar imagem -->
+                            <div class="form-group">
+                                <label for="edit-product-image">Imagem do Produto</label>
+                                <div>
+                                    <img id="edit-product-image" class="img-fluid" src="<?php echo ROOT; ?>admin/img/ui-sam.jpg" alt="Imagem do Produto" style="width: 70px; height: 70px;">
+                                </div>
+                            </div>
+                             <!-- Adicione um campo para selecionar uma nova imagem -->
+                            <div class="form-group">
+                                <label for="new-product-image">Carregar nova imagem</label>
+                                <input type="file" id="new-product-image" class="form-control" accept="image/*">
+                            </div>
+                            <!-- Editar imagem -->
                             <input id="editProductId" name="editProductId" type="hidden" value="">
+                            <!-- <input type="file" id="product-image" accept="image/*"> -->
                         </form>
                     </div>
                     <div class="modal-footer">
@@ -221,7 +235,7 @@
 <?php $this->view("../admin/_includes/admin_footer", $data); ?>
 
 <script>
-
+    //ADD Function
     function get_data() {
 
         let product_name        = document.querySelector("#product-name").value.trim();
@@ -230,7 +244,7 @@
         let price_name          = parseFloat(document.querySelector("#price-name").value.trim()); 
         let product_image       = document.querySelector("#product-image").files[0];
 
-        // Validação
+        // Validation data received
         if (!product_name) {
             Swal.fire({
                 icon: 'error',
@@ -285,61 +299,18 @@
         data.append('product_image', product_image);
         data.append('data_type', 'add_product');
 
-
-
-        // let data = {
-        //     product_name: product_name,
-        //     product_quantity: product_quantity,
-        //     category_name: category_name,
-        //     price_name: price_name,
-        //     data_type: 'add_product'
-        // };
-        
-        
-        console.log(data);
         send_data(data);
     }
-
-
-    function send_data(data = {}) {
-        var ajax = new XMLHttpRequest();
-
-        ajax.addEventListener('readystatechange', function() {
-            if (ajax.readyState === 4 && ajax.status === 200) {
-                handle_result(ajax.responseText);
-            }
-        });
-
-        ajax.open("POST", "<?=ROOT?>admin/products/product", true);
-        //ajax.setRequestHeader("Content-Type", "application/json");
-
-        ajax.send((data));
-    }
-
-    function send_data_files(formData) {
-        
-        var ajax = new XMLHttpRequest();
-
-        ajax.addEventListener('readystatechange', function() {
-            if (ajax.readyState === 4 && ajax.status === 200) {
-                handle_result(ajax.responseText);
-            }
-        });
-
-        ajax.open("POST", "<?=ROOT?>admin/products/product", true);
-        //ajax.setRequestHeader("Content-Type", "application/json");
-
-        ajax.send(formData);
-    }
-
+    //EDIT Function
     function edit_row() {
         let productId = document.querySelector("#editProductId").value.trim();
         let productName = document.querySelector("#edit-product-name").value.trim();
         let productQuantity = parseInt(document.querySelector("#edit-product-quantity").value.trim());
         let categoryName = document.querySelector("#edit-category-name").value.trim();
         let priceName = parseFloat(document.querySelector("#edit-price-name").value.trim());
+        let productImage = document.querySelector("#new-product-image").files[0]; // Input file element for image
 
-        // Validação
+        // Validation data received
         if (!productName) {
             Swal.fire({
                 icon: 'error',
@@ -376,6 +347,7 @@
             return;
         }
 
+
         // Criação de FormData com os dados necessários
         let data = new FormData();
         data.append('id', productId); // Nome do campo deve ser 'id'
@@ -385,29 +357,51 @@
         data.append('price', priceName); // Nome do campo deve ser 'price'
         data.append('data_type', 'edit_product');
 
+
+        if (productImage) {
+            data.append('product_image', productImage);
+        }
+
         console.log(data); // Verifica se os dados estão corretos antes de enviar
 
         // Função para enviar os dados
         send_data_files(data);
     }
-
-
-
-    function disabled_row(id, state) {
-        send_data({
-            data_type: "disabled_row",
-            id: id,
-            current_state: state
-        });
-    }
-
+    //Disable Function ( not used in this view)
+    // function disabled_row(id, state) {
+    //     send_data({
+    //         data_type: "disabled_row",
+    //         id: id,
+    //         current_state: state
+    //     });
+    // }
+    //DELETE Function
     function delete_row(id) {
-        send_data({
-            data_type: "delete_row",
-            id: id
-        });
-    }
 
+        let data = new FormData();
+        data.append('data_type', 'delete_row');
+        data.append('id', id);
+
+        send_data_files(data);
+    }
+    /**
+     * HANDLERS
+     */
+    function send_data_files(data) {
+        
+        var ajax = new XMLHttpRequest();
+
+        ajax.addEventListener('readystatechange', function() {
+            if (ajax.readyState === 4 && ajax.status === 200) {
+                handle_result(ajax.responseText);
+            }
+        });
+
+        ajax.open("POST", "<?=ROOT?>admin/products/product", true);
+        //ajax.setRequestHeader("Content-Type", "application/json");
+
+        ajax.send(data);
+    }
     function handle_result(result) {
         console.log("The result is" + result);
         if (result !== "") {
@@ -482,20 +476,18 @@
             }
         }
     }
-
     function openDeleteModal(id) {
         document.getElementById('deleteProductId').value = id;
         $('#deleteProductModal').modal('show');
     }
-
-    function openEditModal(id, description, quantity, categoryId, price) {
+    function openEditModal(id, description, quantity, categoryId, price, image) {
 
         document.getElementById('editProductId').value = id;
         document.getElementById('edit-product-name').value = description;
         document.getElementById('edit-product-quantity').value = quantity;
         document.getElementById('edit-price-name').value = price;
 
-        // Atualizar o campo de seleção da categoria
+        // Update field in modal
         var categorySelect = document.getElementById('edit-category-name');
         var options = categorySelect.options;
         for (var i = 0; i < options.length; i++) {
@@ -504,6 +496,18 @@
                 break;
             }
         }
+
+        var rootPath = "<?php echo ROOT; ?>";
+
+        // Show the actual picture with path ROOT include
+        var imageElement = document.getElementById('edit-product-image');
+        var fullPath = rootPath + image;
+        imageElement.onerror = function() {
+            // Opcional: define a image standart
+            this.src="<?php echo ASSETS; ?>admin/img/ui-sam.jpg"; 
+        };
+        imageElement.src = fullPath;
+
 
         $('#editProductModal').modal('show');
     }

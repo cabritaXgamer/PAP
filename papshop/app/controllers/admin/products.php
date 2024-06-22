@@ -1,6 +1,5 @@
 <?php
 
-
 class Products extends Controller
 {
     //Public default metodo index, mesmo que o utilizador coloque ou não qualquer URL, o Index vai sempre correr
@@ -95,7 +94,6 @@ class Products extends Controller
 
             // Handle editing a product
             elseif ($data->data_type == 'edit_product') {
-
                 // Verifica se todas as propriedades necessárias estão definidas
                 if (isset($data->id, $data->description, $data->quantity, $data->category, $data->price)) {
                     $id = $data->id;
@@ -103,15 +101,18 @@ class Products extends Controller
                     $quantity = $data->quantity;
                     $categoryId = $data->category; // Ajuste o nome do campo se necessário
                     $price = $data->price;
+                    $files = $_FILES;
 
                     // Chama o método de edição no modelo
-                    $check = $product->edit_product($id, $description, $quantity, $categoryId, $price);
+                    $check = $product->edit_product($id, $description, $quantity, $categoryId, $price, $files);
 
+                    $arr = array();
                     if ($check) {
                         $arr['message'] = "Produto editado com sucesso!";
                         $arr['message_type'] = "info";
                     } else {
-                        $arr['message'] = "Erro ao editar o produto!";
+                        $arr['message'] = !empty($_SESSION['error']) ? $_SESSION['error'] : "Erro ao editar o produto!";
+                        $_SESSION['error'] = ""; // Limpa a mensagem de erro após usá-la
                         $arr['message_type'] = "error";
                     }
                 } else {
@@ -124,25 +125,26 @@ class Products extends Controller
 
                 echo json_encode($arr);
             }
-            
-            // Handle change state of a category
-            elseif ($data->data_type == 'disabled_row') {
-                $id = $data->id;
-                $disabled = $data->current_state ? 0 : 1;
+
+
+            // // Handle change state of a category
+            // elseif ($data->data_type == 'disabled_row') {
+            //     $id = $data->id;
+            //     $disabled = $data->current_state ? 0 : 1;
     
-                $query = "UPDATE categories SET disabled = :disabled WHERE id = :id LIMIT 1";
-                $params = array(':disabled' => $disabled, ':id' => $id);
-                $DB = Database::getInstance();
-                $DB->write($query, $params);
+            //     $query = "UPDATE categories SET disabled = :disabled WHERE id = :id LIMIT 1";
+            //     $params = array(':disabled' => $disabled, ':id' => $id);
+            //     $DB = Database::getInstance();
+            //     $DB->write($query, $params);
     
-                $arr['message'] = "";
-                $_SESSION['error'] = "";
-                $arr['message_type'] = "info";
-                $arr['data'] = "";
-                $arr['data_type'] = "disabled_row";
+            //     $arr['message'] = "";
+            //     $_SESSION['error'] = "";
+            //     $arr['message_type'] = "info";
+            //     $arr['data'] = "";
+            //     $arr['data_type'] = "disabled_row";
     
-                echo json_encode($arr);
-            }
+            //     echo json_encode($arr);
+            // }
     
             // Handle deleting a category
             elseif ($data->data_type == 'delete_row') {
