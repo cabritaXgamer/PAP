@@ -21,8 +21,9 @@
                                 <th class="hidden-phone"><i class="fa fa-question-circle"></i> Product</th>
                                 <th class="hidden-phone"><i class="fa fa-question-circle"></i> Quantity</th>
                                 <th class="hidden-phone"><i class="fa fa-question-circle"></i> Category</th>
-                                <th class="hidden-phone"><i class="fa fa-question-circle"></i> Date</th>
                                 <th class="hidden-phone"><i class="fa fa-question-circle"></i> Price</th>
+                                <th class="hidden-phone"><i class="fa fa-question-circle"></i> Date</th>
+                                <th class="hidden-phone"><i class="fa fa-question-circle"></i> Image</th>
                                 <th><i class=" fa fa-edit"></i> Status</th>
                                 <th></th>
                             </tr>
@@ -38,7 +39,17 @@
                                         <td><?php echo htmlspecialchars($product['categoryName']); ?></td>
 
                                         <td><?php echo htmlspecialchars($product['price']); ?></td>
-                                        <td><?php echo htmlspecialchars($product['date']); ?></td>
+                                        <!-- <td><?php //echo htmlspecialchars($product['date']); ?></td> -->
+                                        <td>
+                                            <?php
+                                            // Supondo que $product['date'] está no formato Y-m-d H:i:s
+                                            $date = new DateTime($product['date']);
+                                            echo htmlspecialchars($date->format('jS M, Y H:i:s'));
+                                            ?>
+                                        </td>
+                                        <!-- Show image -->
+                                        <td>
+                                            <img src="<?php echo ROOT . htmlspecialchars($product['image']); ?>" alt="Product Image" style="width: 70px; height: 70px;">
                                         <!-- <td>
                                             <?php if ($product['disabled']): ?>
                                                 <span class="label label-warning label-mini" style="cursor:pointer" 
@@ -50,9 +61,15 @@
                                         </td> -->
                                         <td>
                                             <!-- EDIT trigger modal --> 
-                                            <button class="btn btn-primary btn-xs" onclick="openEditModal(<?php echo htmlspecialchars($product['id']); ?>, 
-                                                '<?php echo htmlspecialchars($product['description']); ?>')">
-                                                <i class="fa fa-pencil"></i></button>
+                                            <button class="btn btn-primary btn-xs" onclick="openEditModal(
+                                                <?php echo htmlspecialchars($product['id']); ?>,
+                                                '<?php echo htmlspecialchars($product['description']); ?>',
+                                                <?php echo htmlspecialchars($product['quantity']); ?>,
+                                                '<?php echo htmlspecialchars($product['categoryName']); ?>',
+                                                <?php echo htmlspecialchars($product['price']); ?>,
+                                                '<?php echo htmlspecialchars($product['image']); ?>')">
+                                                <i class="fa fa-pencil"></i>
+                                            </button>
                                             <!-- END EDIT trigger modal -->
                                             <!-- DELETE trigger modal -->
                                             <button class="btn btn-danger btn-xs" onclick="openDeleteModal(<?php echo htmlspecialchars($product['id']); ?>)">
@@ -124,23 +141,43 @@
         <!-- END Modal -->
 
         <!-- Edit Modal -->
-        <div class="modal fade" id="editProductModal" tabindex="-1" role="dialog" 
-            aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="editProductModal" tabindex="-1" role="dialog" aria-labelledby="editProductModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Edit product</h5>
+                        <h5 class="modal-title" id="editProductModalLabel">Edit Product</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form id="productForm">
+                        <form id="editProductForm">
                             <div class="form-group">
-                                <label for="product-name" class="col-form-label">Product:</label>
-                                <input type="text" class="form-control" id="editProduct" name="editProduct">
-                                <input id="editProductId" name="editProductId" type="hidden" class="form-control" value="">
+                                <label for="edit-product-name" class="col-form-label">Product:</label>
+                                <input type="text" class="form-control" id="edit-product-name" name="edit-product-name">
                             </div>
+                            <div class="form-group">
+                                <label for="edit-product-quantity" class="col-form-label">Quantity:</label>
+                                <input type="number" class="form-control" id="edit-product-quantity" name="edit-product-quantity" min="0" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="edit-category-name" class="col-form-label">Category:</label>
+                                <select name="edit-category-name" id="edit-category-name" class="form-control" required>
+                                    <!-- Populate dynamically -->
+                                    <?php if (!empty($data['categories'])): ?>
+                                        <?php foreach ($data['categories'] as $category): ?>
+                                            <option value="<?php echo htmlspecialchars($category['id']); ?>"><?php echo htmlspecialchars($category['category']); ?></option>
+                                        <?php endforeach; ?>
+                                    <?php else: ?>
+                                        <option value="" disabled>No categories available</option>
+                                    <?php endif; ?>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="edit-price-name" class="col-form-label">Price:</label>
+                                <input type="number" class="form-control" id="edit-price-name" name="edit-price-name" placeholder="0.00" min="0.00" step="0.01" required>
+                            </div>
+                            <input id="editProductId" name="editProductId" type="hidden" value="">
                         </form>
                     </div>
                     <div class="modal-footer">
@@ -150,6 +187,7 @@
                 </div>
             </div>
         </div>
+
         <!-- END Edit Modal -->
 
         <!-- Delete Modal HTML -->
@@ -206,7 +244,7 @@
             Swal.fire({
                 icon: 'error',
                 title: 'Erro',
-                text: 'A quantidade do produto deve ser um número não negativo.'
+                text: 'A quantidade do produto deve ser um número maior que 0 ou não negativo.'
             });
             return;
         }
@@ -224,7 +262,7 @@
             Swal.fire({
                 icon: 'error',
                 title: 'Erro',
-                text: 'O preço do produto deve ser um número não negativo.'
+                text: 'O preço do produto deve ser um valor maior que 0 ou não negativo.'
             });
             return;
         }
@@ -295,27 +333,65 @@
     }
 
     function edit_row() {
-        let product_input = document.querySelector("#editProduct");
-        let id_input = document.querySelector("#editProductId");
+        let productId = document.querySelector("#editProductId").value.trim();
+        let productName = document.querySelector("#edit-product-name").value.trim();
+        let productQuantity = parseInt(document.querySelector("#edit-product-quantity").value.trim());
+        let categoryName = document.querySelector("#edit-category-name").value.trim();
+        let priceName = parseFloat(document.querySelector("#edit-price-name").value.trim());
 
-        if (product_input.value.trim() === "" || !isNaN(product_input.value.trim())) {
+        // Validação
+        if (!productName) {
             Swal.fire({
                 icon: 'error',
-                title: 'Error',
-                text: 'Please enter a valid product name!'
+                title: 'Erro',
+                text: 'O nome do produto é obrigatório.'
             });
             return;
         }
 
-        let data = product_input.value.trim();
-        let id = id_input.value;
+        if (isNaN(productQuantity) || productQuantity < 0) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Erro',
+                text: 'A quantidade do produto deve ser um número maior que 0 ou não negativo.'
+            });
+            return;
+        }
 
-        send_data({
-            id: id,
-            data: data,
-            data_type: 'edit_product'
-        });
+        if (!categoryName) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Erro',
+                text: 'O nome da categoria é obrigatório.'
+            });
+            return;
+        }
+
+        if (isNaN(priceName) || priceName < 0) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Erro',
+                text: 'O preço do produto deve ser um valor maior que 0 ou não negativo.'
+            });
+            return;
+        }
+
+        // Criação de FormData com os dados necessários
+        let data = new FormData();
+        data.append('id', productId); // Nome do campo deve ser 'id'
+        data.append('description', productName); // Nome do campo deve ser 'description'
+        data.append('quantity', productQuantity); // Nome do campo deve ser 'quantity'
+        data.append('category', categoryName); // Nome do campo deve ser 'category'
+        data.append('price', priceName); // Nome do campo deve ser 'price'
+        data.append('data_type', 'edit_product');
+
+        console.log(data); // Verifica se os dados estão corretos antes de enviar
+
+        // Função para enviar os dados
+        send_data_files(data);
     }
+
+
 
     function disabled_row(id, state) {
         send_data({
@@ -412,9 +488,23 @@
         $('#deleteProductModal').modal('show');
     }
 
-    function openEditModal(id, product) {
+    function openEditModal(id, description, quantity, categoryId, price) {
+
         document.getElementById('editProductId').value = id;
-        document.getElementById('editProduct').value = product;
+        document.getElementById('edit-product-name').value = description;
+        document.getElementById('edit-product-quantity').value = quantity;
+        document.getElementById('edit-price-name').value = price;
+
+        // Atualizar o campo de seleção da categoria
+        var categorySelect = document.getElementById('edit-category-name');
+        var options = categorySelect.options;
+        for (var i = 0; i < options.length; i++) {
+            if (options[i].text === categoryId) {
+                categorySelect.selectedIndex = i;
+                break;
+            }
+        }
+
         $('#editProductModal').modal('show');
     }
 </script>

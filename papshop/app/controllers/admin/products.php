@@ -92,28 +92,39 @@ class Products extends Controller
                 $arr['data'] = "";
                 echo json_encode($arr);
             }
-            // Handle editing a category
+
+            // Handle editing a product
             elseif ($data->data_type == 'edit_product') {
-                $id = $data->id;
-                $new_category = $data->data;
 
-                // Call the model's edit method
-                $check = $category->edit($id, $new_category);
+                // Verifica se todas as propriedades necessárias estão definidas
+                if (isset($data->id, $data->description, $data->quantity, $data->category, $data->price)) {
+                    $id = $data->id;
+                    $description = $data->description;
+                    $quantity = $data->quantity;
+                    $categoryId = $data->category; // Ajuste o nome do campo se necessário
+                    $price = $data->price;
 
-                if ($check) {
-                    $arr['message'] = "Categoria editada com sucesso!";
-                    $arr['message_type'] = "info";
+                    // Chama o método de edição no modelo
+                    $check = $product->edit_product($id, $description, $quantity, $categoryId, $price);
+
+                    if ($check) {
+                        $arr['message'] = "Produto editado com sucesso!";
+                        $arr['message_type'] = "info";
+                    } else {
+                        $arr['message'] = "Erro ao editar o produto!";
+                        $arr['message_type'] = "error";
+                    }
                 } else {
-                    $arr['message'] = "Erro ao editar a categoria!";
+                    $arr['message'] = "Dados incompletos para editar o produto!";
                     $arr['message_type'] = "error";
                 }
-                $_SESSION['error'] = "";
+
                 $arr['data'] = "";
-                $arr['data_type'] = "edit_row";
+                $arr['data_type'] = "edit_product";
 
                 echo json_encode($arr);
             }
-    
+            
             // Handle change state of a category
             elseif ($data->data_type == 'disabled_row') {
                 $id = $data->id;

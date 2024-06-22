@@ -140,23 +140,49 @@ Class Product
         }
     }
 
-    //Function model edit category
-    public function edit_product($id, $new_category) {
+    //Function model edit product
+    public function edit_product($id, $description, $quantity, $categoryId, $price) {
         $DB = Database::getInstance();
-    
-        // Validate the new category name
-        $new_category = ucwords(trim($new_category));
-        if (!preg_match("/^[a-zA-Z]+$/", $new_category)) {
-            $_SESSION['error'] = "Por favor insira um nome de categoria correto!";
+
+        // Validate inputs
+        $description = ucwords(trim($description));
+        $quantity = (int)$quantity;
+        $categoryId = (int)$categoryId;
+        $price = (float)$price;
+
+        // Ensure valid inputs
+        if (empty($description) || !is_numeric($quantity) || $quantity < 0 || !is_numeric($categoryId) || !is_numeric($price) || $price < 0) {
+            $_SESSION['error'] = "Por favor, insira valores corretos!";
             return false;
         }
-    
-        // Update the category in the database
-        $query = "UPDATE categories SET category = :category WHERE id = :id LIMIT 1";
-        $params = array(':category' => $new_category, ':id' => $id);
-        return $DB->write($query, $params);
+
+        // Update the product in the database
+        $query = "UPDATE products SET description = :description, quantity = :quantity, categoryId = :categoryId, price = :price WHERE id = :id LIMIT 1";
+        $params = array(
+            ':description' => $description,
+            ':quantity' => $quantity,
+            ':categoryId' => $categoryId,
+            ':price' => $price,
+            ':id' => $id
+        );
+
+        try {
+            $check = $DB->write($query, $params);
+
+            if ($check) {
+                return true;
+            } else {
+                $_SESSION['error'] = "Erro ao atualizar produto na base de dados.";
+                return false;
+            }
+        } catch (Exception $e) {
+            $_SESSION['error'] = "Erro ao atualizar produto: " . $e->getMessage();
+            return false;
+        }
     }
-    
+
+
+  
     public function delete_product($id)
     {
         $DB = Database::getInstance();
