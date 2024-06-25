@@ -26,7 +26,7 @@
 
             <!-- Page Banner Images Start -->
             <div class="page-banner-images">
-                <img src="assets/images/page-banner-3.png" alt="Page Banner">
+                <img src="<?= ASSETS . THEME ?>/images/page-banner-3.png" alt="Page Banner">
             </div>
             <!-- Page Banner Images End -->
 

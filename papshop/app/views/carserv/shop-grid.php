@@ -9,30 +9,30 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="<?= ASSETS . THEME ?>/images/favicon.ico">
 
     <!-- CSS
 	============================================ -->
 
     <!-- Icon Font CSS -->
-    <link rel="stylesheet" href="assets/css/plugins/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/icofont.min.css">
+    <link rel="stylesheet" href="<?= ASSETS . THEME ?>/css/plugins/font-awesome.min.css">
+    <link rel="stylesheet" href="<?= ASSETS . THEME ?>/css/plugins/icofont.min.css">
 
     <!-- Plugins CSS -->
-    <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/animate.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/jquery-ui.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/select2.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/aos.css">
+    <link rel="stylesheet" href="<?= ASSETS . THEME ?>/css/plugins/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= ASSETS . THEME ?>/css/plugins/animate.min.css">
+    <link rel="stylesheet" href="<?= ASSETS . THEME ?>/css/plugins/jquery-ui.min.css">
+    <link rel="stylesheet" href="<?= ASSETS . THEME ?>/css/plugins/select2.min.css">
+    <link rel="stylesheet" href="<?= ASSETS . THEME ?>/css/plugins/swiper-bundle.min.css">
+    <link rel="stylesheet" href="<?= ASSETS . THEME ?>/css/plugins/aos.css">
 
     <!-- Main Style CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="<?= ASSETS . THEME ?>/css/style.css">
 
 
     <!--====== Use the minified version files listed below for better performance and remove the files listed above ======-->
-    <!-- <link rel="stylesheet" href="assets/css/vendor/plugins.min.css">
-    <link rel="stylesheet" href="assets/css/style.min.css"> -->
+    <!-- <link rel="stylesheet" href="<?= ASSETS . THEME ?>/css/vendor/plugins.min.css">
+    <link rel="stylesheet" href="<?= ASSETS . THEME ?>/css/style.min.css"> -->
 
 </head>
 
@@ -80,7 +80,7 @@
 
                         <!-- Header Logo Start -->
                         <div class="header-logo">
-                            <a href="index.html"><img src="assets/images/logo.png" alt="Logo"></a>
+                            <a href="index.html"><img src="<?= ASSETS . THEME ?>/images/logo.png" alt="Logo"></a>
                         </div>
                         <!-- Header Logo End -->
 
@@ -96,13 +96,13 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#">Shop</a>
+                                    <a href="shop">Loja</a>
                                     <ul class="sub-menu">
-                                        <li><a href="shop-grid.html">Shop Grid</a></li>
-                                        <li><a href="shop-left-sidebar.html">Shop left Sidebar</a></li>
+                                        <li><a href="shopd">tabela de produtos</a></li>
+                                        <!-- <li><a href="shop-left-sidebar.html">Shop left Sidebar</a></li>
                                         <li><a href="shop-right-sidebar.html">Shop Right Sidebar</a></li>
                                         <li><a href="product-details-left-sidebar.html">Product Details Left Sidebar</a></li>
-                                        <li><a href="product-details-right-sidebar.html">Product Details Right Sidebar</a></li>
+                                        <li><a href="product-details-right-sidebar.html">Product Details Right Sidebar</a></li> -->
                                     </ul>
                                 </li>
                                 <li>
@@ -157,7 +157,7 @@
                                                 <!-- Single Cart Item Start -->
                                                 <div class="single-cart-item">
                                                     <div class="cart-thumb">
-                                                        <img src="assets/images/mini-cart/cart-1.jpg" alt="Cart">
+                                                        <img src="<?= ASSETS . THEME ?>/images/mini-cart/cart-1.jpg" alt="Cart">
                                                         <span class="product-quantity">1x</span>
                                                     </div>
                                                     <div class="cart-item-content">
@@ -175,7 +175,7 @@
                                                 <!-- Single Cart Item Start -->
                                                 <div class="single-cart-item">
                                                     <div class="cart-thumb">
-                                                        <img src="assets/images/mini-cart/cart-2.jpg" alt="Cart">
+                                                        <img src="<?= ASSETS . THEME ?>/images/mini-cart/cart-2.jpg" alt="Cart">
                                                         <span class="product-quantity">1x</span>
                                                     </div>
                                                     <div class="cart-item-content">
@@ -193,7 +193,7 @@
                                                 <!-- Single Cart Item Start -->
                                                 <div class="single-cart-item">
                                                     <div class="cart-thumb">
-                                                        <img src="assets/images/mini-cart/cart-3.jpg" alt="Cart">
+                                                        <img src="<?= ASSETS . THEME ?>/images/mini-cart/cart-3.jpg" alt="Cart">
                                                         <span class="product-quantity">1x</span>
                                                     </div>
                                                     <div class="cart-item-content">
@@ -314,13 +314,13 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#">Shop</a>
+                            <a href="shop">Loja</a>
                             <ul class="sub-menu">
-                                <li><a href="shop-grid.html">Shop Grid</a></li>
-                                <li><a href="shop-left-sidebar.html">Shop left Sidebar</a></li>
+                                <li><a href="shops">tabela de produtos</a></li>
+                                <!-- <li><a href="shop-left-sidebar.html">Shop left Sidebar</a></li>
                                 <li><a href="shop-right-sidebar.html">Shop Right Sidebar</a></li>
                                 <li><a href="product-details-left-sidebar.html">Product Details Left Sidebar</a></li>
-                                <li><a href="product-details-right-sidebar.html">Product Details Right Sidebar</a></li>
+                                <li><a href="product-details-right-sidebar.html">Product Details Right Sidebar</a></li> -->
                             </ul>
                         </li>
                         <li>
@@ -364,7 +364,7 @@
         <!-- Mobile Menu End -->
 
         <!-- Page Banner Section Start -->
-        <div class="section page-banner-section" style="background-image: url(assets/images/page-banner-bg.png);">
+        <div class="section page-banner-section" style="background-image: url(<?= ASSETS . THEME ?>/images/page-banner-bg.png);">
             <div class="container">
                 <!-- Page Banner Wrapper Start -->
                 <div class="page-banner-wrapper">
@@ -388,7 +388,7 @@
 
                     <!-- Page Banner Images Start -->
                     <div class="page-banner-images">
-                        <img src="assets/images/page-banner-4.png" alt="Page Banner">
+                        <img src="<?= ASSETS . THEME ?>/images/page-banner-4.png" alt="Page Banner">
                     </div>
                     <!-- Page Banner Images End -->
 
@@ -411,7 +411,7 @@
                                 <div class="product-image">
                                     <span class="lable">25%</span>
 
-                                    <a href="product-details-right-sidebar.html"><img src="assets/images/shop/shop-1.jpg" alt="Product"></a>
+                                    <a href="product-details-right-sidebar.html"><img src="<?= ASSETS . THEME ?>/images/shop/shop-1.jpg" alt="Product"></a>
 
                                     <ul class="product-action">
                                         <li><button data-bs-tooltip="tooltip" data-bs-placement="top" title="Add to Cart"><i class="icofont-shopping-cart"></i></button></li>
@@ -435,7 +435,7 @@
                                 <div class="product-image">
                                     <span class="lable new">New</span>
 
-                                    <a href="product-details-right-sidebar.html"><img src="assets/images/shop/shop-2.jpg" alt="Product"></a>
+                                    <a href="product-details-right-sidebar.html"><img src="<?= ASSETS . THEME ?>/images/shop/shop-2.jpg" alt="Product"></a>
 
                                     <ul class="product-action">
                                         <li><button data-bs-tooltip="tooltip" data-bs-placement="top" title="Add to Cart"><i class="icofont-shopping-cart"></i></button></li>
@@ -456,7 +456,7 @@
                             <!-- Single Product Start -->
                             <div class="single-product" data-aos="fade-up" data-aos-delay="600">
                                 <div class="product-image">
-                                    <a href="product-details-right-sidebar.html"><img src="assets/images/shop/shop-3.jpg" alt="Product"></a>
+                                    <a href="product-details-right-sidebar.html"><img src="<?= ASSETS . THEME ?>/images/shop/shop-3.jpg" alt="Product"></a>
 
                                     <ul class="product-action">
                                         <li><button data-bs-tooltip="tooltip" data-bs-placement="top" title="Add to Cart"><i class="icofont-shopping-cart"></i></button></li>
@@ -479,7 +479,7 @@
                                 <div class="product-image">
                                     <span class="lable">25%</span>
 
-                                    <a href="product-details-right-sidebar.html"><img src="assets/images/shop/shop-4.jpg" alt="Product"></a>
+                                    <a href="product-details-right-sidebar.html"><img src="<?= ASSETS . THEME ?>/images/shop/shop-4.jpg" alt="Product"></a>
 
                                     <ul class="product-action">
                                         <li><button data-bs-tooltip="tooltip" data-bs-placement="top" title="Add to Cart"><i class="icofont-shopping-cart"></i></button></li>
@@ -503,7 +503,7 @@
                                 <div class="product-image">
                                     <span class="lable">35%</span>
 
-                                    <a href="product-details-right-sidebar.html"><img src="assets/images/shop/shop-5.jpg" alt="Product"></a>
+                                    <a href="product-details-right-sidebar.html"><img src="<?= ASSETS . THEME ?>/images/shop/shop-5.jpg" alt="Product"></a>
 
                                     <ul class="product-action">
                                         <li><button data-bs-tooltip="tooltip" data-bs-placement="top" title="Add to Cart"><i class="icofont-shopping-cart"></i></button></li>
@@ -527,7 +527,7 @@
                                 <div class="product-image">
                                     <span class="lable new">New</span>
 
-                                    <a href="product-details-right-sidebar.html"><img src="assets/images/shop/shop-6.jpg" alt="Product"></a>
+                                    <a href="product-details-right-sidebar.html"><img src="<?= ASSETS . THEME ?>/images/shop/shop-6.jpg" alt="Product"></a>
 
                                     <ul class="product-action">
                                         <li><button data-bs-tooltip="tooltip" data-bs-placement="top" title="Add to Cart"><i class="icofont-shopping-cart"></i></button></li>
@@ -550,7 +550,7 @@
                                 <div class="product-image">
                                     <span class="lable new">New</span>
 
-                                    <a href="product-details-right-sidebar.html"><img src="assets/images/shop/shop-7.jpg" alt="Product"></a>
+                                    <a href="product-details-right-sidebar.html"><img src="<?= ASSETS . THEME ?>/images/shop/shop-7.jpg" alt="Product"></a>
 
                                     <ul class="product-action">
                                         <li><button data-bs-tooltip="tooltip" data-bs-placement="top" title="Add to Cart"><i class="icofont-shopping-cart"></i></button></li>
@@ -573,7 +573,7 @@
                                 <div class="product-image">
                                     <span class="lable">55%</span>
 
-                                    <a href="product-details-right-sidebar.html"><img src="assets/images/shop/shop-8.jpg" alt="Product"></a>
+                                    <a href="product-details-right-sidebar.html"><img src="<?= ASSETS . THEME ?>/images/shop/shop-8.jpg" alt="Product"></a>
 
                                     <ul class="product-action">
                                         <li><button data-bs-tooltip="tooltip" data-bs-placement="top" title="Add to Cart"><i class="icofont-shopping-cart"></i></button></li>
@@ -597,7 +597,7 @@
                                 <div class="product-image">
                                     <span class="lable">25%</span>
 
-                                    <a href="product-details-right-sidebar.html"><img src="assets/images/shop/shop-9.jpg" alt="Product"></a>
+                                    <a href="product-details-right-sidebar.html"><img src="<?= ASSETS . THEME ?>/images/shop/shop-9.jpg" alt="Product"></a>
 
                                     <ul class="product-action">
                                         <li><button data-bs-tooltip="tooltip" data-bs-placement="top" title="Add to Cart"><i class="icofont-shopping-cart"></i></button></li>
@@ -639,7 +639,7 @@
         <!-- Shop Section End -->
 
         <!-- Footer Section Start -->
-        <div class="section footer-section" style="background-image: url(assets/images/footer-bg.jpg);">
+        <div class="section footer-section" style="background-image: url(<?= ASSETS . THEME ?>/images/footer-bg.jpg);">
 
             <!-- Footer Widget Start -->
             <div class="footer-widget-section section-padding">
@@ -652,7 +652,7 @@
 
                                 <!-- Footer Widget Start -->
                                 <div class="footer-widget" data-aos="fade-up" data-aos-delay="100">
-                                    <a class="footer-logo" href="#"><img src="assets/images/logo.png" alt="Logo"></a>
+                                    <a class="footer-logo" href="#"><img src="<?= ASSETS . THEME ?>/images/logo.png" alt="Logo"></a>
                                     <p>Trusted and reliable service is our to main goal extremely painful. again a there anyone loves our chooses</p>
 
                                     <div class="widget-info">
@@ -794,13 +794,13 @@
                                     <div class="swiper-container">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
-                                                <img src="assets/images/shop/product-details-01.jpg" alt="Product Details">
+                                                <img src="<?= ASSETS . THEME ?>/images/shop/product-details-01.jpg" alt="Product Details">
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="assets/images/shop/product-details-02.jpg" alt="Product Details">
+                                                <img src="<?= ASSETS . THEME ?>/images/shop/product-details-02.jpg" alt="Product Details">
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="assets/images/shop/product-details-03.jpg" alt="Product Details">
+                                                <img src="<?= ASSETS . THEME ?>/images/shop/product-details-03.jpg" alt="Product Details">
                                             </div>
                                         </div>
                                         <div class="swiper-button-prev"><i class="icofont-rounded-left"></i></div>
@@ -885,26 +885,26 @@
     ============================================ -->
 
     <!-- Modernizer & jQuery JS -->
-    <script src="assets/js/vendor/modernizr-3.11.2.min.js"></script>
-    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="<?= ASSETS . THEME ?>/js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="<?= ASSETS . THEME ?>/js/vendor/jquery-3.6.0.min.js"></script>
 
     <!-- Bootstrap JS -->
-    <script src="assets/js/plugins/popper.min.js"></script>
-    <script src="assets/js/plugins/bootstrap.min.js"></script>
+    <script src="<?= ASSETS . THEME ?>/js/plugins/popper.min.js"></script>
+    <script src="<?= ASSETS . THEME ?>/js/plugins/bootstrap.min.js"></script>
 
     <!-- Plugins JS -->
-    <script src="assets/js/plugins/swiper-bundle.min.js"></script>
-    <script src="assets/js/plugins/jquery-ui.min.js"></script>
-    <script src="assets/js/plugins/select2.min.js"></script>
-    <script src="assets/js/plugins/ajax-contact.js"></script>
-    <script src="assets/js/plugins/aos.js"></script>
+    <script src="<?= ASSETS . THEME ?>/js/plugins/swiper-bundle.min.js"></script>
+    <script src="<?= ASSETS . THEME ?>/js/plugins/jquery-ui.min.js"></script>
+    <script src="<?= ASSETS . THEME ?>/js/plugins/select2.min.js"></script>
+    <script src="<?= ASSETS . THEME ?>/js/plugins/ajax-contact.js"></script>
+    <script src="<?= ASSETS . THEME ?>/js/plugins/aos.js"></script>
 
     <!--====== Use the minified version files listed below for better performance and remove the files listed above ======-->
-    <!-- <script src="assets/js/plugins.min.js"></script> -->
+    <!-- <script src="<?= ASSETS . THEME ?>/js/plugins.min.js"></script> -->
 
 
     <!-- Main JS -->
-    <script src="assets/js/main.js"></script>
+    <script src="<?= ASSETS . THEME ?>/js/main.js"></script>
 
 </body>
 

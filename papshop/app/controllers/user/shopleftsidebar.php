@@ -1,7 +1,7 @@
 <?php
 
 
-class Home extends Controller
+class shopleftsidebar extends Controller
 {
     //Public default metodo index, mesmo que o utilizador coloque ou não qualquer URL, o Index vai sempre correr
 
@@ -18,8 +18,8 @@ class Home extends Controller
         }
 
         //$this->title = 'Admin - Dashboard';
-        $data['page_title'] = "shop-grind - loja";
+        $data['page_title'] = "shop-left-sidebar - Loja";
         //Rota onde esta a view que vai carregar
-        $this->view("shop-grid", $data);
+        $this->view("shop-left-sidebar", $data);
     }
 }

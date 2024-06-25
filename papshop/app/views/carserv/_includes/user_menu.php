@@ -69,14 +69,14 @@
                                 <li>
                                     <a href="service">Serviços</a>
                                     <ul class="sub-menu">
-                                        <li><a href="services">Serviços</a></li>
-                                        <li><a href="service-details">detalhes dos serviços</a></li>
+                                        <li><a href="service">Serviços</a></li>
+                                        <li><a href="servicedetailes">detalhes dos serviços</a></li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#">Loja</a>
+                                    <a href="shop">Loja</a>
                                     <ul class="sub-menu">
-                                        <li><a href="shop-grid">tabela de produtos</a></li>
+                                        <li><a href="shop">tabela de produtos</a></li>
                                         <!-- <li><a href="shop-left-sidebar">Loja left Sidebar</a></li> -->
                                         <!-- <li><a href="shop-right-sidebar">Loja Right Sidebar</a></li> -->
                                         <!-- <li><a href="product-details-left-sidebar">Product Details Left Sidebar</a></li> -->
@@ -309,17 +309,17 @@
                             <a href="service">Serviços</a>
                             <ul class="sub-menu">
                                 <li><a href="service">Serviços</a></li>
-                                <li><a href="service-details">detalhes dos serviços</a></li>
+                                <li><a href="servicedetailes">detalhes dos serviços</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#">Loja</a>
+                            <a href="shop">Loja</a>
                             <ul class="sub-menu">
                                 <li><a href="shop-grid">tabela de produtos</a></li>
-                                <li><a href="shop-left-sidebar">Loja left Sidebar</a></li>
+                                <!-- <li><a href="shop-left-sidebar">Loja left Sidebar</a></li>
                                 <li><a href="shop-right-sidebar">Loja Right Sidebar</a></li>
                                 <li><a href="product-details-left-sidebar">Product Details Left Sidebar</a></li>
-                                <li><a href="product-details-right-sidebar">Product Details Right Sidebar</a></li>
+                                <li><a href="product-details-right-sidebar">Product Details Right Sidebar</a></li> -->
                             </ul>
                         </li>
                         <li>
