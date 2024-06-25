@@ -1,0 +1,152 @@
+/*--
+/*  4.16 - Shop CSS
+/*----------------------------------------*/
+
+// Shop Wrapper
+.shop-wrapper{
+    margin-top: -50px;
+    padding-top: 20px;
+}
+
+
+// Single Product
+.single-product{
+    margin-top: 30px;
+    overflow: hidden;
+    border-radius: 15px;
+
+    & .product-image{
+        position: relative;
+        overflow: hidden;
+
+        & .lable{
+            font-size: 28px;
+            font-weight: 700;
+            font-family: $heading-font;
+            color: $primary;
+            position: absolute;
+            top: 25px;
+            left: 35px;
+
+            @media #{$desktop-device}{
+                top: 15px;
+                left: 25px;
+                font-size: 24px;
+            }
+            @media #{$large-mobile}{
+                top: 15px;
+                left: 25px;
+                font-size: 22px;
+            }
+
+            &.new{
+                color: $secondary;
+            }
+        }
+
+        & a{
+            display: block;
+
+            & img{
+                width: 100%;
+            }
+        }
+
+        & .product-action{
+            position: absolute;
+            bottom: 0px;
+            display: flex;
+            left: 0;
+            right: 0;
+            justify-content: center;
+            transition: $transition-default;
+            opacity: 0;
+            visibility: hidden;
+
+            & li{
+                margin: 0 7px;
+
+                & button{
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    background-color: #c9d9fc;
+                    border-radius: 50%;
+                    text-align: center;
+                    color: $primary;
+                    font-size: 20px;
+                    border: 0;
+
+                    &:hover{
+                        background-color: $primary;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+    & .product-content{
+        text-align: center;
+        background-color: $primary;
+        padding: 20px 30px;
+
+        & .name{
+            line-height: 1;
+
+            & a{
+                font-size: 28px;
+                font-weight: 700;
+                color: $white;
+
+                @media #{$desktop-device}{
+                    font-size: 22px;
+                }
+                @media #{$large-mobile}{
+                    font-size: 20px;
+                }
+            }
+        }
+        & .price{
+            padding-top: 5px;
+
+            & .sale-price{
+                font-size: 18px;
+                font-weight: 500;
+                color: $white;
+            }
+            & .regular-price{
+                font-size: 18px;
+                font-weight: 500;
+                color: #c0bfbf;
+                text-decoration: line-through;
+                margin-left: 10px;
+            }
+        }
+    }
+
+    &:hover{
+        & .product-image{
+            & .product-action{
+                bottom: 20px;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

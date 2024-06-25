@@ -1,0 +1,73 @@
+/*--
+/*  4.21 - Error CSS
+/*----------------------------------------*/
+
+
+// Error Section 
+.error-section{}
+
+
+// Error Wrapper 
+.error-wrapper{
+    text-align: center;
+    
+    & .error-images{
+        & img{}
+    }
+    & .error-content{
+        max-width: 520px;
+        margin: 45px auto 0;
+
+        & .title{
+            font-size: 60px;
+            font-weight: 600;
+            color: #f03c3a;
+
+            @media #{$small-mobile}{
+                font-size: 40px;
+            }
+        }
+        & .sub-title{
+            font-size: 52px;
+            font-weight: 700;
+            color: $primary;
+            line-height: 1.1;
+            margin-top: 10px;
+
+            @media #{$desktop-device}{
+                font-size: 48px;
+            }
+            @media #{$small-mobile}{
+                font-size: 34px;
+            }
+        }
+        & p{
+            margin-top: 15px;
+        }
+        & .btn{
+            margin-top: 40px;
+
+            @media #{$small-mobile}{
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

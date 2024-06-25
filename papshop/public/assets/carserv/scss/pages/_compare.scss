@@ -1,0 +1,209 @@
+/*--
+/*  4.24 - Compare CSS
+/*----------------------------------------*/
+
+// Compare Wrapper 
+.compare-wrapper{
+    & .table{
+        &.table-striped{
+            & > tbody {
+                & > tr{
+                    &:nth-of-type(2n+1){
+                        --bs-table-accent-bg: none;
+                        color: $body-color;
+                    }
+                    &:nth-of-type(2n+2){
+                        background-color: #eeeeee;
+                    }
+                }
+            }
+        } 
+        & tbody{
+            & tr{
+                & th,
+                & td{
+                    color: $body-color;
+                    font-size: 16px;
+                    font-weight: 600;
+                    text-transform: capitalize;
+                    border: 0;
+                    padding: 15px;
+                }
+                & th{
+                    white-space: nowrap;
+                    
+                    @media #{$large-mobile}{
+                        display: none;
+                    }
+                }
+                & td{
+                    vertical-align: middle;
+                    font-weight: 500;
+                    font-size: 14px;
+                    min-width: 330px;
+                }
+            }
+        }
+    }
+}
+
+
+.compare-product{
+    position: relative;
+    display: inline-block;
+    padding-top: 2.5rem;
+    margin-bottom: 15px;
+
+    & .pack-product-container{
+        & .thumb-mask{}
+        & .desc-box{
+            margin-top: 20px;
+
+            & .product-name {
+                font-size: 16px;
+                font-weight: 600;
+                font-family: $heading-font;
+                display: block;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            & .product-reviews{
+                margin-top: 5px;
+
+                & .review-star{
+                    position: relative;
+                    display: inline-block;
+        
+                    &::before{
+                        content: '\f005\f005\f005\f005\f005';
+                        font-size: 14px;
+                        font-family: FontAwesome;
+                        display: inline-block;
+                        color: #dbdbdb;
+                        font-weight: 400;
+                        line-height: 1;
+                        vertical-align: middle;
+                        letter-spacing: 3px;
+                    }
+                    & .star{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        z-index: 2;
+                        overflow: hidden;
+        
+                        &::before{
+                            content: '\f005\f005\f005\f005\f005';
+                            font-size: 14px;
+                            font-family: FontAwesome;
+                            display: inline-block;
+                            color: #ffc600;
+                            font-weight: 400;
+                            line-height: 1;
+                            vertical-align: middle;
+                            letter-spacing: 3px;
+                        }
+                    }
+                }
+            }
+            & .product-prices{
+                margin-top: 5px;
+        
+                & .old-price{
+                    font-size: 14px;
+                    color: $body-color;
+                    font-weight: 400;
+                    text-decoration: line-through;
+                    margin-right: 5px;
+        
+                    @media #{$small-mobile}{
+                        font-size: 18px;
+                    }
+                }
+                & .sale-price{
+                    color: $heading-color;
+                    font-size: 18px;
+                    font-weight: 600;
+                    display: inline-block;
+                    margin-right: 13px;
+        
+                    @media #{$small-mobile}{
+                        font-size: 24px;
+                    }
+                }
+                & .discount-percentage{
+                    font-weight: 400;
+                    font-size: 11px;
+                    line-height: 20px;
+                    color: white;
+                    padding: 0 5px 0 5px;
+                    background: #253237;
+                    vertical-align: 5px;
+                    text-transform: capitalize;        
+                    display: inline-block;
+        
+                    @media #{$small-mobile}{
+                        font-size: 13px;
+                        padding: 0 8px 0 8px;
+                    }
+                }
+            }
+
+            & .product-cart{
+                padding-top: 15px;
+
+                & .btn{
+                    text-transform: capitalize;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    & .compare-remove{
+        padding: 0;
+        padding-right: 20px;
+        font-size: 14px;
+        font-weight: 500;
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: $body-color;
+        border: 0;
+        background: none;
+
+        &::after,
+        &::before {
+            content: " ";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            width: 15px;
+            height: 2px;
+            display: inline-block;
+            transform: rotate(0);
+            background-color: currentColor;
+            -webkit-transition: background-color .2s ease-in-out,transform .2s ease-in-out,width .2s ease-in-out;
+            -webkit-transition: background-color .2s ease-in-out,width .2s ease-in-out,-webkit-transform .2s ease-in-out;
+            transition: background-color .2s ease-in-out,width .2s ease-in-out,-webkit-transform .2s ease-in-out;
+            transition: background-color .2s ease-in-out,transform .2s ease-in-out,width .2s ease-in-out;
+            transition: background-color .2s ease-in-out,transform .2s ease-in-out,width .2s ease-in-out,-webkit-transform .2s ease-in-out;
+        }
+        &:hover{
+            color: $primary;
+
+            &::before{
+                transform: rotate(45deg);
+                background-color: $primary;
+            }
+            &::after{
+                transform: rotate(-45deg);
+                background-color: $primary;
+            }
+        }
+    }
+}
+
+
+

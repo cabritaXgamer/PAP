@@ -1,0 +1,231 @@
+/*--
+/*  4.12 - Service Details CSS
+/*----------------------------------------*/
+
+// Service Details Wrapper 
+.service-details-wrapper{
+    margin-top: -50px;
+}
+
+// Service Details Content 
+.service-details-content{
+    margin-top: 50px;
+    
+    @media #{$extraBig-device, $laptop-device}{
+        padding-right: 40px;
+    }
+
+    & .details-image{
+        border-radius: 30px;
+        overflow: hidden;
+        
+        @media #{$large-mobile}{
+            border-radius: 15px;
+        }
+
+        & img{
+            width: 100%;
+        }
+    }
+    & .title{
+        font-size: 52px;
+        font-weight: 700;
+        color: $primary;
+        margin-top: 40px;
+        line-height: 1;
+
+        @media #{$large-mobile}{
+            font-size: 38px;
+        }
+        @media #{$small-mobile}{
+            font-size: 30px;
+        }
+    }
+    & p{
+        margin-top: 15px;
+        line-height: 1.75;
+    }
+
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: $primary;
+        margin-top: 30px;
+    }
+
+    & .details-description{
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 20px;
+        
+        & .description{
+            width: 60%;
+            padding-right: 20px;
+
+            @media #{$desktop-device, $tablet-device, $large-mobile}{
+                width: 100%;
+            }
+            
+            & p{
+                margin-top: 15px;
+            }
+
+            & ul{
+                display: flex;
+                flex-wrap: wrap;
+
+                & li{
+                    margin-top: 15px;
+                    width: 50%;
+
+                    @media #{$small-mobile}{
+                        width: 100%;
+                    }
+
+                    & i{
+                        margin-right: 3px;
+                    }
+                }
+            }
+        }
+        & .images{
+            width: 40%;
+            margin-top: 45px;
+
+            @media #{$desktop-device, $tablet-device, $large-mobile}{
+                width: 100%;
+            }
+
+            & img{
+                border-radius: 30px;
+
+                @media #{$large-mobile}{
+                    border-radius: 15px;
+                }
+            }
+        }
+    }
+    
+}
+
+
+// Single Details Price 
+.service-details-price{
+    padding-top: 10px;
+}
+
+
+// Single Price 
+.service-price{
+    background-color: #e4f3ff;
+    border-radius: 10px;
+    padding: 35px;
+    transition: $transition-default;
+    position: relative;
+    overflow: hidden;
+    margin-top: 30px;
+
+    @media #{$desktop-device, $tablet-device}{
+        padding: 25px;
+    }
+
+    &::before{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 6px;
+        background-color: $secondary;
+        bottom: 0;
+        left: 0;
+        transition: $transition-default;
+        transform: translateY(100%);
+    }
+
+    & .title{
+        position: relative;
+        padding-bottom: 5px;
+
+        &::before{
+            position: absolute;
+            content: '';
+            width: 30px;
+            height: 2px;
+            background-color: $secondary;
+            bottom: 0;
+            left: 0;
+        }
+
+        & a{
+            font-size: 28px;
+            font-weight: 700;
+            color: $body-color;
+            line-height: 1.1;
+
+            @media #{$desktop-device}{
+                font-size: 24px;
+            }
+
+            @media #{$large-mobile, $tablet-device}{
+                font-size: 26px;
+            }
+        }
+    }
+    & .more{
+        font-size: 16px;
+        color: $primary;
+        margin-top: 14px;
+    }
+    & .price{
+        text-align: right;
+        position: relative;
+        margin-top: 5px;
+
+        & span{
+            color: $primary;
+            transition: $transition-default;
+            font-size: 60px;
+            font-weight: 700;
+            font-family: $heading-font;
+            line-height: 1;
+
+            @media #{$tablet-device}{
+                font-size: 50px;
+            }
+        }
+    }
+
+    &:hover{
+        box-shadow: 0px 11px 18px 0px rgba(0, 0, 0, 0.29);
+          
+        &::before{
+            transform: translateY(0);
+        }
+
+        & .more{
+            color: $secondary;
+        }
+        & .price{    
+            & span{
+                color: $secondary;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

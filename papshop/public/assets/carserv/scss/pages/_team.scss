@@ -1,0 +1,141 @@
+/*--
+/*  4.11 - Team CSS
+/*----------------------------------------*/
+
+
+// Team Wrapper 
+.team-wrapper{
+    padding-top: 20px;
+}
+
+// Team Wrapper 02
+.team-wrapper-02{
+    margin-top: -30px;
+}
+
+// Single Team 
+.single-team{
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: #e4f3ff;
+    margin-top: 30px;
+    transition: $transition-default;
+
+    & .team-images{
+        & a{
+            display: block;
+
+            & img{
+                width: 100%;
+            }
+        }
+    }
+    & .team-content{
+        padding: 20px;
+        text-align: center;
+        transition: $transition-default;
+        position: relative;
+        background-color: #e4f3ff;
+        
+        & .content-wrapper{
+            overflow: hidden;
+
+            & .name{
+                font-size: 28px;
+                font-weight: 700;
+                line-height: 1;
+
+                @media #{$desktop-device}{
+                    font-size: 22px;
+                }
+            }
+            & .designation{
+                font-size: 16px;
+                font-weight: 300;
+                display: block;
+            }
+            & .team-meta{
+                display: flex;
+                justify-content: space-between;
+                border-top: 1px solid #c9d9fc;
+                padding-top: 10px;
+                margin-top: 14px;
+
+                @media #{$desktop-device}{
+                    display: block;
+                    text-align: center;
+                }
+
+                & p{
+                    white-space: nowrap;
+
+                    & strong{
+                        color: $primary;
+                        font-weight: 500;
+                    }
+                    & span{
+                        color: $secondary;
+                        font-weight: 500;
+                    }
+                }
+            }
+            & .social{
+                display: flex;
+                justify-content: center;
+                border-top: 1px solid #c9d9fc;
+                padding-top: 15px;
+                margin-top: 10px;
+                margin-bottom: -55px;
+                transition: $transition-default;
+
+                & li{
+                    margin: 0 7px;
+
+                    & a{
+                        width: 30px;
+                        height: 30px;
+                        line-height: 30px;
+                        background-color: #c9d9fc;
+                        border-radius: 50%;
+
+                        &:hover{
+                            background-color: $primary;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &:hover{
+        box-shadow: 0px 6px 16px 0px rgba(0, 0, 0, 0.17);
+
+        & .team-content{
+            margin-top: -55px;
+
+            & .content-wrapper{
+                & .social{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

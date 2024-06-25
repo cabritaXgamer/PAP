@@ -1,0 +1,87 @@
+/*--
+/*  4.13 - Project Gallery CSS
+/*----------------------------------------*/
+
+// Project Gallery Wrapper
+.project-gallery-wrapper{
+    margin-top: -30px;
+}
+
+
+.single-gallery{
+    position: relative;
+    overflow: hidden;
+    margin-top: 30px;
+
+    & .gallery-images{
+        border-radius: 15px;
+        overflow: hidden;
+
+        @media #{$large-mobile}{
+            border-radius: 10px;
+        }
+
+        & a{
+            display: block;
+
+            & img{
+                width: 100%;
+            }
+        }
+    }
+    & .gallery-content{
+        position: absolute;
+        background-color: #e4f3ff;
+        opacity: 0.88;
+        left: 30px;
+        bottom: 30px;
+        padding: 16px 20px;
+        border-radius: 10px;
+        transform: translateY(100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: $transition-default;
+
+        @media #{$desktop-device, $large-mobile}{
+            bottom: 15px;
+            left: 15px;
+        }
+
+        & .title{
+            font-size: 28px;
+            font-weight: 600;
+            color: $primary;
+            line-height: 1;
+
+            @media #{$desktop-device}{
+                font-size: 22px;
+            }
+            @media #{$large-mobile}{
+                font-size: 20px;
+            }
+        }
+        & span{
+            @media #{$desktop-device, $large-mobile}{
+                font-size: 14px;
+            }
+        }
+    }
+
+    &:hover{
+        & .gallery-content{
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

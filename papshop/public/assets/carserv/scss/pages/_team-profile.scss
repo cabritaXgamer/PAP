@@ -1,0 +1,133 @@
+/*--
+/*  4.15 - Team Profile CSS
+/*----------------------------------------*/
+
+
+// Team Profile Wrapper
+.team-profile-wrapper{
+    margin-top: -50px;
+}
+
+// Team Profile Image
+.team-profile-image{
+    margin-top: 50px;
+
+    @media #{$extraBig-device, $laptop-device}{
+        padding-right: 40px;
+    }
+
+    & img{
+        border-radius: 30px;
+        width: 100%;
+
+        @media #{$large-mobile}{
+            border-radius: 15px;
+        }
+    }
+}
+
+// Team Profile Content
+.team-profile-Content{
+    margin-top: 45px;
+
+    & .name{
+        font-size: 52px;
+        font-weight: 700;
+        color: $primary;
+        margin-top: 0px;
+        line-height: 1;
+
+        @media #{$desktop-device}{
+            font-size: 42px;
+        }
+        @media #{$large-mobile}{
+            font-size: 38px;
+        }
+        @media #{$small-mobile}{
+            font-size: 30px;
+        }
+    }
+    & .designation{
+        font-size: 28px;
+        font-weight: 300;
+
+        @media #{$desktop-device}{
+            font-size: 22px;
+        }
+        @media #{$large-mobile}{
+            font-size: 20px;
+        }
+    }
+    & .title{}
+    & > p{
+        margin-top: 5px;
+        line-height: 1.75;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: $primary;
+        margin-top: 21px;
+    }
+    & .profile-info{
+        padding-top: 30px;
+        
+        & .info{
+            border-top: 1px solid #c9d9fc;
+            display: flex;
+            padding-top: 11px;
+            padding-bottom: 15px;
+
+            & p{
+                & + p{
+                    margin-left: 110px;
+
+                    @media #{$small-mobile}{
+                        margin-left: 55px;
+                    }
+                }
+                & span,
+                & a{
+                    color: $primary;
+                    font-weight: 500;
+                }
+            }
+        }
+        & .social{
+            display: flex;
+
+            & li{
+                margin-right: 15px;
+
+                &:last-child{
+                    margin-right: 0;
+                }
+
+                & a{
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    background-color: #c9d9fc;
+                    border-radius: 50%;
+                    text-align: center;
+
+                    &:hover{
+                        background-color: $primary;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

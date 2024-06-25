@@ -1,0 +1,70 @@
+/*--
+/*  4.5 - Why Choose CSS
+/*----------------------------------------*/
+
+
+// Why Choose Wrapper
+.choose-wrapper{
+    
+}
+
+// Why Choose Content
+.choose-content{
+    max-width: 400px;
+
+    & p{
+        margin-top: 20px;
+    }
+    & img{
+        margin-top: 20px;
+    }
+}
+
+// Why Choose Items Wrapper
+.choose-items-wrapper{
+    
+}
+
+// Single Choose Item
+.single-choose-item{
+    display: flex;
+    margin-top: 60px;
+
+    & .item-icon{
+        & img{
+            width: 60px;
+
+            @media #{$desktop-device, $large-mobile}{
+                width: 50px;
+            }
+        }
+    }
+    & .item-content{
+        padding-left: 20px;
+        flex: 1;
+        margin-top: -5px;
+
+        & .title{
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1.2;
+
+            @media #{$desktop-device}{
+                font-size: 24px;
+            }
+            @media #{$large-mobile}{
+                font-size: 22px;
+            }
+        }
+        & p{
+            margin-top: 12px;
+        }
+    }
+}
+
+
+
+
+
+
+
