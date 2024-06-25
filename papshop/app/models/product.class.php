@@ -140,21 +140,93 @@ Class Product
         }
     }
 
-    //Function model edit category
-    public function edit_product($id, $new_category) {
+    public function edit_product($id, $description, $quantity, $categoryId, $price, $files) {
         $DB = Database::getInstance();
     
-        // Validate the new category name
-        $new_category = ucwords(trim($new_category));
-        if (!preg_match("/^[a-zA-Z]+$/", $new_category)) {
-            $_SESSION['error'] = "Por favor insira um nome de categoria correto!";
+        // Validate inputs
+        $description = ucwords(trim($description));
+        $quantity = (int)$quantity;
+        $categoryId = (int)$categoryId;
+        $price = (float)$price;
+    
+        // Ensure valid inputs
+        if (empty($description) || !is_numeric($quantity) || $quantity < 0 || !is_numeric($categoryId) || !is_numeric($price) || $price < 0) {
+            $_SESSION['error'] = "Por favor, insira valores corretos!";
             return false;
         }
     
-        // Update the category in the database
-        $query = "UPDATE categories SET category = :category WHERE id = :id LIMIT 1";
-        $params = array(':category' => $new_category, ':id' => $id);
-        return $DB->write($query, $params);
+        // Initialize image variable
+        $image = null;
+    
+        // Verifica se foi enviado um arquivo de imagem
+        if (isset($files['product_image']) && $files['product_image']['error'] === UPLOAD_ERR_OK) {
+            // Configurações para o upload da imagem
+            $uploadDir = "uploads/";
+            $allowedTypes = ["image/jpeg", "image/png", "image/gif"];
+            $maxSize = 10 * 1024 * 1024; // 10 MB
+    
+            if (!file_exists($uploadDir)) {
+                mkdir($uploadDir, 0777, true);
+            }
+    
+            // Verifica se o tipo de arquivo é permitido e se o tamanho está dentro do limite
+            if (in_array($files['product_image']['type'], $allowedTypes) && $files['product_image']['size'] <= $maxSize) {
+                // Gera um nome único para o arquivo de imagem
+                $fileName = uniqid('img_') . '_' . $files['product_image']['name'];
+                $filePath = $uploadDir . $fileName;
+    
+                // Move o arquivo de imagem para o diretório de uploads
+                if (move_uploaded_file($files['product_image']['tmp_name'], $filePath)) {
+                    $image = $filePath; // Define o caminho da imagem para ser inserido no banco de dados
+    
+                    // Remove a imagem antiga, se existir
+                    $oldImageQuery = "SELECT image FROM products WHERE id = :id";
+                    $oldImageParams = array(':id' => $id);
+                    $oldImageResult = $DB->read($oldImageQuery, $oldImageParams);
+    
+                    if ($oldImageResult) {
+                        $oldImage = $oldImageResult[0]->image;
+                        if ($oldImage && file_exists($oldImage)) {
+                            unlink($oldImage);
+                        }
+                    }
+                } else {
+                    $_SESSION['error'] = "Erro ao mover o arquivo de imagem para o diretório de uploads.";
+                    return false;
+                }
+            } else {
+                $_SESSION['error'] = "Tipo de arquivo de imagem não permitido ou tamanho excede o limite de 10MB.";
+                return false;
+            }
+        }
+    
+        // Update the product in the database
+        $query = "UPDATE products SET description = :description, quantity = :quantity, categoryId = :categoryId, price = :price" . ($image ? ", image = :image" : "") . " WHERE id = :id LIMIT 1";
+        $params = array(
+            ':description' => $description,
+            ':quantity' => $quantity,
+            ':categoryId' => $categoryId,
+            ':price' => $price,
+            ':id' => $id
+        );
+    
+        if ($image) {
+            $params[':image'] = $image;
+        }
+    
+        try {
+            $check = $DB->write($query, $params);
+    
+            if ($check) {
+                return true;
+            } else {
+                $_SESSION['error'] = "Erro ao atualizar produto na base de dados.";
+                return false;
+            }
+        } catch (Exception $e) {
+            $_SESSION['error'] = "Erro ao atualizar produto: " . $e->getMessage();
+            return false;
+        }
     }
     
     public function delete_product($id)
