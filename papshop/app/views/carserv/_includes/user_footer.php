@@ -1,5 +1,5 @@
        <!-- Footer Section Start -->
-       <div class="section footer-section" style="background-image: url(<?= ASSETS . THEME ?>/images/footer-bg.jpg);">
+       <div class="section footer-section">
 
            <!-- Footer Widget Start -->
            <div class="footer-widget-section section-padding">

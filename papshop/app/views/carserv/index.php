@@ -11,7 +11,7 @@
             <!-- Slider Section Start -->
             <div class="slider-content">
                 <h5 class="sub-title" data-aos="fade-up" data-aos-delay="100">Uma oficina para todos os modelos</h5>
-                <h1 class="main-title" data-aos="fade-up" data-aos-delay="400">necessitas de reparação automovel?</h1>
+                <h1 class="main-title" data-aos="fade-up" data-aos-delay="400">Necessitas de reparação automovel?</h1>
                 <p data-aos="fade-up" data-aos-delay="600">Nós da Cilindrenvolvente oferecemos garantia de serviço de reparo rápido do seu veiculo</p>
                 <a href="#contact" data-aos="fade-up" data-aos-delay="800" class="btn btn-custom-01">Contacta-nos</a>
             </div>
@@ -96,7 +96,7 @@
                     </div>
                     <!-- About Count End -->
 
-                    <a href="contact.html" class="btn btn-custom-01">Get Appointment</a>
+                    <!-- <a href="contact.html" class="btn btn-custom-01">Get Appointment</a> -->
 
                 </div>
                 <!-- About Content End -->
