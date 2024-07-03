@@ -13,15 +13,15 @@
 
                 <!-- Section Title Start -->
                 <div class="section-title">
-                    <h5 class="sub-title">Services</h5>
-                    <h2 class="main-title">Entire Engine Servicing</h2>
+                    <h5 class="sub-title">Serviços</h5>
+                    <h2 class="main-title">Serviço completo do motor</h2>
                 </div>
                 <!-- Section Title End -->
 
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="service.html">Services</a></li>
-                    <li class="breadcrumb-item active">Services Details</li>
+                    <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                    <li class="breadcrumb-item"><a href="service.html">Serviços</a></li>
+                    <li class="breadcrumb-item active">Detalhes dos serviços</li>
                 </ul>
             </div>
             <!-- Page Banner Content End -->
@@ -52,39 +52,33 @@
                         <div class="details-image">
                             <img src="<?= ASSETS . THEME ?>/images/service/service-details.jpg" alt="Service">
                         </div>
-                        <h2 class="title">Entire Engine Servicing</h2>
-                        <p>Car servicing rationally encounter consequences extremely painful. Nor again is the there anyone who loves or pursues take a trivial example, which of us undertakes chooses pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure</p>
-                        <p>Car servicing rationally encounter consequences extremely painful. Nor again is the there anyone who loves or pursues take a trivial example, which of us undertakes chooses pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because is pain,</p>
+                        <h2 class="title">Manutenção completa do motor</h2>
+                        <p>A manutenção completa do motor é um procedimento essencial para garantir a longevidade e o desempenho do veículo. Este processo inclui uma série de verificações e ajustes detalhados, como a troca de óleo e filtros, a inspeção e substituição das velas de ignição, a verificação do sistema de arrefecimento, e a limpeza ou substituição dos injetores de combustível. Além disso, pode envolver a revisão de componentes mais complexos, como a correia de distribuição, a bomba de água e os anéis de pistão. Realizar uma manutenção completa regularmente não só previne avarias inesperadas como também melhora a eficiência do combustível e reduz as emissões de poluentes, contribuindo para um funcionamento mais suave e fiável do motor.</p>
 
                         <div class="details-description">
                             <div class="description">
-                                <h3>Engine Diognostic</h3>
-                                <p>Car servicing rationally encounter consequences extremely painful. Nor again is the there anyone who loves or pursues take a trivial example, which of us undertakes chooses</p>
+                                <h3>Diognóstico do motor</h3>
+                                <p>O diagnóstico do motor identifica e corrige problemas no desempenho do veículo. Técnicos usam ferramentas avançadas para verificar ignição, combustível e sensores. Ler códigos de erro e analisar dados ajuda a detectar avarias precoces, garantindo eficiência e segurança.</p>
                                 <ul>
-                                    <li><i class="fa fa-angle-double-right"></i> Engine check</li>
-                                    <li><i class="fa fa-angle-double-right"></i> Spark plug replacement</li>
-                                    <li><i class="fa fa-angle-double-right"></i> Lights check</li>
-                                    <li><i class="fa fa-angle-double-right"></i> Air-conditioner filter check</li>
-                                    <li><i class="fa fa-angle-double-right"></i> Suspension check</li>
-                                    <li><i class="fa fa-angle-double-right"></i> Brake fluid and brakes check</li>
-                                    <li><i class="fa fa-angle-double-right"></i> Air and fuel filter check</li>
-                                    <li><i class="fa fa-angle-double-right"></i> Transmission service</li>
-                                    <li><i class="fa fa-angle-double-right"></i> Repack wheel bearings</li>
-                                    <li><i class="fa fa-angle-double-right"></i> Engine oil and oil filter change</li>
+                                    <li><i class="fa fa-angle-double-right"></i>Verificação do motor</li>
+                                    <li><i class="fa fa-angle-double-right"></i>Substituição da vela de ignição</li>
+                                    <li><i class="fa fa-angle-double-right"></i>Verificação de luzes</li>
+                                    <li><i class="fa fa-angle-double-right"></i>Verificação do filtro do ar condicionado</li>
+                                    <li><i class="fa fa-angle-double-right"></i>Verificação de suspensão</li>
+                                    <li><i class="fa fa-angle-double-right"></i>verificação do liquido e dos discos de travão</li>
+                                    <li><i class="fa fa-angle-double-right"></i>Verificação do filtro de ar e combustível</li>
+                                    <li><i class="fa fa-angle-double-right"></i>Serviço de transmissão</li>
+                                    <li><i class="fa fa-angle-double-right"></i>substituição dos rolamentos da direção</li>
+                                    <li><i class="fa fa-angle-double-right"></i>Troca de óleo do motor e filtro de óleo</li>
                                 </ul>
                             </div>
                             <div class="images">
                                 <img src="<?= ASSETS . THEME ?>/images/service/service-dec.jpg" alt="Service">
                             </div>
                         </div>
+                        <!-- 
+                        <h3>Custo dos serviços</h3> -->
 
-                        <p>Car servicing rationally encounter consequences extremely painful. Nor again is the there anyone who loves or pursues take a trivial example, which of us undertakes chooses pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure</p>
-
-                        <p>Car servicing rationally encounter consequences extremely painful. Nor again is the there anyone who loves or pursues take a trivial example, which of us undertakes chooses pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because is pain,</p>
-
-                        <h3>Service Costing</h3>
-
-                        <p>Car servicing rationally encounter consequences extremely painful. Nor again is the there anyone who loves or pursues take a trivial example, which of us undertakes chooses price ar included and can be pay online</p>
                     </div>
                     <!-- Service Details Content End -->
 
@@ -93,74 +87,74 @@
                         <div class="row">
                             <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
                                 <!-- Service Price Start -->
-                                <div class="service-price">
+                                <!-- <div class="service-price">
                                     <h4 class="title"><a href="#">Regular Engine <br>Check</a></h4>
                                     <a href="#" class="more">Select now</a>
 
                                     <div class="price">
                                         <span>$79</span>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- Service Price End -->
-                            </div>
+                                <!-- </div>
                             <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
-                                <!-- Service Price Start -->
-                                <div class="service-price">
+                                Service Price Start -->
+                                <!-- <div class="service-price">
                                     <h4 class="title"><a href="#">Full Engine <br> Diagnostic</a></h4>
                                     <a href="#" class="more">Select now</a>
 
                                     <div class="price">
                                         <span>$145</span>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- Service Price End -->
-                            </div>
+                                <!-- </div>
                             <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
-                                <!-- Service Price Start -->
-                                <div class="service-price">
+                                Service Price Start -->
+                                <!-- <div class="service-price">
                                     <h4 class="title"><a href="#">Engine Oil and <br> Filter Change</a></h4>
                                     <a href="#" class="more">Select now</a>
 
                                     <div class="price">
                                         <span>$65</span>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- Service Price End -->
-                            </div>
+                                <!-- </div>
                             <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
-                                <!-- Service Price Start -->
-                                <div class="service-price">
+                                Service Price Start -->
+                                <!-- <div class="service-price">
                                     <h4 class="title"><a href="#">Air and Fuel <br> Filter Check</a></h4>
                                     <a href="#" class="more">Select now</a>
 
                                     <div class="price">
                                         <span>$50</span>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- Service Price End -->
-                            </div>
+                                <!-- </div>
                             <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
-                                <!-- Service Price Start -->
-                                <div class="service-price">
+                                Service Price Start -->
+                                <!-- <div class="service-price">
                                     <h4 class="title"><a href="#">Spark plug <br> Replacement</a></h4>
                                     <a href="#" class="more">Select now</a>
 
                                     <div class="price">
                                         <span>$110</span>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- Service Price End -->
                             </div>
                             <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
                                 <!-- Service Price Start -->
-                                <div class="service-price">
+                                <!-- <div class="service-price">
                                     <h4 class="title"><a href="#">New Engine <br> Replacement</a></h4>
                                     <a href="#" class="more">Select now</a>
 
                                     <div class="price">
                                         <span>$280</span>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- Service Price End -->
                             </div>
                         </div>
@@ -175,29 +169,30 @@
                         <!-- Widget Sidebar Start -->
                         <div class="widget-sidebar">
                             <ul class="category">
-                                <li><a href="#">Anti Lock Brake Servicing</a></li>
-                                <li><a href="#">Car Wash Service</a></li>
-                                <li><a href="#">Entire Engine Servicing</a></li>
-                                <li><a href="#">Change Oil and Filter</a></li>
-                                <li><a href="#">Battery Replacement</a></li>
-                                <li><a href="#">Tire Change and Repair</a></li>
+                                <li><a href="#">Manutenção do travão de mão</a></li>
+                                <li><a href="#">Serviço de lavagem de carro</a></li>
+                                <li><a href="#">Reparação completa do motor</a></li>
+                                <li><a href="#">Troca de óleo e filtro</a></li>
+                                <li><a href="#">Substituição da bateria</a></li>
+                                <li><a href="#">Reparamos carros </a></li>
+                                <li><a href="#">Reparamos tratores </a></li>
                             </ul>
                         </div>
                         <!-- Widget Sidebar End -->
 
                         <!-- Widget Sidebar Start -->
-                        <div class="widget-sidebar">
+                        <!-- <div class="widget-sidebar">
                             <a class="banner" href="#"><img src="<?= ASSETS . THEME ?>/images/banner-1.jpg" alt="Banner"></a>
-                        </div>
+                        </div> -->
                         <!-- Widget Sidebar End -->
 
                         <!-- Widget Sidebar Start -->
-                        <div class="widget-sidebar">
+                        <!-- <div class="widget-sidebar">
                             <ul class="download">
                                 <li><a href="#"><i class="fa fa-file-pdf-o"></i> Download Brochure <span class="fa fa-download"></span></a></li>
                                 <li><a href="#"><i class="fa fa-file-word-o"></i> Download Brochure <span class="fa fa-download"></span></a></li>
                             </ul>
-                        </div>
+                        </div> -->
                         <!-- Widget Sidebar End -->
 
                     </div>
