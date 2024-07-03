@@ -12,7 +12,7 @@
             <div class="slider-content">
                 <h5 class="sub-title" data-aos="fade-up" data-aos-delay="100">Uma oficina para todos os modelos</h5>
                 <h1 class="main-title" data-aos="fade-up" data-aos-delay="400">necessitas de reparação automovel?</h1>
-                <p data-aos="fade-up" data-aos-delay="600">Nós da Cilindrenvolvente ofereçemos garantia de serviço de reparo repido do seu veiculo</p>
+                <p data-aos="fade-up" data-aos-delay="600">Nós da Cilindrenvolvente oferecemos garantia de serviço de reparo rápido do seu veiculo</p>
                 <a href="#contact" data-aos="fade-up" data-aos-delay="800" class="btn btn-custom-01">Contacta-nos</a>
             </div>
             <!-- Slider Section End -->
@@ -613,7 +613,7 @@
                         <!-- Section Title Start -->
                         <div class="section-title">
                             <h5 class="sub-title">Porque escolher-nos</h5>
-                            <h2 class="main-title">Confiança e serviço são nossa prioridade</h2>
+                            <h2 class="main-title">A Confiança do cliente é a nossa prioridade</h2>
                         </div>
                         <!-- Section Title End -->
 
@@ -636,7 +636,7 @@
                                     </div>
                                     <div class="item-content">
                                         <h4 class="title">equipamentos de ultima geração</h4>
-                                        <p>equipamentos de ultima geração preparados para as atualidades automoveis</p>
+                                        <p>Equipamentos de ultima geração preparados para as atualidades automoveis</p>
                                     </div>
                                 </div>
                                 <!-- Single Choose Item End -->
@@ -650,7 +650,7 @@
                                         <img src="<?= ASSETS . THEME ?>/images/choose/icon-3.svg" alt="Icon">
                                     </div>
                                     <div class="item-content">
-                                        <h4 class="title">Mecanicos Experientes</h4>
+                                        <h4 class="title">Mecânicos Experientes</h4>
                                         <p>A experiencia leva ao sucesso e satisfação ao cliente</p>
                                     </div>
                                 </div>
@@ -666,7 +666,7 @@
                                     </div>
                                     <div class="item-content">
                                         <h4 class="title">Serviços de qualidade</h4>
-                                        <p>Garantimos o conserto do seu carro e higiene</p>
+                                        <p>Garantimos a reparação e a higiene do seu veiculo</p>
                                     </div>
                                 </div>
                                 <!-- Single Choose Item End -->
@@ -681,7 +681,7 @@
                                     </div>
                                     <div class="item-content">
                                         <h4 class="title">Entrega rapida</h4>
-                                        <p>garantia de rapides e prioridade do seu automovel</p>
+                                        <p>Garantia de rapides e prioridade do seu automovel</p>
                                     </div>
                                 </div>
                                 <!-- Single Choose Item End -->
@@ -706,7 +706,7 @@
         <!-- Section Title Start -->
         <div class="section-title text-center">
             <h5 class="sub-title">processo do trabalho</h5>
-            <h2 class="main-title">Como nos trabalhamos</h2>
+            <h2 class="main-title">Como nós trabalhamos</h2>
             <p>A sua satisfação e garantia do serviço é a nossa prioridade</p>
         </div>
         <!-- Section Title End -->

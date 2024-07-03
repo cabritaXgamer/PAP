@@ -270,8 +270,8 @@
 
                 <!-- Header top Info Start -->
                 <div class="header-top-info">
-                    <p>328D, Marid Drive, Ackloand</p>
-                    <p>Call us: <a href="+12025256214">+12(025) 256 214</a></p>
+                    <!-- <p>328D, Marid Drive, Ackloand</p>
+                    <p>Call us: <a href="+12025256214">+12(025) 256 214</a></p> -->
                 </div>
 
                 <!-- Validation paramenters to check if the user is loggedin -->
