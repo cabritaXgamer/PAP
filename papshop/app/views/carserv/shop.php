@@ -57,17 +57,17 @@
                                     </a>
                                     <ul class="product-action">
                                         <li>
-                                            <button data-bs-tooltip="tooltip" data-bs-placement="top" title="Add to Cart">
+                                            <button data-bs-tooltip="tooltip" data-bs-placement="top" title="Adicionar ao carrinho">
                                                 <i class="icofont-shopping-cart"></i>
                                             </button>
                                         </li>
                                         <li>
-                                            <button data-bs-tooltip="tooltip" data-bs-placement="top" title="Quick View" data-bs-toggle="modal" data-bs-target="#quickview">
+                                            <button data-bs-tooltip="tooltip" data-bs-placement="top" title="Ver ao promenor" data-bs-toggle="modal" data-bs-target="#quickview">
                                                 <i class="icofont-eye"></i>
                                             </button>
                                         </li>
                                         <li>
-                                            <button data-bs-tooltip="tooltip" data-bs-placement="top" title="Add to wishlist">
+                                            <button data-bs-tooltip="tooltip" data-bs-placement="top" title="Adicionar à wishlist">
                                                 <i class="fa fa-heart-o"></i>
                                             </button>
                                         </li>
@@ -75,11 +75,11 @@
                                 </div>
                                 <div class="product-content">
                                     <h3 class="name">
-                                        <a href="product-details-right-sidebar.html">17 inch Rim 8 Lug</a>
+                                        <a href="product-details-right-sidebar.html"><?php echo htmlspecialchars($product['description']); ?></a>
                                     </h3>
                                     <div class="price">
-                                        <span class="sale-price">$215</span>
-                                        <span class="regular-price">$350</span>
+                                        <span class="sale-price">€<?php echo htmlspecialchars($product['price']);?></span>
+                                        <!-- <span class="regular-price"><?php echo htmlspecialchars($product['price']); ?></span> -->
                                     </div>
                                 </div>
                             </div>
