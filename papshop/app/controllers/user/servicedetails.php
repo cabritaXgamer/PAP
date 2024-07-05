@@ -1,7 +1,7 @@
 <?php
 
 
-class Servicedetailes extends Controller
+class ServiceDetails extends Controller
 {
     //Public default metodo index, mesmo que o utilizador coloque ou não qualquer URL, o Index vai sempre correr
 
@@ -18,7 +18,7 @@ class Servicedetailes extends Controller
         }
 
         //$this->title = 'Admin - Dashboard';
-        $data['page_title'] = "service-details - serviços";
+        $data['page_title'] = "Serviços";
         //Rota onde esta a view que vai carregar
         $this->view("service-details", $data);
     }

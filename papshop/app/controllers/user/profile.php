@@ -10,7 +10,8 @@ class Profile extends Controller
         $User = $this->load_model('User');
 
         //Validate if is login and if is an admin
-        $data['user_data'] = $User->check_login(true, ["costumer"]);
+        $data['user_data'] = $User->check_login(true);
+        
 
         //validate if the user is really log in
         if(is_array($data['user_data']))

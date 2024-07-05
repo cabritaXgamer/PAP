@@ -76,8 +76,8 @@
                                 <li>
                                     <a href="#">Loja</a>
                                     <ul class="sub-menu">
-                                        <li><a href="wishlist">Wishlist</a></li>
                                         <li><a href="shop">Loja</a></li>
+                                        <li><a href="wishlist">Wishlist</a></li>
                                         <!-- <li><a href="shop">tabela de produtos</a></li> -->
                                         <!-- <li><a href="shop-left-sidebar">Loja left Sidebar</a></li> -->
                                         <!-- <li><a href="shop-right-sidebar">Loja Right Sidebar</a></li> -->
@@ -105,10 +105,9 @@
                                         <li><a href="blog-details-right-sidebar">Blog Details Right Sidebar</a></li>
                                     </ul>
                                 </li> -->
-
-
                                 <!-- <li><a href="#contact">Contacto</a></li> -->
 
+                                 <!-- Admin section -->
                                 <li>
                                     <?php if (isset($data['user_data'])) : ?>
                                         <a href="#">Perfil</a>
@@ -122,11 +121,8 @@
                                         </ul>
                                     <?php endif ?>
                                 </li>
-
-
+                                <!-- End  Admin section -->
                             </ul>
-
-
                         </div>
                         <!-- Header Menu End -->
 
@@ -315,8 +311,8 @@
                         <li>
                             <a href="shop">Loja</a>
                             <ul class="sub-menu">
-                                <li><a href="wishlist">Wishlist</a></li>
                                 <li><a href="shop">Loja</a></li>
+                                <li><a href="wishlist">Wishlist</a></li>
                                 <!-- <li><a href="shop-grid">tabela de produtos</a></li> -->
                                 <!-- <li><a href="shop-left-sidebar">Loja left Sidebar</a></li>
                                 <li><a href="shop-right-sidebar">Loja Right Sidebar</a></li>

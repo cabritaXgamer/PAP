@@ -9,7 +9,7 @@ class Service extends Controller
     {
 
         $User = $this->load_model('User');
-        $user_data = $User->check_login(true);
+        $user_data = $User->check_login(false);
 
         //validate if the user is really log in
         if (is_object($user_data)) {

@@ -1,39 +1,37 @@
-<?php $this->view("_includes/user_menu", $data); ?>
-
-
+<?php $this->view("_includes/user_menu"); ?>
 
 <!-- Page Banner Section Start -->
 <div class="section page-banner-section" style="background-image: url(<?= ASSETS . THEME ?>/images/page-banner-bg.png);">
-    <div class="container">
+    <!-- <div class="container"> -->
         <!-- Page Banner Wrapper Start -->
-        <div class="page-banner-wrapper">
+        <!-- <div class="page-banner-wrapper"> -->
 
             <!-- Page Banner Content Start -->
-            <div class="page-banner-content">
+            <!-- <div class="page-banner-content"> -->
 
                 <!-- Section Title Start -->
-                <div class="section-title">
+                <!-- <div class="section-title">
                     <h5 class="sub-title">Error</h5>
                     <h2 class="main-title">Page Not <br> Found</h2>
-                </div>
+                </div> -->
                 <!-- Section Title End -->
 
-                <ul class="breadcrumb">
+                <!-- <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                     <li class="breadcrumb-item active">Error</li>
                 </ul>
-            </div>
+            </div> -->
             <!-- Page Banner Content End -->
 
             <!-- Page Banner Images Start -->
-            <div class="page-banner-images">
+            <!-- <div class="page-banner-images">
                 <img src="<?= ASSETS . THEME ?>/images/page-banner-3.png" alt="Page Banner">
-            </div>
+            </div> -->
             <!-- Page Banner Images End -->
 
-        </div>
+        <!-- </div> -->
         <!-- Page Banner Wrapper End -->
-    </div>
+    <!-- </div> -->
 </div>
 <!-- Page Banner Section End -->
 
@@ -44,13 +42,13 @@
         <!-- Error Wrapper Start -->
         <div class="error-wrapper">
             <div class="error-images">
-                <img src="<?= ASSETS . THEME ?>/images/error.png" alt="Error">
+                <img src="<?= ASSETS . THEME ?>/images/404/404.jpeg" alt="Error" style="width: 270px; height: 270px;">
             </div>
             <div class="error-content">
-                <h1 class="title">Sorry,</h1>
-                <h4 class="sub-title">Something missiong....</h4>
-                <p>Standard dummy text ever since the and when an unknown printe specimen book has survived centuries.</p>
-                <a href="index.html" class=" btn btn-custom-01">Back to Home</a>
+                <h1 class="title">Lamento,</h1>
+                <h4 class="sub-title">Algo está errado....</h4>
+                <p>Por favor volte à página principal!</p>
+                <a href="index.html" class=" btn btn-custom-01">Voltar à página principal</a>
             </div>
         </div>
         <!-- Error Wrapper End -->
@@ -60,4 +58,4 @@
 <!-- Error Section End -->
 
 
-<?php $this->view("_includes/user_footer", $data); ?>
+<?php $this->view("_includes/user_footer"); ?>
