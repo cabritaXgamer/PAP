@@ -27,14 +27,14 @@
                         <?php if (isset($data['user_data'])) : ?>
                             <!-- Header top Button Start -->
                             <div class="header-top-btn">
-                                <a href="logout">Logout</a>
+                                <a href="logout">Sair</a>
                                 <!-- <a href="register">Register</a> -->
                             </div>
                             <!-- Header top Button End -->
                         <?php else : ?>
                             <div class="header-top-btn">
                                 <a href="login">Entrar</a>
-                                <a href="register">Register</a>
+                                <a href="register">Registo</a>
                             </div>
                         <?php endif ?>
                         <!-- END  Validation paramenters to check if the user is loggedin -->
@@ -118,7 +118,7 @@
                                                 <li><a href="admin">Secção Admin</a></li>
                                             <?php endif; ?>
 
-                                            <li><a href="logout">Logout</a></li>
+                                            <li><a href="<?= ROOT ?>">Sair</a></li>
                                         </ul>
                                     <?php endif ?>
                                 </li>
@@ -279,14 +279,14 @@
                 <?php if (isset($data['user_data'])) : ?>
                     <!-- Header top Button Start -->
                     <div class="header-top-btn">
-                        <a href="logout">Logout</a>
+                        <a href="logout">Sair</a>
                         <!-- <a href="register">Register</a> -->
                     </div>
                     <!-- Header top Button End -->
                 <?php else : ?>
                     <div class="header-top-btn">
                         <a href="login">Entrar</a>
-                        <a href="register">Register</a>
+                        <a href="register">Registo</a>
                     </div>
                 <?php endif ?>
                 <!-- END  Validation paramenters to check if the user is loggedin -->
@@ -335,7 +335,7 @@
                                 <li><a href="checkout">Checkout</a></li>
                                 <li><a href="my-account">My Account</a></li>
                                 <li><a href="login">Login</a></li>
-                                <li><a href="register">Register</a></li>
+                                <li><a href="register">Registo</a></li>
                                 <li><a href="project-gallery">Project Gallery</a></li>
                                 <li><a href="project-details">Project Details</a></li>
                                 <li><a href="our-team">Team</a></li>
