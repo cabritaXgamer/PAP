@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * Todo o website vai arrancar desta classe
@@ -14,7 +14,7 @@ class App
     // //Constructor
     // public function __construct()
     // { 
-        
+
     //     $url= $this->parseURL();
 
     //     //show($url);
@@ -31,7 +31,7 @@ class App
     //      require "../app/controllers/user/" . $this->controller . ".php";
     //      $this->controller = new $this->controller;
 
-    
+
 
     //     //Aqui vamos procurar um metodo dentro do controldaor no array pos [1] da URL
     //     if(isset($url[1]))
@@ -45,7 +45,7 @@ class App
     //             unset($url[1]);
     //         }
     //     }
-    
+
     //     //show( ADMIN_THEME);
     //     //Validação se nao existir nada na url ele manda para a home, caso contrario
     //     //O params pode receber o array fornecido pelo utilizador, caso contrario recebe a home 
@@ -104,10 +104,7 @@ class App
             }
         }
 
-        // Set parameters or default to ["home"]
         $this->params = $url ? array_values($url) : ["home"];
-
-        // Call the method on the controller with parameters
         call_user_func_array([$this->controller, $this->method], $this->params);
     }
 
@@ -119,4 +116,3 @@ class App
         return ["home"];
     }
 }
-
