@@ -67,26 +67,16 @@ class User
 
 
         if ($this->error == "") {
-            // Para testar com a minha base de dados
             $data['role'] = "costumer";
             $data['date'] = date("Y-m-d H:i:s");
 
-            //Hash a palavra passe
             $data['password'] = hash('sha1', $data['password']);
-            //Query to insert values into DB table users
             $query = "insert into users (email,name,password,date,role,url_address) values(:email,:name,:password,:date,:role,:url_address)";
-            //Call method insert
             $result = $db->write($query, $data);
-
-
-            //Check the result
-            //If ok, send the user to new location and disconet the db connection
             if ($result) {
                 header("location: " . ROOT . "login");
                 die;
             }
-            // If not give the error
-
         }
         $_SESSION['error'] = $this->error;
     }
@@ -164,13 +154,10 @@ class User
             }
             return false;
         }
-
         $db = Database::getInstance();
         $url = $_SESSION['user_url'];
-
         $query = "SELECT * FROM users WHERE url_address = :url LIMIT 1";
         $result = $db->read($query, array('url' => $url));
-
         if (!$result) {
             if ($redirect) {
                 header("Location: " . ROOT . "login");
