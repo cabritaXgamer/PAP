@@ -2,7 +2,7 @@
 
 class Products extends Controller
 {
-    //Public default metodo index, mesmo que o utilizador coloque ou não qualquer URL, o Index vai sempre correr
+     // Public default method index, even if the user does or does not specify a URL, the Index will always run
     
     public function index()
     {
@@ -17,7 +17,6 @@ class Products extends Controller
      if(is_array($data['user_data']))
      {
          $data['user_data'] = $user_data;
-         //show($data['user_data']);
      }
 
         // Get category list
@@ -25,13 +24,13 @@ class Products extends Controller
         $data['products'] = $categoryModel->get_product();
         $data['categories'] = $categoryModel->get_categories();
         
-           // Mapeia os IDs de categoria para os nomes correspondentes
+        // Maps category IDs to corresponding names
         $categoryNames = [];
         foreach ($data['categories'] as $category) {
             $categoryNames[$category['id']] = $category['category'];
         }
 
-        // Adiciona o nome da categoria aos dados de cada produto
+        // Adds the category name to each product's data
         foreach ($data['products'] as &$product) {
             if (isset($categoryNames[$product['categoryId']])) {
                 $product['categoryName'] = $categoryNames[$product['categoryId']];
@@ -39,13 +38,13 @@ class Products extends Controller
                 $product['categoryName'] = 'Categoria Desconhecida'; // Trate casos em que a categoria não existe
             }
         }
-        unset($product); // Limpa a referência ao último produto
+        unset($product); // clean last name referenc
 
 
-       //show( $data['category_name']);
+       //Page title
        //$this->title = 'Admin - Dashboard';
        $data['page_title'] = "Admin - Products";
-       //Rota onde esta a view que vai carregar
+       // Path where the view that will load is located
        $this->view("../admin/products", $data);
     } 
 
@@ -57,15 +56,6 @@ class Products extends Controller
         // Load the Product model
         $product = $this->load_model('Product');
         
-        //Código antigo, temos que modificar para o POST por causa das imagens
-        // Get the data sent from the client
-        //$data = file_get_contents("php://input");
-        //$data = json_decode($data);
-
-        // show($_POST);
-        // show($_FILES);
-        // die;
-
         $data = (object)$_POST;
 
         // Verify that data is an object and has the required property
@@ -94,7 +84,7 @@ class Products extends Controller
 
             // Handle editing a product
             elseif ($data->data_type == 'edit_product') {
-                // Verifica se todas as propriedades necessárias estão definidas
+                // Checks if all required properties are defined
                 if (isset($data->id, $data->description, $data->quantity, $data->category, $data->price)) {
                     $id = $data->id;
                     $description = $data->description;
@@ -103,7 +93,7 @@ class Products extends Controller
                     $price = $data->price;
                     $files = $_FILES;
 
-                    // Chama o método de edição no modelo
+                    // Calls the edit method on the model
                     $check = $product->edit_product($id, $description, $quantity, $categoryId, $price, $files);
 
                     $arr = array();
@@ -112,7 +102,7 @@ class Products extends Controller
                         $arr['message_type'] = "info";
                     } else {
                         $arr['message'] = !empty($_SESSION['error']) ? $_SESSION['error'] : "Erro ao editar o produto!";
-                        $_SESSION['error'] = ""; // Limpa a mensagem de erro após usá-la
+                        $_SESSION['error'] = ""; 
                         $arr['message_type'] = "error";
                     }
                 } else {
@@ -126,26 +116,6 @@ class Products extends Controller
                 echo json_encode($arr);
             }
 
-
-            // // Handle change state of a category
-            // elseif ($data->data_type == 'disabled_row') {
-            //     $id = $data->id;
-            //     $disabled = $data->current_state ? 0 : 1;
-    
-            //     $query = "UPDATE categories SET disabled = :disabled WHERE id = :id LIMIT 1";
-            //     $params = array(':disabled' => $disabled, ':id' => $id);
-            //     $DB = Database::getInstance();
-            //     $DB->write($query, $params);
-    
-            //     $arr['message'] = "";
-            //     $_SESSION['error'] = "";
-            //     $arr['message_type'] = "info";
-            //     $arr['data'] = "";
-            //     $arr['data_type'] = "disabled_row";
-    
-            //     echo json_encode($arr);
-            // }
-    
             // Handle deleting a category
             elseif ($data->data_type == 'delete_row') {
                 

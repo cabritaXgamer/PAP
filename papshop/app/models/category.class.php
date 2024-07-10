@@ -5,13 +5,13 @@ class Category
 {
     public function get_categories()
     {
-        // Utilize a instância única do Database
+        // Use the singleton instance of the Database
         $DB = Database::getInstance();
 
         $query = "SELECT * FROM categories";
         $result = $DB->read($query);
 
-        // Converta o resultado para um array associativo
+        // Convert the result to an associative array
         return json_decode(json_encode($result), true);
     }
 
@@ -19,26 +19,26 @@ class Category
     {
         $DB = Database::getInstance();
 
-        // Verifique se os dados são válidos antes de inserir
+        // Check if the data is valid before inserting
         if (!empty($data->data) && $data->data_type == 'add_category') {
-            // Prepare os dados para inserção
+            // Prepare the data for insertion
             $category = ucwords(trim($data->data));
 
-            // Verifique se o nome da categoria é válido
+            // Validate the category name
             if (!preg_match("/^[a-zA-Z]+$/", $category)) {
                 $_SESSION['error'] = "Por favor insira um nome de categoria correto!";
                 return false;
             }
-            // Construa a consulta SQL para inserção
+            // Build the SQL query for insertion
             $query = "INSERT INTO categories (category) VALUES (:category)";
             $params = array(':category' => $category);
 
-            // Execute a consulta SQL
+            // Execute the SQL query
             $check = $DB->write($query, $params);
             if ($check) {
                 return true;
             } else {
-                // Se houver um erro ao inserir, defina uma mensagem de erro na sessão
+                // If there's an error inserting, set an error message in the session
                 $_SESSION['error'] = "Erro ao inserir categoria na base de dados.";
             }
         } else {
@@ -47,7 +47,7 @@ class Category
         return false;
     }
 
-    //Function model edit category
+    // Function to edit a category
     public function edit($id, $new_category)
     {
         $DB = Database::getInstance();
@@ -74,7 +74,7 @@ class Category
         $DB = Database::getInstance();
         $id = (int)$id;
 
-        // Verificar se o estado de desativação está ativo para esta categoria
+        // Check if the disabled state is active for this category
         $query_check_disable = "SELECT disabled FROM categories WHERE id = :id";
         $params_check_disable = array(':id' => $id);
         $disable_result = $DB->read($query_check_disable, $params_check_disable);

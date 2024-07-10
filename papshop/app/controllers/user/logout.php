@@ -1,12 +1,12 @@
 <?php
 
-// Controlador responsável por exibir a página inicial e verificar o status de login do usuário.
-class logout extends Controller
+    // Public default method index, even if the user does or does not specify a URL, the Index will always run
+    class logout extends Controller
 {
-    // Método index para renderizar a página inicial
+    
     public function index()
     {
-        // Carrega o modelo de usuário e verifica o status de login
+        // Load model logout 
         $User = $this->load_model('User');
         $User->logout();
     }

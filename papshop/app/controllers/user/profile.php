@@ -20,9 +20,9 @@ class Profile extends Controller
             show($data['user_data']);
         }
 
-        //$this->title = 'Admin - Dashboard';
+        //Page title
         $data['page_title'] = "Test Admin Section";
-        //Rota onde esta a view que vai carregar
+        // Path where the view that will load is located
         $this->view("my-account", $data);
 
      }

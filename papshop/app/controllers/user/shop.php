@@ -8,13 +8,13 @@ class Shop extends Controller
     public function index()
     {
 
+        //Load model User, to access database
         $User = $this->load_model('User');
         $user_data = $User->check_login();
 
         //validate if the user is really log in
         if (is_object($user_data)) {
             $data['user_data'] = $user_data;
-            //show($data['user_data']);
         }
 
         // Get category list
@@ -22,7 +22,7 @@ class Shop extends Controller
         $data['products'] = $categoryModel->get_product();
 
 
-        // Adiciona o nome da categoria aos dados de cada produto
+        // Adds the category name to each product's data
         foreach ($data['products'] as &$product) {
             if (isset($categoryNames[$product['categoryId']])) {
                 $product['categoryName'] = $categoryNames[$product['categoryId']];
@@ -30,11 +30,11 @@ class Shop extends Controller
                 $product['categoryName'] = 'Categoria Desconhecida'; // Trate casos em que a categoria não existe
             }
         }
-        unset($product); // Limpa a referência ao último produto
+        unset($product);
 
-        //$this->title = 'Admin - Dashboard';
+        //Page title
         $data['page_title'] = "Shop - loja";
-        //Rota onde esta a view que vai carregar
+        // Path where the view that will load is located
         $this->view("shop", $data);
     }
 }

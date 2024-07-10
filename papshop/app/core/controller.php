@@ -3,6 +3,7 @@
 class Controller
 {
 
+    //public function view
     public function view($path, $data = [])
     {
         $fullPath = "../app/views/" . THEME .  "/" . $path . ".php";
@@ -19,12 +20,13 @@ class Controller
     }
 
 
-
+    //public function show error page
     private function showErrorPage()
     {
         require_once "../app/views/carserv/404.php";
     }
 
+    //public function load model
     public function load_model($model)
     {
 

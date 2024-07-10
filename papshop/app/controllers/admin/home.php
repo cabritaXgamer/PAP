@@ -3,7 +3,7 @@
 
 class Home extends Controller
 {
-    //Public default metodo index, mesmo que o utilizador coloque ou não qualquer URL, o Index vai sempre correr
+    // Public default method index, even if the user does or does not specify a URL, the Index will always run
 
     public function index()
     {
@@ -17,12 +17,11 @@ class Home extends Controller
         //validate if the user is really log in
         if (is_array($data['user_data'])) {
             $data['user_data'] = $user_data;
-            //show($data['user_data']);
         }
 
-        //$this->title = 'Admin - Dashboard';
+        //Page title
         $data['page_title'] = "Admin Home - Dashboard";
-        //Rota onde esta a view que vai carregar
+        // Path where the view that will load is located
         $this->view("../admin/index", $data);
     }
 
@@ -41,9 +40,9 @@ class Home extends Controller
             //show($data['user_data']);
         }
 
-        //$this->title = 'Admin - Dashboard';
+        //Page title
         $data['page_title'] = "Admin Home - Dashboard";
-        //Rota onde esta a view que vai carregar
+        // Path where the view that will load is located
         $this->view("admin/categories", $data);
     }
 }

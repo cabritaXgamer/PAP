@@ -8,18 +8,17 @@ class ServiceDetails extends Controller
     public function index()
     {
 
-        $User = $this->load_model('User');
+        //Validate if is login
         $user_data = $User->check_login();
 
         //validate if the user is really log in
         if (is_object($user_data)) {
             $data['user_data'] = $user_data;
-            //show($data['user_data']);
         }
 
-        //$this->title = 'Admin - Dashboard';
+        //Page title
         $data['page_title'] = "Serviços";
-        //Rota onde esta a view que vai carregar
+        // Path where the view that will load is located
         $this->view("service-details", $data);
     }
 }

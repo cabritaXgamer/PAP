@@ -1,21 +1,23 @@
 <?php
 
-//extenção da class controller para a home
+
 class Login extends Controller
 {
 
+    // Public default method index, even if the user does or does not specify a URL, the Index will always run
    public function index()
    {
+      
+      //Page title
       $data['page_title'] = "Login";
-      //mostra a pagina home
-      if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
-         // show($_POST);
+      if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
          $user = $this->load_model("User");
          $user->login($_POST);
       }
-      //mostra a pagina do login
+      
+      // Path where the view that will load is located
       $this->view("login", $data);
    }
 }

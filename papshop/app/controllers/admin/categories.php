@@ -3,7 +3,7 @@
 
 class Categories extends Controller
 {
-    //Public default metodo index, mesmo que o utilizador coloque ou não qualquer URL, o Index vai sempre correr
+     // Public default method index, even if the user does or does not specify a URL, the Index will always run
     
     public function index()
     {
@@ -18,17 +18,16 @@ class Categories extends Controller
      if(is_array($data['user_data']))
      {
          $data['user_data'] = $user_data;
-         //show($data['user_data']);
      }
 
         // Get category list
         $categoryModel = $this->load_model('Category');
         $data['categories'] = $categoryModel->get_categories();
 
-       //$this->title = 'Admin - Dashboard';
-       $data['page_title'] = "Admin - Categories";
-       //Rota onde esta a view que vai carregar
-       $this->view("../admin/categories", $data);
+        //Page title
+        $data['page_title'] = "Admin - Categories";
+        // Path where the view that will load is located
+        $this->view("../admin/categories", $data);
     } 
 
 
@@ -110,16 +109,6 @@ class Categories extends Controller
             elseif ($data->data_type == 'delete_row') {
                 
                 $check = $category->delete($data->id);
-                // if ($check) {
-                //     $arr['message'] = "A sua categoria foi removida com sucesso!";
-                //     $arr['message_type'] = "info";
-                // } else {
-                //     $arr['message'] = "Erro ao remover a categoria!";
-                //     $arr['message_type'] = "error";
-                // }
-                // $_SESSION['error'] = "";
-                // $arr['data'] = "";
-                // $arr['data_type'] = "delete_row";
 
                 if ($check === true) {
                     $arr['message'] = "A sua categoria foi removida com sucesso!";
@@ -148,6 +137,3 @@ class Categories extends Controller
     }
     
 }
-
-
-  

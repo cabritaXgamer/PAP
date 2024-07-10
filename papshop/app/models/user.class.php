@@ -6,6 +6,7 @@ class User
 
     private $error = "";
 
+    //function register user
     function Signup($POST)
     {
 
@@ -13,29 +14,26 @@ class User
         $db = Database::getInstance();
 
         $data['name']       = trim($POST['name']);
-        //$data['username']   = trim($POST['username']);
         $data['email']      = trim($POST['email']);
         $data['password']   = trim($POST['password']);
         $password2          = trim($POST['password2']);
 
-        //var_dump($data[0]);
-
-        //validação de email
+        //validate email
         if (empty($data['email']) || !preg_match("/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/", $data['email'])) {
             $this->error .= "Please enter a valid email <br>";
         }
 
-        //validação do nome
+        //validate name
         if (empty($data['name']) || !preg_match("/^[a-zA-Z]+$/", $data['name'])) {
             $this->error .= "Please enter a valid name <br>";
         }
 
-        //verificar se a password é igual à password2
+        //validate password 1 equal to password2
         if ($data['password'] !== $password2) {
             $this->error .= "Passwords do not match <br>";
         }
 
-        //validação do tamanho da senha (min 4 caracteres)
+        // Check if the password is at least 4 characters long
         if (strlen($data['password']) < 4) {
             $this->error .= "Password must be at least 4 characters <br>";
         }
@@ -94,23 +92,23 @@ class User
         return $random_string;
     }
 
-
+    // Function to authenticate user
     function Login($POST)
     {
 
         $data = array();
         $db = Database::getInstance();
 
-        //atribuir dentro do array data um valor para o email e para a password que serão responsáveis pelo login
+         // Assign email and password values from POST to the data array for login
         $data['email'] = trim($POST['email']);
         $data['password'] = trim($POST['password']);
 
-        //verificar se o email é válido
+        // Check if the email is valid
         if (empty($data['email']) || !preg_match("/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/", $data['email'])) {
             $this->error .= "Please enter a valid email <br>";
         }
 
-        //verificar se a passowrd tem pelo menos 4 caracteres
+        // Check if the password is at least 4 characters long
         if (strlen($data['password']) < 4) {
             $this->error .= "Password must be at least 4 characters <br>";
         }
@@ -134,6 +132,7 @@ class User
         $_SESSION['error'] = $this->error;
     }
 
+    // Function to log out user
     public function logout()
     {
         if (isset($_SESSION['user_url'])) {
@@ -144,7 +143,7 @@ class User
         die;
     }
 
-
+    // Function to check if user is logged in
     function check_login($redirect = false, $allowed = array())
     {
         if (!isset($_SESSION['user_url'])) {
