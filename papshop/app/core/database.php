@@ -3,8 +3,6 @@
 class Database
 {
 
-
-
     // Variável estática para armazenar a instância do Database
     private static $instance = null;
 

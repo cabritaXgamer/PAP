@@ -70,7 +70,7 @@
                                     <a href="#">Serviços</a>
                                     <ul class="sub-menu">
                                         <li><a href="service">Serviços</a></li>
-                                        <li><a href="servicedetailes">Detalhes dos serviços</a></li>
+                                        <li><a href="ServiceDetails">Detalhes dos serviços</a></li>
                                     </ul>
                                 </li>
                                 <li>
@@ -107,7 +107,7 @@
                                 </li> -->
                                 <!-- <li><a href="#contact">Contacto</a></li> -->
 
-                                 <!-- Admin section -->
+                                <!-- Admin section -->
                                 <li>
                                     <?php if (isset($data['user_data'])) : ?>
                                         <a href="#">Perfil</a>
@@ -305,7 +305,7 @@
                             <a href="service">Serviços</a>
                             <ul class="sub-menu">
                                 <li><a href="service">Serviços</a></li>
-                                <li><a href="servicedetailes">Detalhes dos serviços</a></li>
+                                <li><a href="ServiceDetails">Detalhes dos serviços</a></li>
                             </ul>
                         </li>
                         <li>

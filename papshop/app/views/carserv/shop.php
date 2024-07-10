@@ -41,12 +41,12 @@
 <div class="section section-padding">
     <div class="container">
 
-    
+
         <!-- Shop Wrapper Start -->
         <div class="shop-wrapper">
             <div class="row">
-                <?php if (!empty($data['products'])): ?>
-                    <?php foreach ($data['products'] as $index => $product): ?>
+                <?php if (!empty($data['products'])) : ?>
+                    <?php foreach ($data['products'] as $index => $product) : ?>
                         <div class="col-lg-4 col-sm-6">
                             <!-- Single Product Start -->
                             <div class="single-product" data-aos="fade-up" data-aos-delay="200">
@@ -78,7 +78,7 @@
                                         <a href="product-details-right-sidebar.html"><?php echo htmlspecialchars($product['description']); ?></a>
                                     </h3>
                                     <div class="price">
-                                        <span class="sale-price">€<?php echo htmlspecialchars($product['price']);?></span>
+                                        <span class="sale-price">€<?php echo htmlspecialchars($product['price']); ?></span>
                                         <!-- <span class="regular-price"><?php echo htmlspecialchars($product['price']); ?></span> -->
                                     </div>
                                 </div>
