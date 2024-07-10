@@ -299,7 +299,7 @@
         data.append('product_image', product_image);
         data.append('data_type', 'add_product');
 
-        send_data(data);
+        send_data_files(data);
     }
     //EDIT Function
     function edit_row() {
