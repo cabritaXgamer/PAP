@@ -16,7 +16,7 @@
                       <div class="content-panel">
                           <table class="table table-striped table-advance table-hover">
 	                  	  	  <h4>
-                                <i class="fa fa-angle-right"></i> Products Categories                              
+                                <i class="fa fa-angle-right"></i> Categories                              
                                   <!-- Button trigger modal --> 
                                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#categoryModal"> 
                                     <i class="fa fa-plus"></i>Add new</button>             

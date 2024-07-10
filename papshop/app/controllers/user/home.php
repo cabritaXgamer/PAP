@@ -3,25 +3,21 @@
 
 class Home extends Controller
 {
-    //Public default metodo index, mesmo que o utilizador coloque ou não qualquer URL, o Index vai sempre correr
-    
+    // Public default method index, even if the user does or does not specify a URL, the Index will always run
     public function index()
-     {
-        
+    {
+        //Validate if is login
         $User = $this->load_model('User');
         $user_data = $User->check_login();
 
         //validate if the user is really log in
-        if(is_object($user_data))
-        {
+        if (is_object($user_data)) {
             $data['user_data'] = $user_data;
-            //show($data['user_data']);
         }
 
-        //$this->title = 'Admin - Dashboard';
+        //Page title
         $data['page_title'] = "Home - Dashboard";
-        //Rota onde esta a view que vai carregar
+        // Path where the view that will load is located
         $this->view("index", $data);
-
-     }
+    }
 }

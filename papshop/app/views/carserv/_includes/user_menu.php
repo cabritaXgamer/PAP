@@ -16,8 +16,8 @@
 
                         <!-- Header top Wrapper Start -->
                         <div class="header-top-info">
-                            <p>328D, Marid Drive, Ackloand</p>
-                            <p>Call us: <a href="+12025256214">+12(025) 256 214</a></p>
+                            <!-- <p>328D, Marid Drive, Ackloand</p>
+                            <p>Call us: <a href="+12025256214">+12(025) 256 214</a></p> -->
                         </div>
                         <!-- Header top Wrapper End -->
 
@@ -27,14 +27,14 @@
                         <?php if (isset($data['user_data'])) : ?>
                             <!-- Header top Button Start -->
                             <div class="header-top-btn">
-                                <a href="logout">Logout</a>
+                                <a href="logout">Sair</a>
                                 <!-- <a href="register">Register</a> -->
                             </div>
                             <!-- Header top Button End -->
                         <?php else : ?>
                             <div class="header-top-btn">
                                 <a href="login">Entrar</a>
-                                <a href="register">Register</a>
+                                <a href="register">Registo</a>
                             </div>
                         <?php endif ?>
                         <!-- END  Validation paramenters to check if the user is loggedin -->
@@ -56,7 +56,7 @@
 
                         <!-- Header Logo Start -->
                         <div class="header-logo">
-                            <a href="index.htlm"><img src="<?= ASSETS . THEME ?>/images/logo.png" alt="Logo"></a>
+                            <a href="index"><img src="<?= ASSETS . THEME ?>/images/logo.png" alt="Logo"></a>
                             <?php //show(ASSETS . THEME . "/images/logo.png") 
                             ?>
                         </div>
@@ -67,34 +67,34 @@
                             <ul class="nav-menu">
                                 <li><a href="index">Inicio</a></li>
                                 <li>
-                                    <a href="service">Serviços</a>
+                                    <a href="#">Serviços</a>
                                     <ul class="sub-menu">
-                                        <li><a href="services">Serviços</a></li>
-                                        <li><a href="service-details">detalhes dos serviços</a></li>
+                                        <li><a href="service">Serviços</a></li>
+                                        <li><a href="ServiceDetails">Detalhes dos serviços</a></li>
                                     </ul>
                                 </li>
                                 <li>
                                     <a href="#">Loja</a>
                                     <ul class="sub-menu">
-                                        <li><a href="shop-grid">tabela de produtos</a></li>
+                                        <li><a href="shop">Loja</a></li>
+                                        <li><a href="wishlist">Wishlist</a></li>
+                                        <!-- <li><a href="shop">tabela de produtos</a></li> -->
                                         <!-- <li><a href="shop-left-sidebar">Loja left Sidebar</a></li> -->
                                         <!-- <li><a href="shop-right-sidebar">Loja Right Sidebar</a></li> -->
                                         <!-- <li><a href="product-details-left-sidebar">Product Details Left Sidebar</a></li> -->
                                         <!-- <li><a href="product-details-right-sidebar">Product Details Right Sidebar</a></li> -->
                                     </ul>
                                 </li>
-                                <li>
-                                    <a href="#">menu</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="about">Sobre nos</a></li>
-                                        <!-- <li><a href="cart">Cart</a></li> -->
-                                        <!-- <li><a href="compare">Compare</a></li> -->
-                                        <li><a href="wishlist">Wishlist</a></li>
-                                        <!-- <li><a href="my-account">My Account</a></li> -->
-                                        <!-- <li><a href="project-details">Project Details</a></li> -->
-                                        <li><a href="faq">FAQ</a></li>
-                                    </ul>
-                                </li>
+                                <!-- <li>
+                                     <ul class="sub-menu"> -->
+                                <!-- <li><a href="about">Sobre nos</a></li> -->
+                                <!-- <li><a href="cart">Cart</a></li> -->
+                                <!-- <li><a href="compare">Compare</a></li> -->
+                                <!-- <li><a href="my-account">My Account</a></li> -->
+                                <!-- <li><a href="project-details">Project Details</a></li> -->
+                                <!-- <li><a href="faq">FAQ</a></li> -->
+                                <!-- </ul> -->
+                                <!-- </li>  -->
                                 <!-- <li>
                                     <a href="#">Blog</a>
                                     <ul class="sub-menu">
@@ -105,10 +105,9 @@
                                         <li><a href="blog-details-right-sidebar">Blog Details Right Sidebar</a></li>
                                     </ul>
                                 </li> -->
+                                <!-- <li><a href="#contact">Contacto</a></li> -->
 
-
-                                <li><a href="#contact">Contacto</a></li>
-
+                                <!-- Admin section -->
                                 <li>
                                     <?php if (isset($data['user_data'])) : ?>
                                         <a href="#">Perfil</a>
@@ -118,15 +117,12 @@
                                                 <li><a href="admin">Secção Admin</a></li>
                                             <?php endif; ?>
 
-                                            <li><a href="logout">Logout</a></li>
+                                            <li><a href="<?= ROOT ?>">Sair</a></li>
                                         </ul>
                                     <?php endif ?>
                                 </li>
-
-
+                                <!-- End  Admin section -->
                             </ul>
-
-
                         </div>
                         <!-- Header Menu End -->
 
@@ -270,8 +266,8 @@
 
                 <!-- Header top Info Start -->
                 <div class="header-top-info">
-                    <p>328D, Marid Drive, Ackloand</p>
-                    <p>Call us: <a href="+12025256214">+12(025) 256 214</a></p>
+                    <!-- <p>328D, Marid Drive, Ackloand</p>
+                    <p>Call us: <a href="+12025256214">+12(025) 256 214</a></p> -->
                 </div>
 
                 <!-- Validation paramenters to check if the user is loggedin -->
@@ -279,14 +275,14 @@
                 <?php if (isset($data['user_data'])) : ?>
                     <!-- Header top Button Start -->
                     <div class="header-top-btn">
-                        <a href="logout">Logout</a>
+                        <a href="logout">Sair</a>
                         <!-- <a href="register">Register</a> -->
                     </div>
                     <!-- Header top Button End -->
                 <?php else : ?>
                     <div class="header-top-btn">
                         <a href="login">Entrar</a>
-                        <a href="register">Register</a>
+                        <a href="register">Registo</a>
                     </div>
                 <?php endif ?>
                 <!-- END  Validation paramenters to check if the user is loggedin -->
@@ -309,17 +305,19 @@
                             <a href="service">Serviços</a>
                             <ul class="sub-menu">
                                 <li><a href="service">Serviços</a></li>
-                                <li><a href="service-details">detalhes dos serviços</a></li>
+                                <li><a href="ServiceDetails">Detalhes dos serviços</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#">Loja</a>
+                            <a href="shop">Loja</a>
                             <ul class="sub-menu">
-                                <li><a href="shop-grid">tabela de produtos</a></li>
-                                <li><a href="shop-left-sidebar">Loja left Sidebar</a></li>
+                                <li><a href="shop">Loja</a></li>
+                                <li><a href="wishlist">Wishlist</a></li>
+                                <!-- <li><a href="shop-grid">tabela de produtos</a></li> -->
+                                <!-- <li><a href="shop-left-sidebar">Loja left Sidebar</a></li>
                                 <li><a href="shop-right-sidebar">Loja Right Sidebar</a></li>
                                 <li><a href="product-details-left-sidebar">Product Details Left Sidebar</a></li>
-                                <li><a href="product-details-right-sidebar">Product Details Right Sidebar</a></li>
+                                <li><a href="product-details-right-sidebar">Product Details Right Sidebar</a></li> -->
                             </ul>
                         </li>
                         <li>
@@ -333,7 +331,7 @@
                                 <li><a href="checkout">Checkout</a></li>
                                 <li><a href="my-account">My Account</a></li>
                                 <li><a href="login">Login</a></li>
-                                <li><a href="register">Register</a></li>
+                                <li><a href="register">Registo</a></li>
                                 <li><a href="project-gallery">Project Gallery</a></li>
                                 <li><a href="project-details">Project Details</a></li>
                                 <li><a href="our-team">Team</a></li>
@@ -352,7 +350,7 @@
                                 <li><a href="blog-details-right-sidebar">Blog Details Right Sidebar</a></li>
                             </ul>
                         </li>
-                        <li><a href="#contact">Contact</a></li>
+                        <!-- <li><a href="#contact">Contact</a></li> -->
 
                     </ul>
 

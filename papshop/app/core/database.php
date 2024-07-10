@@ -1,83 +1,12 @@
 <?php
 
-Class Database 
+class Database
 {
 
-    //Make conection to database mysql
-
-    // public static $con;
-
-    // public function __construct()
-    // {
-    //     try{
-
-    //         $string = DB_TYPE . ":host=" . DB_HOST . ";dbname=" . DB_NAME;
-    //         //echo($string);
-    //         self::$con = new PDO($string , DB_USER , DB_PASS);
-
-    //     }
-    //     catch (PDOException $e){
-
-    //         die($e->getMessage());
-
-    //     }
-
-    // }
-
-    // public static function getInstance()
-    // {
-    //     if(self::$con)
-    //     {
-    //         return self::$con;
-    //     }
-
-    //     //self::$con = new self();
-    //     return $instance = new self();
-    // }
-
-    // public static function newInstance()
-    // {
-    //     //self::$con = new self();
-    //     return $instance = new self();
-    // }
-
-    // //read data from database
-    // public function read($query, $data = array())
-    // {
-    //     $stm = self::$con->prepare($query);
-    //     $result = $stm->execute($data);
-
-    //     if($result)
-    //     {
-    //         $data = $stm->fetchAll(PDO::FETCH_OBJ);
-    //         if(is_array($data) && count($data) > 0)
-    //         {
-    //             return $data;
-    //         }
-    //     }
-
-    //     return false;
-    // }
-
-    // //write to database
-    // public function write($query, $data = array())
-    // {
-    //     $stm = self::$con->prepare($query);
-    //     $result = $stm->execute($data);
-
-    //     if($result)
-    //     {
-    //         return true;
-    //     }
-
-    //     return false;
-    // }
-
-  
-    // Variável estática para armazenar a instância do Database
+    // Static variable to store the instance of the Database
     private static $instance = null;
 
-    // Variável para armazenar a conexão PDO
+    // Variable to store the PDO connection
     private $con;
 
     private function __construct()
@@ -85,14 +14,14 @@ Class Database
         try {
             $string = DB_TYPE . ":host=" . DB_HOST . ";dbname=" . DB_NAME;
             $this->con = new PDO($string, DB_USER, DB_PASS);
-            // Defina o modo de erro PDO para exceção
+            // Set the PDO error mode to exception
             $this->con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
             die($e->getMessage());
         }
     }
 
-    // Método para obter a instância única
+    // Method to get the singleton instance
     public static function getInstance()
     {
         if (self::$instance === null) {
@@ -102,13 +31,13 @@ Class Database
         return self::$instance;
     }
 
-    // Método para obter a conexão PDO
+    // Method to get the PDO connection
     public function getConnection()
     {
         return $this->con;
     }
 
-    // Método para ler dados do banco de dados
+    // Method to read data from the database
     public function read($query, $data = array())
     {
         $stm = $this->con->prepare($query);
@@ -124,7 +53,7 @@ Class Database
         return false;
     }
 
-    // Método para escrever dados no banco de dados
+    // Method to write data to the database
     public function write($query, $data = array())
     {
         $stm = $this->con->prepare($query);

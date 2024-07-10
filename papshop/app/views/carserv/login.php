@@ -3,36 +3,8 @@
 
 <!-- Page Banner Section Start -->
 <div class="section page-banner-section" style="background-image: url(<?= ASSETS . THEME ?>/images/page-banner-bg.png);">
-    <div class="container">
-        <!-- Page Banner Wrapper Start -->
-        <div class="page-banner-wrapper">
 
-            <!-- Page Banner Content Start -->
-            <div class="page-banner-content">
 
-                <!-- Section Title Start -->
-                <div class="section-title">
-                    <h5 class="sub-title">Login</h5>
-                    <h2 class="main-title">Login</h2>
-                </div>
-                <!-- Section Title End -->
-
-                <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
-                    <li class="breadcrumb-item active">Login</li>
-                </ul>
-            </div>
-            <!-- Page Banner Content End -->
-
-            <!-- Page Banner Images Start -->
-            <div class="page-banner-images">
-                <img src="assets/images/page-banner-3.png" alt="Page Banner">
-            </div>
-            <!-- Page Banner Images End -->
-
-        </div>
-        <!-- Page Banner Wrapper End -->
-    </div>
 </div>
 <!-- Page Banner Section End -->
 
@@ -47,7 +19,7 @@
 
                     <!-- Register & Login Form Start -->
                     <div class="register-login-form">
-                        <h3 class="title">Login <span>agora</span></h3>
+                        <h3 class="title">Entrar</h3>
 
                         <div class="form-wrapper">
                             <form method="post">
@@ -63,8 +35,8 @@
                                 <!-- Single Form End -->
                                 <!-- Single Form Start -->
                                 <div class="single-form">
-                                    <button type="submit" class="btn btn-custom-01 w-100">Login</button>
-                                    <a class="btn btn-custom-02 w-100" href="#">Login com Google</a>
+                                    <button type="submit" class="btn btn-custom-01 w-100">Entrar</button>
+                                    <!-- <a class="btn btn-custom-02 w-100" href="#">Login com Google</a> -->
                                 </div>
                                 <!-- Single Form End -->
                                 <p><a href="#">esqueceste da palavra-passe?</a></p>
