@@ -1,4 +1,5 @@
-![image](https://github.com/cabritaXgamer/PAP/assets/65983803/30049dc9-8d2a-4c1c-8eda-dda69269da3d)
+![image](https://github.com/cabritaXgamer/PAP/assets/65983803/30049dc9-8d2a-4c1c-8eda-dda69269da3d) ![image](https://github.com/cabritaXgamer/PAP/assets/65983803/de99d0e1-43da-4723-a904-4028e2f73b5e)
+
 
 Escola Secundária de Silves
 Curso Profissional de Técnico de Informática - sistemas
