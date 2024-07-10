@@ -9,7 +9,7 @@
 
 <body>
     <h1>Teste de pagina com caminho </h1>
-    <?php show($url) ?>
+
 </body>
 
 </html>

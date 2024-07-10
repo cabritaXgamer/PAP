@@ -47,6 +47,9 @@
                     <div class="register-login-form">
                         <h3 class="title">Regista-te<span> agora</span></h3>
 
+                        <!-- show error if it exists -->
+								<span style="color:red"><?php check_error() ?></span>
+                                
                         <div class="form-wrapper">
                             <form method="post">
                                 <!-- Single Form Start -->
